@@ -1,0 +1,294 @@
+/* CSS RESET  */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+body {
+/* 3. Add accessible line-height */
+line-height: 1.5;
+/* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+display: block;
+    max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul, ol {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  row-gap: .5rem;
+}
+
+/*
+9. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+
+/* CUSTOM PROPERTIES  */
+:root {
+    --clr-white: hsl(0,0%,100%);
+    --clr-stone-100: hsl(30, 54%, 90%);
+    --clr-stone-150: hsl(30,18%,87%);
+    --clr-stone-600: hsl(30, 10%, 34%);
+    --clr-stone-900: hsl(24, 5%, 18%);
+    --clr-brown-800: hsl(15, 45%, 36%);
+    --clr-rose-800: hsl(332, 51%, 32%);
+    --clr-rose-50: hsl(330, 100%, 98%);
+    --fs-1: 2rem;
+    --fs-2: 1.5rem;
+    --fs-3: 1.25rem;
+    --fs-4: 1rem;
+}
+
+
+/* CUSTOM FONTS */
+/* young-serif-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Young Serif';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/young-serif-v2-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* outfit-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/outfit-v11-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* outfit-600 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./fonts/outfit-v11-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* outfit-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/outfit-v11-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* HELPER  */
+.border {
+    border-bottom: 1px solid var(--clr-stone-150);
+}
+
+.bold {
+    font-weight: 700;
+    color: var(--clr-stone-600);
+}
+
+.listPadding {
+    padding-block-end: 1rem;
+}
+
+.brown {
+    color: var(--clr-brown-800);
+}
+
+.weight--700 {
+    font-weight: 700;
+}
+
+
+/* GENERAL STYLES  */
+body {
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-family: 'Young Serif', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+
+
+
+.recipe {
+    /* 740px is around where the 
+    breakpoint should be, also it 
+    is very close to the tablet 
+    size  */
+    max-width: 720px;
+    background: var(--clr-white);
+    border-radius: .5rem
+}
+
+.wrapper {
+    padding-inline: 2rem;
+    display: grid;
+    row-gap: 1.5rem;
+}
+
+.recipe__info {
+    padding-block: 2rem;
+    display: grid;
+    row-gap: 1.5rem;
+}
+
+.recipe__infoTitle {
+    font-family: 'Young Serif', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--clr-stone-900);
+    line-height: 1;
+    word-spacing: .2rem;
+}
+
+.recipe__infoDescription {
+    color: var(--clr-stone-600);
+    font-size: 1rem;
+}
+
+.recipe__prep {
+    /* might be 1.2rem 1.5rem  */
+    padding: 1.5rem;
+    background: var(--clr-rose-50);
+    border-radius: 1rem;
+    display: grid;
+    row-gap: .5rem;
+}
+
+.recipe__prepTitle {
+    color: var(--clr-rose-800);
+}
+
+.recipe__prepList {
+    list-style: disc;
+    padding-inline: 1.5rem;
+}
+
+.recipe__prepItem {
+    padding-inline-start: 1rem;
+    color: var(--clr-stone-600);
+}
+
+.recipe__prepItem::marker {
+    color: var(--clr-rose-800);
+}
+
+.recipe__ingredients {
+    display: grid;
+    row-gap: 1rem;
+}
+
+.recipe__ingredientsList {
+    list-style: disc;
+    padding-inline: 1.5rem;
+}
+
+.recipe__ingredientsItem {
+    padding-inline-start: 1rem;
+    color: var(--clr-stone-600);
+
+}
+
+.recipe__ingredientsItem::marker {
+    color: var(--clr-brown-800);
+}
+
+.recipe__instructions {
+    display: grid;
+    gap: 1rem;
+}
+
+.recipe__instructionsList {
+    list-style: decimal;
+    padding-inline: 1.4rem;
+    padding-block-end: 1.35rem;
+}
+
+.recipe__instructionsItem {
+    padding-inline-start: 1rem;
+    padding-block-end: .5rem;
+    color: var(--clr-stone-600);
+}
+
+.recipe__instructionsItem::marker {
+    color: var(--clr-brown-800);
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
+    font-weight: 600
+}
+
+.recipe__nutrition {
+    display: grid;
+    row-gap: 1rem;
+}
+
+.recipe__nutritionDescription {
+    color: var(--clr-stone-600);
+}
+
+.recipe__nutritionValue {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(2, 1fr);
+    padding-block-end: .5rem;
+}
+
+.recipe__nutritionItemName {
+    color: var(--clr-stone-600)
+}
+
+.recipe__nutritionItemName--padding {
+    padding-inline-start: 2rem;
+}
+
+
+
+@media (width >= 720px){
+
+    body {
+        background: var(--clr-stone-100);
+        display: grid;
+        place-content: center;
+    }
+
+    .recipe {
+        margin: 3rem 6rem;
+    }
+
+    
+    .recipe__img {
+        border-radius: 2.5rem;
+        padding: 2rem;
+    }
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
