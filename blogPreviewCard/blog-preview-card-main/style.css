@@ -1,0 +1,153 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+  /* 2. Remove default margin */
+* {
+    margin: 0;
+}
+  
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+  
+  /* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+  
+  /* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+  
+  /* 8. Improve line wrapping */
+/* p {
+    text-wrap: pretty;
+} */
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+/* CUSTOM FONTS  */
+/* figtree-500 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./assets/fonts/font-woff/figtree-v6-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+  /* figtree-800 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Figtree';
+    font-style: normal;
+    font-weight: 800;
+    src: url('./assets/fonts/font-woff/figtree-v6-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* CUSTOM PROPERTIES  */
+:root {
+    /* COLORS  */
+    --clr-yellow: hsl(47, 88%, 63%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-gray-500: hsl(0, 0%, 42%);
+    --clr-gray-950: hsl(0, 0%, 7%);
+}
+
+/* GENERAL STYLES  */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    background: var(--clr-yellow);
+    font-family: 'Figtree', Arial, Helvetica, sans-serif;
+}
+
+.card {
+    background: var(--clr-white);
+    border: 1px solid var(--clr-gray-950);
+    border-radius: .875rem;
+    padding-inline: 1.5rem;
+    margin-inline: 1.5rem;
+    display: grid;
+    box-shadow: 5px 5px 0 1px var(--clr-gray-950);
+    max-width: 330px;
+}
+
+.card__img {
+    border-radius: .7rem;
+}
+
+.card__info {
+    display: grid;
+    gap: .5rem;
+}
+
+.card__theme {
+    display: grid;
+    gap: .75rem;
+}
+
+.card__type{
+    font-size: .65rem;
+    padding: .25rem 1rem;;
+    background: var(--clr-yellow);
+    border-radius: .25rem;
+    font-weight: 800;
+    width: max-content;
+}
+
+.card__date {
+    font-size: .75rem;
+    color: var(--clr-gray-950);
+}
+
+.card__title {
+    font-size: 1.25rem;
+}
+
+.card__title > a {
+    text-decoration: none;
+    color: var(--clr-gray-950);
+    font-weight: 800;
+    transition: 150ms opacity ease-in-out;
+}
+
+.card__title > a:hover {
+    opacity: .75;
+}
+
+.card__title > a:active {
+    color: var(--clr-yellow)
+}
+
+.card__description {
+    font-size: .875rem;
+    color: var(--clr-gray-500);
+}
+
+.card__owner {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-block: .65rem 1.2rem;
+}
+
+.card__profilePic {
+    width: 25px;
+    height: 25px;
+} 
+
+.card__name {
+    font-size: .875rem;
+}
