@@ -1,0 +1,193 @@
+/* CSS RESET  */
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+body {
+/* 3. Add accessible line-height */
+    line-height: 1.5;
+/* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+/* CUSTOM FONTS  */
+/* inter-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/font-woff/inter-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-600 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./assets/fonts/font-woff/inter-v18-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/fonts/font-woff/inter-v18-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* CUSTOM PROPERTIES  */
+
+:root {
+    /* COLORS  */
+    --clr-green: hsl(75, 94%, 57%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-grey-700: hsl(0, 0%, 20%);
+    --clr-grey-800: hsl(0, 0%, 12%);
+    --clr-grey-900: hsl(0, 0%, 8%);
+    /* TYPOGRAPHY  */
+    --fs-p: .875rem; /* same as 14px  */
+    --fs-h1: 1.5rem;
+}
+
+/* HELPER  */
+.grid--center {
+    display: grid;
+    justify-content: center;
+}
+
+/* GENERAL STYLES  */
+
+.grid--center {
+    display: grid;
+    justify-content: center
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: var(--clr-grey-900);
+    display: grid;
+    place-content: center;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+.profile {
+    background: var(--clr-grey-800);
+    border-radius: .875rem;
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.profile__info {
+    /* .grid--center helper  */
+    margin-block-start: 1rem;
+    gap: 1.5rem;
+}
+
+.profile__img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    justify-self: center
+}
+
+.profile__address {
+    /* .grid--center helper */
+    gap: .3rem;
+}
+
+.profile__name {
+    font-size: var(--fs-h1);
+    color: var(--clr-white);
+    font-weight: 400;
+}
+
+.profile__location {
+    font-size: var(--fs-p);
+    color: var(--clr-green);
+    justify-self: center
+}
+
+.profile__description {
+    color: var(--clr-white);
+    padding-inline: 1.2rem;
+}
+
+.profile__links {
+    display: grid;
+    gap: .875rem;
+    padding-inline: 1rem;
+    margin-block-end: 1rem;
+}
+
+.profile__linkItem {
+    text-decoration: none;
+    color: var(--clr-white);
+    font-weight: 700;
+    background: var(--clr-grey-700);
+    width: 100%;
+    text-align: center;
+    padding: .55rem;
+    border-radius: .35rem;
+    transition: 150ms opacity ease-in-out;
+}
+
+.profile__linkItem:hover {
+    opacity: .55;
+}
+
+.profile__linkItem:active {
+    background: var(--clr-green)
+}
+
+
+
+
+
+
+
+
+
+
+.attribution { 
+    color: white;
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
