@@ -1,0 +1,121 @@
+/* CSS RESET  */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 7. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+/* CUSTOM PROPERTIES  */
+
+:root {
+    /* COLORS  */
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-slate-300: hsl(212, 45%, 89%);
+    --clr-slate-500: hsl(216, 15%, 48%);
+    --clr-slate-900: hsl(218, 44%, 22%);
+    /* FONT SIZES  */
+    --fs-p: .9375rem; /* 15px */
+}
+
+/* CUSTOM FONTS  */
+/* outfit-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/outfit-v11-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+  /* outfit-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/outfit-v11-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* GENERAL STYLES  */
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    background: var(--clr-slate-300);
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
+}
+
+main {
+    background: var(--clr-white);
+    padding: 1rem;
+    margin-inline: 1rem;
+    border-radius: 1rem;
+    display: grid;
+    gap: 1rem;
+    max-width: 21.4375rem; /* 375px-32px(1rem of padding on each side)  */
+}
+
+img {
+    border-radius: .7rem;
+    margin-block-end: .5rem;
+}
+
+h1 {
+    line-height: 1.2;
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--clr-slate-900)
+}
+
+p {
+    color: var(--clr-slate-500);
+    text-align: center;
+    padding-inline: 1.5rem;
+    padding-block-end: 1.5rem;
+}
+
+
+
+
+
+@media(width>=375px){
+
+}
+
+@media(width>=1440px){
+
+}
