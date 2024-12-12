@@ -1,0 +1,174 @@
+/* CSS RESET  */
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+  /* 2. Remove default margin */
+* {
+    margin: 0;
+}
+  
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+  
+  /* 4. Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+  
+  /* 5. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+  
+  /* 6. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+/* CUSTOM PROPERTIES  */
+
+:root {
+    /* COLORS  */
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-light-pink: hsl(275, 100%, 97%);
+    --clr-gray-purple: hsl(292, 16%, 49%);
+    --clr-dark-purple: hsl(292, 42%, 14%);
+    --clr-solid-gray: hsl(300, 1%, 58%);
+    --clr-light-gray: hsl(300, 2%, 87%);
+    --clr-solid-purple: hsl(283, 82%, 53%);
+    /* FONT SIZES  */
+    --fs-h1: 2rem;
+    --fs-h2: 1rem;
+    --fs-p: .875rem;
+}
+
+/* CUSTOM FONTS  */
+
+/* work-sans-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/fontWoff/work-sans-v19-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* work-sans-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./assets/fonts/fontWoff/work-sans-v19-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* work-sans-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/fonts/fontWoff/work-sans-v19-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+/* HELPER  */
+
+.accordion__section--border-bottom {
+  border-bottom: 1px solid var(--clr-light-gray);
+}
+
+/* GENERAL STYLES */
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url("./assets/images/background-pattern-mobile.svg"), linear-gradient(to bottom, rgba(0,0,0,0) 25%, var(--clr-light-pink) 25%);
+    background-position: top;
+    background-repeat: no-repeat;
+    display: grid;
+    place-content: center;
+    font-family: "Work Sans", Arial, Helvetica, sans-serif;
+}
+
+.accordion {
+  max-width: 522px;
+  background: var(--clr-white);
+  border-radius: .75rem;
+  padding-inline: 1.5rem;
+  margin-inline: 1.5rem;
+  padding-block-start: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.accordion__heading {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.accordion__icon {
+  width: 25px;
+  height: 25px;
+}
+
+.accordion__section {
+  display: grid;
+  gap: 1.5rem;
+  padding-block-end: 1.5rem;
+}
+
+.accordion__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  gap: 2rem;
+}
+
+.accordion__toggle:is(:hover, :focus) > .accordion__question {
+  color: var(--clr-solid-purple);
+}
+
+
+
+.accordion__toggle:hover > .accordion__button {
+  opacity: .75;
+}
+
+
+.accordion__question {
+  font-size: 1rem;
+  font-weight: 700;
+  transition: color 150ms ease-in-out;
+}
+
+.accordion__button {
+  transition: opacity 150ms ease-in-out;
+}
+
+.accordion__answer {
+  font-size: var(--fs-p);
+  color: var(--clr-solid-gray);
+  display: none;
+  transition: display 150ms ease-in-out;
+}
+
+
+
+
+@media (width >= 375px){
+  body {
+    background-image: url("./assets/images/background-pattern-desktop.svg"), linear-gradient(to bottom, rgba(0,0,0,0) 25%, var(--clr-light-pink) 25%);
+    background-repeat: repeat-x
+  }
+}
