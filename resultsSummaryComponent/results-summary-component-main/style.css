@@ -1,0 +1,304 @@
+/* CSS RESET  */
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+  /* 2. Remove default margin */
+* {
+    margin: 0;
+}
+  
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+  
+  /* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+  
+  /* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+    font: inherit;
+}
+  
+  /* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+  
+  /* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+/* 9. Remove list styles on ul, which suggests default styling will be removed */
+ul, ol {
+  list-style: none;
+}
+
+/* CUSTOM PROPERTIES  */
+:root {
+    /* PRIMARY COLORS  */
+    --clr-primary-light-red: hsl(0, 100%, 67%);
+    --clr-primary-orangey-yellow: hsl(39, 100%, 56%);
+    --clr-primary-green-teal: hsl(166, 100%, 37%);
+    --clr-primary-cobalt-blue: hsl(234, 85%, 45%);
+    --clr-primary-light-red-transparent: hsla(0, 100%, 67%, 0.1);
+    --clr-primary-orangey-yellow-transparent: hsla(39, 100%, 56%, 0.1);
+    --clr-primary-green-teal-transparent: hsla(166, 100%, 37%, 0.1);
+    --clr-primary-cobalt-blue-transparent: hsla(234, 85%, 45%, 0.1);
+    /* GRADIENTS  */
+        /* BACKGROUND  */
+    --clr-gradient-light-slate-blue: hsl(252, 100%, 67%);
+    --clr-gradient-light-royal-blue: hsl(241, 81%, 54%);
+        /* CIRCLE  */
+    --clr-gradient-violet-blue: hsla(256, 72%, 46%, 1);
+    --clr-gradient-persion-blue: hsla(241, 72%, 46%, 0);
+        /* NEUTRAL  */
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-pale-blue: hsl(221, 100%, 96%);
+    --clr-light-lavender: hsl(241, 100%, 89%);
+    --clr-dark-gray-blue: hsl(224, 30%, 27%);
+    /* FONTS  */
+    --fs-p: 1.125rem;
+}
+
+/* CUSTOM FONTS  */
+/* hanken-grotesk-500 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./assets/fonts/fontsWoff/hanken-grotesk-v8-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+  /* hanken-grotesk-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/fonts/fontsWoff/hanken-grotesk-v8-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+  /* hanken-grotesk-800 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Hanken Grotesk';
+    font-style: normal;
+    font-weight: 800;
+    src: url('./assets/fonts/fontsWoff/hanken-grotesk-v8-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* GENERAL STYLES  */
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Hanken Grotesk', Arial, Helvetica, sans-serif;
+}
+
+.component__result {
+    background: linear-gradient(var(--clr-gradient-light-slate-blue), var(--clr-gradient-light-royal-blue));
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+    border-radius: 0 0 2rem 2rem;
+    padding: 1rem;
+}
+
+.component__result-title {
+    color: var(--clr-light-lavender);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.component__result-score-container {
+    width: 130px;
+    height: 130px;
+    display: grid;
+    border-radius: 75px;
+    background: linear-gradient(var(--clr-gradient-violet-blue), var(--clr-gradient-persion-blue));
+}
+
+.component__result-score {
+    font-size: 3rem;
+    color: var(--clr-white);
+    align-self: end;
+    justify-self: center;
+}
+
+.component__result-score--gray {
+    color: var(--clr-gradient-light-slate-blue);
+    font-size: 1rem;
+    justify-self: center;
+    align-items: center;
+}
+
+.component__result-comment {
+    color: var(--clr-white);
+    font-size: 1.35rem;
+}
+
+.component__result-description {
+    color: var(--clr-light-lavender);
+    font-size: 1rem;
+    font-size: 1rem;
+    padding-inline: 2rem;
+    padding-block-end: 1rem;
+    text-align: center
+}
+
+.component__summary {
+    display: grid;
+    gap: 1.5rem;
+    padding-inline: 2rem;
+    padding-block: 1rem;
+}
+
+.component__summary-title {
+    color: var(--clr-dark-gray-blue);
+    font-size: 1.2rem
+}
+
+.component__summary-list {
+    padding: 0;
+    display: grid;
+    gap: 1rem;
+}
+
+.component__summary-listItem {
+    display: flex;
+    flex-wrap: wrap;
+    padding-block:1rem;
+    padding-inline: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: .5rem;
+}
+
+.component__summary-listItem--light-red {
+    background: var(--clr-primary-light-red-transparent);
+}
+
+.component__summary-listItem--orangey-yellow {
+    background: var(--clr-primary-orangey-yellow-transparent);
+}
+
+.component__summary-listItem--green-teal {
+    background: var(--clr-primary-green-teal-transparent);
+}
+
+.component__summary-listItem--cobalt-blue {
+    background: var(--clr-primary-cobalt-blue-transparent);
+}
+
+.component__summary-listItem--light-red > div > .component__summary-name {
+    color: var(--clr-primary-light-red);
+}
+
+.component__summary-listItem--orangey-yellow > div > .component__summary-name {
+    color: var(--clr-primary-orangey-yellow);
+}
+
+.component__summary-listItem--green-teal > div > .component__summary-name {
+    color: var(--clr-primary-green-teal);
+}
+
+.component__summary-listItem--cobalt-blue > div > .component__summary-name {
+    color: var(--clr-primary-cobalt-blue);
+}
+
+
+.wrapper {
+    display: flex;
+    gap: .7rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.component__summary-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.component__summary-name{
+    font-size: 1rem;
+}
+
+.component__summary-score {
+    display: inline-flex;
+
+    gap: .4rem;
+    color: var(--clr-dark-gray-blue);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.component__summary-score--dark-gray {
+    color: hsl(300, 1%, 58%);
+}
+
+.component__summary-button {
+    background: var(--clr-dark-gray-blue);
+    border: none;
+    border-radius: 2.5rem;
+    padding: 1rem;
+    color: var(--clr-white);
+    transition-property: opacity, background;
+    transition-duration: 150ms;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+}
+
+.component__summary-button:is(:hover, :focus){
+    opacity: .75;
+}
+
+.component__summary-button:active{
+    background: linear-gradient(var(--clr-gradient-light-slate-blue), var(--clr-gradient-light-royal-blue));
+}
+
+
+@media(width>=628px){
+    body {
+        background: var(--clr-pale-blue);
+        display: grid;
+        place-content: center;
+    }
+    .component {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 628px;
+    }
+    .component__result {
+        border-radius: 1.5rem
+    }
+    .component__summary {
+        border-radius: .5rem 2rem 2rem 0;
+        box-shadow: 2px 0 20px 0 rgba(0,0,0,0.1);
+        position: relative;
+        left: -5px;
+        padding-block-end: 2rem
+    }
+
+    .component__summary-listItem {
+        padding-block: .75rem;
+    }
+
+    .component__summary-button {
+        padding: .75rem;
+    }
+}

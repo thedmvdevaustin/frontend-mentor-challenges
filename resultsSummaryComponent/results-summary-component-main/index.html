@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Results summary component</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="component">
+    <section class="component__result">
+      <h2 class="component__result-title">
+        Your Result
+      </h2>
+      <section class="component__result-score-container">
+        <h3 class="component__result-score">
+          76
+        </h3>
+        <span class="component__result-score--gray">
+          of 100
+        </span>
+      </section>
+      <h4 class="component__result-comment">
+        Great
+      </h4>
+      <p class="component__result-description">
+        You scored higher than 65% of the people who have taken these tests.
+      </p>
+    </section>
+    <section class="component__summary">
+      <h2 class="component__summary-title">
+        Summary
+      </h2>
+      <ul class="component__summary-list">
+        <li class="component__summary-listItem component__summary-listItem--light-red">
+          <div class="wrapper">
+            <img class="component__summary-icon" src="./assets/images/icon-reaction.svg" alt="reaction icon" />
+            <h5 class="component__summary-name">
+              Reaction
+            </h5>
+          </div>
+          <p class="component__summary-score">
+            80 
+            <span class="component__summary-score--dark-gray">
+              / 100
+            </span>
+          </p>
+        </li>
+        <li class="component__summary-listItem component__summary-listItem--orangey-yellow">
+          <div class="wrapper">
+            <img class="component__summary-icon" src="./assets/images/icon-memory.svg" alt="memory icon" />
+            <h5 class="component__summary-name">
+              Memory
+            </h5>
+          </div>
+          <p class="component__summary-score">
+            92 
+            <span class="component__summary-score--dark-gray">
+              / 100
+            </span>
+          </p>
+        </li>
+        <li class="component__summary-listItem component__summary-listItem--green-teal">
+          <div class="wrapper">
+            <img class="component__summary-icon" src="./assets/images/icon-verbal.svg" alt="verbal icon" />
+            <h5 class="component__summary-name">
+              Verbal
+            </h5>
+          </div>
+          <p class="component__summary-score">
+            61 
+            <span class="component__summary-score--dark-gray">
+              / 100
+            </span>
+          </p>
+        </li>
+        <li class="component__summary-listItem component__summary-listItem--cobalt-blue">
+          <div class="wrapper">
+            <img class="component__summary-icon" src="./assets/images/icon-visual.svg" alt="visual icon" />
+            <h5 class="component__summary-name">
+              Visual
+            </h5>
+          </div>
+          <p class="component__summary-score">
+            72 
+            <span class="component__summary-score--dark-gray">
+              / 100
+            </span>
+          </p>
+        </li>
+      </ul>
+      <button type="button" class="component__summary-button">
+        Continue
+      </button>
+    </section>
+  </main>
+</body>
+</html>
