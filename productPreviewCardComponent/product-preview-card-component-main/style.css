@@ -1,0 +1,191 @@
+/* CSS RESET  */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+  
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+  
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+  
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+    font: inherit;
+}
+  
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+  
+/* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+/* CUSTOM PROPERTIES  */
+:root {
+    /* COLORS  */
+        /* PRIMARY  */
+    --clr-dark-cyan: hsl(158, 36%, 37%);
+    --clr-cream: hsl(30, 38%, 92%);
+        /* NEUTRAL  */
+    --clr-very-dark-blue: hsl(212, 21%, 14%);
+    --clr-dark-grayish-blue: hsl(228, 12%, 48%);
+    --clr-white: hsl(0, 0%, 100%);
+    /* FONT SIZE  */
+    --fs-p: .875rem; /* 14px  */
+}
+
+/* CUSTOM FONTS  */
+/* montserrat-500 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./fonts/montserrat-v29-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+  /* montserrat-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/montserrat-v29-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* fraunces-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/fraunces-v31-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* GENERAL STYLES  */
+html, body {
+    height: 100%;
+}
+body {
+    padding-inline: .75rem;
+    padding-block: 1rem;
+    background: var(--clr-cream);
+    font-family: 'Montserrat';
+    display: grid;
+    place-content: center;
+}
+
+.card {
+    border-radius: .5rem;
+    background: var(--clr-white);
+}
+
+.card__img *  {
+    border-radius: .5rem .5rem 0 0
+}
+
+.card__info {
+    display: grid;
+    gap: .5rem;
+    padding: 1.5rem;
+}
+
+.card__type {
+    color: var(--clr-dark-grayish-blue);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: var(--fs-p);
+    font-weight: 500;
+}
+
+.card__name {
+    font-family: 'Fraunces', Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.card__description {
+    color: var(--clr-dark-grayish-blue);
+    font-size: 14px;
+    font-weight: 500;
+    padding-block: .5rem;
+}
+
+.card__cost {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card__current-cost {
+    font-size: 2rem;
+    font-family: 'Fraunces', Arial, Helvetica, sans-serif;
+    color: var(--clr-dark-cyan)
+}
+
+.card__original-cost {
+    color: var(--clr-dark-grayish-blue);
+    text-decoration: line-through;
+}
+
+.card__button {
+    background: var(--clr-dark-cyan);
+    border: none;
+    border-radius: .5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: .75rem;
+    padding-block: .75rem;
+    color: var(--clr-white);
+    font-weight: 700;
+    transition: opacity 150ms ease-in-out;
+}
+
+.card__button:is(:hover) {
+    opacity: .85;
+}
+
+.card__button:active {
+    background:hsla(158, 71%, 11%);
+}
+
+.card__cart-icon {
+    width: 20px;
+    height: 20px;
+}
+
+@media (width >= 37.5rem) {
+    body {
+        display: grid;
+        place-content: center;
+    }
+    .card {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        border-radius: .5rem;
+        max-width: 36.5675rem; /* 585px  */
+    }
+    
+}
+
