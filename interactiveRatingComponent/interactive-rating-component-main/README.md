@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution URL](https://github.com/thedmvdevaustin/frontend-mentor-challenges/tree/main/interactiveRatingComponent/interactive-rating-component-main)
+- Live Site URL: [live site URL](https://frontend-mentor-challenges-interactive-component.vercel.app/)
 
 ### Built with
 
