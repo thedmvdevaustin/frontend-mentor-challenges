@@ -1,0 +1,199 @@
+/* CSS RESET  */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+  
+body {
+    /* 4. Add accessible line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+  
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+  
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+    font: inherit;
+
+}
+  
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+  
+/* 9. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+/* CUSTOM PROPERTIES  */
+:root {
+    /* COLORS  */
+    --clr-orange: hsl(25, 97%, 53%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-light-grey: hsl(217, 12%, 63%);
+    --clr-dark-blue-700: hsl(213, 19%, 18%);
+    --clr-dark-blue-400: hsl(212, 16%, 19%);
+    --clr-very-dark-blue: hsl(216, 12%, 8%);
+    /* FONT SIZE  */
+    --fs-paragraph: 0.9375rem; /* 15px  */
+    --fs-review-btn: 0.8125; /* 13px  */
+}
+
+/* IMPORTED FONTS  */
+/* overpass-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/overpass-v16-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* overpass-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/overpass-v16-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* GENERAL STYLES  */
+
+body {
+    font-family: 'Overpass', Arial, Helvetica, sans-serif;
+    background-color: var(--clr-very-dark-blue);
+    height: 100svh;
+    display: grid;
+    place-items: center
+}
+
+button {
+    cursor: pointer;
+}
+
+/* RATING COMPONENT  */
+.rating-component {
+    width: 350px;
+    background-color: var(--clr-dark-blue-700);
+    border-radius: .7rem;
+    padding: 1.5rem 1rem 1.5rem 1.5rem;
+    display: grid;
+    gap: .9rem;
+}
+
+.rating-component__icon {
+    /* width: 17px;
+    height: 16px; */
+    width: 50px;
+    height: 50px;
+    background-color: var(--clr-dark-blue-400);
+    border-radius: 25px;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+}
+
+.rating-component__title {
+    color: var(--clr-white);
+}
+
+.rating-component__details {
+    color: var(--clr-light-grey);
+    font-size: var(--fs-paragraph);
+}
+
+.rating-component__ratings {
+    display: flex;
+    gap: 1.3rem;
+}
+
+.rating-component__btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 25px;
+    padding: .5rem;
+    background-color: var(--clr-dark-blue-400);
+    /* background-color: black; */
+    border: none;
+    color: var(--clr-light-grey);
+    padding-inline: 1rem;
+    font-size: var(--fs-review-btn);
+    
+}
+
+.rating-component__submit {
+    background-color: var(--clr-orange);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--clr-dark-blue-700);
+    border-radius: 50px;
+    border: none;
+    font-size: 13px;
+    font-weight: 900;
+    padding-block: .75rem;
+}
+
+/* ACTIVE STATES  */
+button:hover {
+    background-color: var(--clr-white);
+}
+
+.rating-component__submit:active {
+    background-color: hsla(0, 0%, 100%, 0.436);
+}
+
+.rating-component__btn:active{
+    background-color: var(--clr-orange);
+}
+
+/* THANK YOU COMPONENT  */
+.thankYou-component {
+    width: 350px;
+    background-color: var(--clr-dark-blue-700);
+    border-radius: .7rem;
+    padding: 2.3rem 1.5rem; 
+    display: grid;
+    justify-items: center;
+    gap: .9rem;
+    display: none;
+}
+
+.thankYou-component__img {
+    height: 108px;
+    width: 162px;
+}
+
+.thankYou-component__choice {
+    color: var(--clr-orange);
+    padding: .5rem 1.3rem;
+    border-radius: 50px;
+    background-color: var(--clr-dark-blue-400);
+    font-size: var(--fs-paragraph);
+}
+
+.thankYou-component__title {
+    color: var(--clr-white);
+    font-size: 1.5rem;
+}
+
+.thankYou-component__comment {
+    color: var(--clr-light-grey);
+    justify-self: center;
+    font-size: var(--fs-paragraph);
+    text-align: center
+}
