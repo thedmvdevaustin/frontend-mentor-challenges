@@ -1,0 +1,199 @@
+/* CSS RESET  */
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+  
+body {
+/* 4. Add accessible line-height */
+    line-height: 1.7;
+/* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+  
+/* 6. Improve media defaults */
+img {
+    display: block;
+    max-width: 100%;
+}
+  
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+  
+/* 9. Improve line wrapping */
+p {
+text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+/* CUSTOM PROPERTIES  */
+
+:root {
+    /* COLORS  */
+    --clr-soft-blue: hsl(215, 51%, 70%);
+    --clr-cyan: hsl(178, 100%, 50%);
+    --clr-very-dark-blue-900: hsl(217, 54%, 11%);
+    --clr-very-dark-blue-700: hsl(216, 50%, 16%);
+    --clr-very-dark-blue-400: hsl(215, 32%, 27%);
+    --clr-white: hsl(0, 0%, 100%);
+    /* FONT SIZES  */
+    --fs-p: 1.125rem; /* 18px  */
+}
+
+/* CUSTOM FONTS  */
+/* outfit-300 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300;
+    src: url('./fonts/outfit-v11-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+  /* outfit-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/outfit-v11-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+  /* outfit-600 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./fonts/outfit-v11-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+body {
+    height: 100svh;
+    display: grid;
+    place-items: center;
+    background-color: var(--clr-very-dark-blue-900);
+    margin-inline: 1rem;
+    font-family: 'Outfit', Arial, Helvetica, sans-serif
+}
+
+.card-component {
+    width: 350px;
+    background-color: var(--clr-very-dark-blue-700);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.card-component__nft {
+    display: grid;
+    gap: 1rem;
+    /* padding-block-start: 1.5rem; */
+}
+
+.card-component__nft-img-container {
+    position: relative;
+    border-radius: .5rem;
+    transition: background-color ease 150ms;
+}
+
+.card-component__nft-img-container:hover {
+    background-color: var(--clr-cyan);
+}
+
+.card-component__nft-img {
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: opacity ease 150ms;
+    position: relative;
+}
+
+.card-component__nft-img:hover {
+    opacity: 0.5;
+}
+
+.card-component__nft__view{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card-component__nft-img-container:hover .card-component__nft__view {
+    display: block;
+}
+
+.card-component__details {
+    display: grid;
+    gap: 1rem;
+}
+
+.card-component__details-title {
+    font-size: 1.35rem;
+    color: var(--clr-white);
+    transition: color ease 150ms;
+    cursor: pointer;
+}
+
+.card-component__details-description {
+    color: var(--clr-soft-blue);
+}
+
+.card-component__purchase-info {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--clr-very-dark-blue-400);
+    padding-block-end: 1rem;
+}
+
+.card-component__purchase-info__cost, .card-component__purchase-info__remaining-time {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.card-component__purchase-info__amount {
+    color: var(--clr-cyan);
+}
+
+.card-component__purchase-info__remaining-time__amount {
+    color: var(--clr-soft-blue)
+}
+
+.card-component__author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-component__author__img {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--clr-white);
+    border-radius: 15px;
+}
+
+.card-component__author__introduction {
+    color: var(--clr-soft-blue);
+}
+
+.card-component__author__name {
+    color: var(--clr-white);
+    transition: color ease 150ms;
+    cursor: pointer;
+}
+
+/* ACTIVE STATES  */
+:is(.card-component__details-title, .card-component__author__name):hover {
+    color: var(--clr-cyan);
+}

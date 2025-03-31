@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | NFT preview card component</title>
+</head>
+<body>
+  <article class="card-component">
+    <figure class="card-component__nft">
+      <div class="card-component__nft-img-container">
+        <img src="./images/image-equilibrium.jpg" alt="nft" class="card-component__nft-img" />
+        <img src="./images/icon-view.svg" alt="view" width="48" height="48" class="card-component__nft__view" />
+      </div>
+      <figcaption class="card-component__details">
+        <h3 class="card-component__details-title">
+          Equilibrium #3429
+        </h3>
+        <p class="card-component__details-description">
+          Our Equilibrium collection promotes balance and calm.
+        </p>
+      </figcaption>
+    </figure>
+    <section class="card-component__purchase-info">
+      <div class="card-component__purchase-info__cost">
+        <img src="./images/icon-ethereum.svg" alt="ethereum" class="card-component__purchase-info__cost-icon" width="11" height="18" />
+        <span class="card-component__purchase-info__amount">
+          0.041 ETH
+        </span>
+      </div>
+      <div class="card-component__purchase-info__remaining-time">
+        <img src="./images/icon-clock.svg" alt="clock" class="card-component__purchase-info__remaining-time__icon" width="17" height="17" />
+        <span class="card-component__purchase-info__remaining-time__amount">
+          3 days left
+        </span>
+      </div>
+    </section>
+    <footer class="card-component__author">
+      <img src="./images/image-avatar.png" alt="author" class="card-component__author__img" />
+      <p class="card-component__author__introduction">
+        Creation of 
+        <span class="card-component__author__name">
+          Jules Wyvern
+        </span>
+      </p>
+    </footer>
+  </article>  
+</body>
+</html>
