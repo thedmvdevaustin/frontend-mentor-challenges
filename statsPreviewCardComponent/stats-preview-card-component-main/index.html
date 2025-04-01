@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Stats preview card component</title>
+</head>
+<body>
+  <main class="stats-preview">
+    <div class="stats-preview__images-container">
+      <picture class="stats-preview__images">
+        <source srcset="./images/image-header-desktop.jpg" media="(min-width: 700px)" class="stats-preview__large-img" />
+        <img src="./images/image-header-mobile.jpg" alt="business" class="stats-preview__small-img" />
+      </picture>
+    </div>
+    <div class="wrapper">
+      <h1 class="stats-preview__title">
+        Get <b class="stats-preview__title-insights">insights </b>that help your business grow.
+      </h1>
+      <p class="stats-preview__details">
+        Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+        experience, and overall efficiency.
+      </p>
+      <section class="stats-preview__stats">
+        <div class="stats-preview__stats__accolade">
+          <span class="stats-preview__stats__accolade-number">10k+</span>
+          <span class="stats-preview__stats__accolade-name">companies</span>
+        </div>
+        <div class="stats-preview__stats__accolade">
+          <span class="stats-preview__stats__accolade-number">314</span>
+          <span class="stats-preview__stats__accolade-name">templates</span>
+        </div>
+        <div class="stats-preview__stats__accolade">
+          <span class="stats-preview__stats__accolade-number">12M+</span>
+          <span class="stats-preview__stats__accolade-name">queries</span>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

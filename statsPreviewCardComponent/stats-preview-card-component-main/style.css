@@ -1,0 +1,209 @@
+/* CSS RESET  */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+  
+body {
+/* 4. Add accessible line-height */
+    line-height: 1.5;
+/* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+  
+/* 6. Improve media defaults */
+img, picture {
+    display: block;
+    max-width: 100%;
+}
+  
+/* 8. Avoid text overflows */
+p, h1 {
+    overflow-wrap: break-word;
+}
+
+/* 
+## Colors
+
+### Primary
+
+- Very dark blue (main background): hsl(233, 47%, 7%)
+- Dark desaturated blue (card background): hsl(244, 38%, 16%)
+- Soft violet (accent): hsl(277, 64%, 61%)
+
+### Neutral
+
+- White (main heading, stats): hsl(0, 0%, 100%)
+- Slightly transparent white (main paragraph): hsla(0, 0%, 100%, 0.75)
+- Slightly transparent white (stat headings): hsla(0, 0%, 100%, 0.6)
+
+/* CUSTOMM PROPERTIES  */
+
+:root {
+    /* COLORS  */
+    --clr-very-dark-blue: hsl(233, 47%, 7%);
+    --clr-dark-desaturated-blue: hsl(244, 38%, 16%);
+    --clr-soft-violet: hsl(277, 64%, 61%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-slightly-transparent-white-700: hsla(0, 0%, 100%, 0.75);
+    --clr-slightly-transparent-white-600: hsla(0, 0%, 100%, 0.6);
+    /* FONT SIZE  */
+    --fs-p: .9375rem; /* 15px  */
+}
+
+/* CUSTOM FONTS  */
+
+/* inter-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/inter-v18-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/inter-v18-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* lexend-deca-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lexend Deca';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/lexend-deca-v22-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* GENERAL STYLES  */
+body {
+    background-color: var(--clr-very-dark-blue);
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    margin: 2rem 1rem;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+.stats-preview {
+    background-color: var(--clr-dark-desaturated-blue);
+    display: grid;
+    border-radius: 0 0 .35rem .35rem;
+    max-width: 345px;
+}
+
+.stats-preview__images-container {
+    background-color: var(--clr-soft-violet);
+    border-radius: .35rem .35rem 0 0;
+    overflow: hidden;
+}
+
+.stats-preview__images {
+    mix-blend-mode: multiply;
+    height: 100%;
+    
+}
+
+.stats-preview__small-img {
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper {
+    padding-inline: 1.4rem;
+    padding-block: 2.3rem;
+    display: grid;
+    gap: 1.25rem;
+}
+
+.stats-preview__title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--clr-white);
+    line-height: 1.12;
+}
+
+.stats-preview__title-insights {
+    color: var(--clr-soft-violet)
+}
+
+.stats-preview__details {
+    font-size: var(--fs-p);
+    color: var(--clr-slightly-transparent-white-700);
+    text-align: center;
+    padding-inline: 1.3rem;
+}
+
+.stats-preview__stats {
+    padding-block-start: 1rem;
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+}
+
+.stats-preview__stats__accolade {
+    display: grid;
+    justify-items: center;
+}
+
+.stats-preview__stats__accolade-number{
+    color: var(--clr-white);
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.stats-preview__stats__accolade-name {
+    color: var(--clr-slightly-transparent-white-600);
+    text-transform: uppercase;
+    font-size: .7rem;
+    letter-spacing: 2px;
+}
+
+@media (width >= 700px) {
+    .stats-preview {
+        max-width: 900px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stats-preview__images-container {
+        grid-row-start: 2 / 3
+    }
+    
+    .wrapper {
+        padding: 3rem;
+        grid-row: 1 / 2;
+    }
+    
+    .stats-preview__stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .stats-preview__title {
+        text-align: revert;
+        text-wrap: balance;
+    }
+    
+    .stats-preview__details {
+        text-align: revert;
+        padding-inline: 0;
+    }
+    .stats-preview__stats {
+        justify-items: start;
+    }
+    
+    .stats-preview__stats__accolade {
+        justify-items: start;
+    }
+}
+
+/* @media (width >= 750px) { 
+
+
+} */
