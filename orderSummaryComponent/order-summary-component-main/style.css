@@ -1,0 +1,198 @@
+/* CSS RESET  */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+  
+body {
+/* 4. Add accessible line-height */
+    line-height: 1.5;
+/* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+  
+/* 6. Improve media defaults */
+img {
+    display: block;
+    max-width: 100%;
+}
+  
+/* 7. Inherit fonts for form controls */
+button{
+    font: inherit;
+}
+  
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+  
+/* 9. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+/* CUSTOM PROPERTIES  */
+
+:root {
+    /* COLORS  */
+    --clr-pale-blue: hsl(225, 100%, 94%);
+    --clr-bright-blue: hsl(245, 75%, 52%);
+    --clr-very-pale-blue: hsl(225, 100%, 98%);
+    --clr-desaturated-blue: hsl(224, 23%, 55%);
+    --clr-dark-blue: hsl(223, 47%, 23%);
+    /* FONT SIZE  */
+    --fs-p: 1rem; /* 16px  */
+}
+
+/* CUSTOM FONTS  */
+
+/* red-hat-display-500 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./fonts/red-hat-display-v20-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* red-hat-display-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/red-hat-display-v20-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* red-hat-display-900 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 900;
+    src: url('./fonts/red-hat-display-v20-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* GENERAL STYLES  */
+
+body {
+    font-family: 'Red Hat Display', Arial, Helvetica, sans-serif;
+    height: 100svh;
+    display: grid;
+    place-items: center;
+    margin: 1.5rem 1rem;
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--clr-pale-blue)
+}
+
+
+.order-summary {
+    max-width: 350px;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 9px 0 rgba(0,0,0,0.1);
+    display: grid;
+    gap: 1.7rem;
+    background-color: white;
+}
+
+.wrapper {
+    padding-inline: 1.5rem;
+    padding-block-end: 1.5rem;
+    display: grid;
+    gap: 1.3rem;
+}
+
+.order-summary__illustration {
+    border-radius: 1.2rem 1.2rem 0 0;
+    height: 175px;
+}
+
+.order-summary__title {
+    justify-self: center;
+    font-weight: 900;
+    color: var(--clr-dark-blue);
+}
+
+.order-summary__comment {
+    text-align: center;
+    padding-inline: .75rem;
+    color: var(--clr-desaturated-blue);
+    font-weight: 700;
+}
+
+.order-summary__plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .9rem;
+    border-radius: .75rem;
+    background-color: var(--clr-very-pale-blue);
+}
+
+.order-summary__plan-type-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.order-summary__plan-type {
+    display: grid;
+}
+
+.order-summary__plan-type__name {
+    font-size: .9rem;
+    font-weight: 900;
+    color: var(--clr-dark-blue)
+}
+
+.order-summary__plan-type__cost {
+    font-size: .9rem;
+    color: var(--clr-desaturated-blue);
+    font-weight: 700;
+}
+
+.order-summary__plan-change {
+    font-size: .9rem;
+    color: var(--clr-bright-blue);
+    font-weight: 900;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+.order-summary__payment-btn {
+    background-color: var(--clr-bright-blue);
+    border: none;
+    border-radius: .65rem;
+    color: var(--clr-very-pale-blue);
+    font-weight: 700;
+    cursor: pointer;
+    padding-block: .75rem;
+}
+
+.order-summary__cancel-btn{
+    border: none;
+    background: none;
+    font-weight: 900;
+    color: var(--clr-desaturated-blue);
+    cursor: pointer;
+    width: max-content;
+    justify-self: center;
+}
+
+/* ACTIVE STATES  */
+:is(.order-summary__plan-change, .order-summary__payment-btn):hover{
+    opacity: .5;
+    text-decoration: none;
+}
+
+.order-summary__cancel-btn:hover {
+    color: var(--clr-dark-blue)
+}
