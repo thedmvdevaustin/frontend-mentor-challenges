@@ -1,0 +1,182 @@
+/* CSS RESET  */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+  
+body {
+/* 3. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* CUSTOM PROPERTIES  */
+:root {
+    /* COLORS  */
+    --clr-dark-cyan: hsl(185, 75%, 39%);
+    --clr-very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --clr-dark-grayish-blue: hsl(227, 10%, 46%);
+    --clr-dark-gray: hsl(0, 0%, 59%);
+    /* FONT SIZE  */
+    --fs-name-stats: 1.125rem; /* 18px  */
+}
+
+/* CUSTOM FONTS  */
+/* kumbh-sans-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/kumbh-sans-v22-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* kumbh-sans-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Kumbh Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/kumbh-sans-v22-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* GENERAL STYLES  */
+body {
+    height: 100svh;
+    display: grid;
+    place-items: center;
+    background: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    background-color: var(--clr-dark-cyan);
+    background-position: -90vw -50vh, 50vw 50vh;
+    /* background-position: bottom 250px right 200px, top 250px left 150px; */
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-attachment: fixed, fixed;
+    font-family: 'Kumbh Sans', Arial, Helvetica, sans-serif;
+}
+
+.profile {
+    margin-inline: 1rem;
+    margin-block: 2rem;
+    width: 330px;
+    background-image: url(./images/bg-pattern-card.svg);
+    background-repeat: no-repeat;
+    background-color: white;
+    border-radius: .5rem;
+    /* display: none; */
+}
+
+.profile__details {
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    padding: 6rem 3rem 1.5rem 3rem;
+    border-bottom: 1px solid var(--clr-dark-gray);
+}
+
+.profile__img {
+    border-radius: 50px;
+    border: 5px solid white;
+}
+
+.profile__contact {
+    display: grid;
+    gap: .5rem;
+}
+
+.profile--flex {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.profile__name {
+    font-size: var(--fs-name-stats);
+    color: var(--clr-very-dark-desaturated-blue);
+    font-weight: 700;
+}
+
+.profile__age {
+    color: var(--clr-dark-gray);
+}
+
+.profile__location {
+    justify-self: center;
+    color: var(--clr-dark-gray);
+    font-size: .9rem;
+}
+
+
+
+.profile__stats {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 3rem;
+    padding-block: 1.5rem;
+}
+
+.profile__grid {
+    display: grid;
+    gap: .5rem;
+    justify-items: center
+}
+
+.profile__count {
+    color: var(--clr-very-dark-desaturated-blue)
+}
+
+.profile__type {
+    font-size: .9rem;
+    color: var(--clr-dark-gray)
+}
+
+/* INCOMPLETE BACKGROUND IMAGE FOR BODY  */
+/* only method I know of is to use media queries to make the background
+responsive which means making sure it looks good from 375px all the way to 1440px */
+
+@media (min-width: 522px) and (max-width: 699px) {
+    body {
+        background-position: -70vw -50vh, 50vw 50vh;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 800px) {
+    body {
+        background-position: -50vw -60vh, 50vw 50vh;
+    }
+}
+@media (min-width: 801px) and (max-width: 1000px) {
+    body {
+        background-position: -55vw -50vh, 50vw 50vh;
+    }
+}
+@media (min-width: 1001px) and (max-width: 1136px) {
+    body {
+        background-position: -50vw -80vh, 50vw 50vh;
+    }
+}
+
+@media (min-width: 1137px) and (max-width: 1237px) {
+    body {
+        background-position: -35vw -115vh, 50vw 20vh;
+    }
+}
+@media (min-width: 1238px) and (max-width: 1338px) {
+    body {
+        background-position: -40vw -120vh, 50vw 20vh;
+    }
+}
+
+@media (min-width: 1339px) and (max-width: 1439px) {
+    body {
+        background-position: -45vw -125vh, 50vw 20vh;
+    }
+}
+@media (width >= 1440px) {
+    body {
+        background-position: -50vw -130vh, 50vw 20vh;
+    }
+}
