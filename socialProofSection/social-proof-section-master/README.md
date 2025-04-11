@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/thedmvdevaustin/frontend-mentor-challenges/tree/main/socialProofSection/social-proof-section-master](https://github.com/thedmvdevaustin/frontend-mentor-challenges/tree/main/socialProofSection/social-proof-section-master)
+- Live Site URL: [https://dmvdevaustin-social-proof-section.netlify.app/](https://dmvdevaustin-social-proof-section.netlify.app/)
 
 
 ### Built with
