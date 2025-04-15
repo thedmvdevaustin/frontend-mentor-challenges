@@ -1,0 +1,254 @@
+/* CSS RESET  */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+  
+body {
+/* 4. Add accessible line-height */
+    line-height: 1.5;
+/* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+  
+/* 6. Improve media defaults */
+img, picture {
+    display: block;
+    max-width: 100%;
+}
+  
+/* 7. Inherit fonts for form controls */
+button{
+    font: inherit;
+}
+  
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* ## Colors
+
+- Very Dark Grayish Blue: hsl(217, 19%, 35%)
+- Desaturated Dark Blue: hsl(214, 17%, 51%)
+- Grayish Blue: hsl(212, 23%, 69%)
+- Light Grayish Blue: hsl(210, 46%, 95%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 13px
+
+### Headings
+
+- Family: [Manrope](https://fonts.google.com/specimen/Manrope)
+- Weights: 500, 700 */
+
+/* CUSTOM PROPERTIES  */
+:root {
+    /* COLORS  */
+    --clr-very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --clr-desaturated-dark-blue: hsl(214, 17%, 51%);
+    --clr-grayish-blue: hsl(212, 23%, 69%);
+    --clr-light-grayish-blue: hsl(210, 46%, 95%);
+    /* FONT SIZE  */
+    --fs-p: .8125rem; /* 13px  */
+}
+
+/* CUSTOM FONTS  */
+/* manrope-500 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./fonts/manrope-v15-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* manrope-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/manrope-v15-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* UTILITIES  */
+.component--padding {
+    padding-inline: 2.2rem;
+}
+
+/* GENERAL STYLES  */
+body {
+    font-family: 'Manrope', Arial, Helvetica, sans-serif;
+    height: 100svh;
+    display: grid;
+    place-items: center;
+    background: var(--clr-light-grayish-blue);
+}
+
+.component {
+    margin: 4rem 1.5rem;
+    border-radius: .5rem;
+    display: grid;
+    gap: 2.2rem;
+    background: white;
+    max-width: 360px;
+}
+
+.img-container {
+    height: 262px;
+    overflow: hidden;
+}
+
+.component__img {
+    border-radius: .5rem .5rem 0 0;
+    height: 120%;
+}
+
+.component__details {
+    display: grid;
+    gap: 1rem;
+}
+
+.component__title {
+    color: var(--clr-very-dark-grayish-blue);
+    font-size: 1rem;
+}
+
+.component__pitch {
+    font-size: var(--fs-p);
+    color: var(--clr-desaturated-dark-blue);
+    font-weight: 500;
+}
+
+.component__contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1rem;
+}
+
+.flex {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.component__pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.component__name {
+    font-size: 12px;
+    color: var(--clr-very-dark-grayish-blue);
+    font-weight: 700;
+}
+
+.component__date {
+    font-size: 12px;
+    color: var(--clr-grayish-blue);
+    font-weight: 500;
+}
+
+.component__share-btn {
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--clr-light-grayish-blue)
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    display: none;
+
+}
+
+.links > span {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--clr-grayish-blue);
+    font-size: var(--fs-p)
+}
+
+.component__contact--bg-dark-grayish-blue {
+    background: var(--clr-very-dark-grayish-blue);
+}
+
+.share-btn--bg-dark-blue {
+    background-color: var(--clr-desaturated-dark-blue);
+}
+
+.share-btn--clr-white {
+    fill: white;
+}
+
+@media (width >= 900px) {
+    #dialog[open] {
+        display: flex;
+        background-color: var(--clr-very-dark-grayish-blue);
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: .5rem;
+        position: absolute;
+        bottom: 100px;
+        transform: translateX(243%);
+        box-shadow: 0px 2px 5px 0px var(--clr-very-dark-grayish-blue)
+    }
+
+    #dialog[open]::after {
+        content: "";
+        position: absolute;
+        border: 13px solid transparent;
+        border-top: 13px solid var(--clr-very-dark-grayish-blue);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        bottom: -38px;
+    }
+
+    .component{
+        grid-template-columns: 40% 60%;
+        gap: 0;
+        max-width: 750px;
+        position: relative;
+    }
+
+    .img-container {
+        height: auto;
+    }
+
+    .component__img {
+        width: 123%;
+        max-width: revert;
+        height: 100%;
+    }
+
+    .component__details {
+        align-content: center;
+        gap: .75rem;
+    }
+    
+    .component__title {
+        font-size: 1.3rem;
+    }
+
+    .component__contact {
+        padding-block: .5rem;
+    }
+
+}
+
