@@ -1,0 +1,295 @@
+/* CSS RESET  */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+  
+  body {
+/* 4. Add accessible line-height */
+    line-height: 1.5;
+/* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+  
+/* 6. Improve media defaults */
+img, picture {
+    display: block;
+    max-width: 100%;
+}
+  
+/* 7. Inherit fonts for form controls */
+input, button {
+font: inherit;
+  }
+  
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+  
+/* 9. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+/* 
+## Colors
+
+### Primary
+
+- Desaturated Red: hsl(0, 36%, 70%)
+- Soft Red: hsl(0, 93%, 68%)
+
+### Neutral
+
+- Dark Grayish Red: hsl(0, 6%, 24%)
+
+### Gradients
+
+- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 16px
+
+### Font
+
+- Family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)
+- Weights: 300, 400, 600 */
+
+/* CUSTOM PROPERTIES  */
+:root {
+    /* COLORS  */
+    --clr-desaturated-red: hsl(0, 36%, 70%);
+    --clr-soft-red: hsl(0, 93%, 68%);
+    --clr-dark-grayish-red: hsl(0, 6%, 24%);
+    /* GRADIENTS  */
+    --linear-grad-white: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    --linear-grad-light-red: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    /* FONT SIZE  */
+    --fs-p: 1rem;
+}
+
+/* CUSTOM FONTS  */
+/* josefin-sans-300 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: url('./fonts/josefin-sans-v32-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* josefin-sans-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/josefin-sans-v32-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* josefin-sans-600 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./fonts/josefin-sans-v32-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* ULTILITIES  */
+.container--padding {
+    padding-inline: 2rem;
+}
+
+/* GENERAL STYLES  */
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+    background: var(--linear-grad-white);
+}
+
+.container {
+    display: grid;
+    gap: 2rem;
+    height: 100%;
+    max-height: 100%;
+}
+
+.icon-container {
+    padding-block-start: 2rem;
+}
+
+picture {
+    justify-self: center;
+    max-height: 100%;
+}
+
+picture * {
+    max-width: 100%;
+    height: 100%;
+}
+
+main {
+    padding-block: 2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+h1 {
+    font-size: 2.75rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    line-height: 1;
+    color: var(--clr-dark-grayish-red)
+}
+
+b {
+    font-weight: 300;
+    color: var(--clr-desaturated-red)
+}
+
+p {
+    color: var(--clr-desaturated-red);
+    text-align: center;
+    font-size: .875rem; /* 14px  */
+}
+
+.input-container {
+    margin-top: 1rem;
+    display: flex;
+    position: relative;
+}
+
+input {
+    width: 100%;
+    padding: .5rem 0 .5rem 1.5rem;
+    border-radius: 30px;
+    border: 1px solid var(--clr-desaturated-red);
+    background-color: transparent;
+    color: var(--clr-desaturated-red);
+}
+
+input::placeholder {
+    font-size: .9rem;
+    color: var(--clr-desaturated-red);
+    opacity: .5;
+}
+
+button {
+    padding-inline: 1.5rem;
+    border-radius: 30px;
+    border: none;
+    background: var(--linear-grad-light-red);
+    position: absolute;
+    height: 100%;
+    right: 0;
+    box-shadow: 5px 10px 30px -5px var(--clr-desaturated-red);
+}
+
+.invalidation-message {
+    position: absolute;
+    left: 25px;
+    bottom: -30px;
+    color: var(--clr-soft-red);
+    display: none;
+}
+
+.error {
+    position: absolute;
+    right: 70px;
+    top: 10px;
+    color: var(--clr-desaturated-red);
+    display: none;
+}
+
+@media (width >= 1000px) {
+    /* UTILLITIES  */
+    .container--padding {
+        padding-inline: 13rem;
+    }
+
+    /* GENERAL STYLES  */
+    
+    body {
+        background: url(./images/bg-pattern-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .container {
+        grid-template-columns: 60% 40%;
+        gap: 0;
+    }
+
+    .icon-container {
+        padding-block-start: 5rem;
+    }
+
+    .icon-container > img {
+        width: 158px;
+        height: 33px;
+    }
+
+    picture {
+        grid-row: 1 / 3;
+        grid-column: 2 / 3;
+    }
+
+    main {
+        place-self: start;
+        /* max-width: 375px; */
+        padding-block: 0;
+
+    }
+
+    h1 {
+        font-size: 4rem;
+        text-align: start;
+        letter-spacing: 15px;
+        line-height: 1.12;
+    }
+
+    p {
+        text-align: start;
+        font-size: 1rem;
+    }
+
+    input {
+        padding: 1rem 0 1rem 1.5rem;
+        background: transparent;
+    }
+
+    input::placeholder {
+        font-size: 1rem;
+    }
+
+    button {
+        padding-inline: 3rem;
+    }
+
+    .invalidation-message {
+        left: 25px;
+        bottom: -30px;
+    }
+    
+    .error {
+        right: 120px;
+        top: 20px;
+    }
+}
