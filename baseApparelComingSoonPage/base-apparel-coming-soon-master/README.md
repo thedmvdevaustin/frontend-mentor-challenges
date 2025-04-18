@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/thedmvdevaustin/frontend-mentor-challenges/tree/main/baseApparelComingSoonPage/base-apparel-coming-soon-master](https://github.com/thedmvdevaustin/frontend-mentor-challenges/tree/main/baseApparelComingSoonPage/base-apparel-coming-soon-master)
+- Live Site URL: [https://dmvdevaustin-coming-soon.netlify.app/](https://dmvdevaustin-coming-soon.netlify.app/)
 
 ### Built with
 
