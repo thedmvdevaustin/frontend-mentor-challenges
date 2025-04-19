@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/thedmvdevaustin/frontend-mentor-challenges/tree/main/introComponentWithSignUpForm/intro-component-with-signup-form-master](https://github.com/thedmvdevaustin/frontend-mentor-challenges/tree/main/introComponentWithSignUpForm/intro-component-with-signup-form-master)
+- Live Site URL: [https://dmvdevaustin-component-with-signup.netlify.app/](https://dmvdevaustin-component-with-signup.netlify.app/)
 
 
 ### Built with
