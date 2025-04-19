@@ -1,0 +1,264 @@
+/* CSS RESET  */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+  
+body {
+/* 4. Add accessible line-height */
+    line-height: 1.5;
+/* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+  
+/* 7. Inherit fonts for form controls */
+input, button {
+    font: inherit;
+}
+  
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* 
+## Colors
+
+### Primary
+
+- Red: hsl(0, 100%, 74%) 
+- Green: hsl(154, 59%, 51%)
+
+### Accent
+
+- Blue: hsl(248, 32%, 49%)
+
+### Neutral
+
+- Dark Blue: hsl(249, 10%, 26%) 
+- Grayish Blue: hsl(246, 25%, 77%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 16px
+
+### Font
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400, 500, 600, 700 */
+
+/* CUSTOM PROPERTIES  */
+:root {
+    /* COLORS  */
+    --clr-red: hsl(0, 100%, 74%);
+    --clr-green: hsl(154, 59%, 51%);
+    --clr-blue: hsl(248, 32%, 49%);
+    --clr-dark-blue: hsl(249,  10%, 26%);
+    --clr-grayish-blue: hsla(246, 25%, 77%, .7);
+    --clr-white: hsl(0, 0%, 100%);
+    /* FONT SIZE  */
+    --fs-p: 1rem; /* 16px  */
+}
+
+/* CUSTOM FONTS  */
+/* poppins-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/poppins-v22-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-500 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./fonts/poppins-v22-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-600 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./fonts/poppins-v22-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/poppins-v22-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* GENERAL STYLES  */
+
+body {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    background: url(./images/bg-intro-mobile.png);
+    background-color: var(--clr-red);
+    display: grid;
+    place-items: center;
+}
+
+.component {
+    display: grid;
+    gap: 3rem;
+    padding-inline: 1.5rem;
+    margin-block: 5rem 3rem;
+    max-width: 375px;
+}
+
+.component__main {
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+}
+
+.component__title {
+    color: var(--clr-white);
+    text-wrap: balance;
+}
+
+.component__description {
+    color: hsl(0, 0%, 100%, .8);
+    font-weight: 500;
+}
+
+.component__ad {
+    display: grid;
+    gap: 1rem;
+}
+
+.component__discount {
+    color: hsl(0, 0%, 100%, .8);
+    font-size: .9rem;
+    font-weight: 400;
+    text-align: center;
+    background-color: var(--clr-blue);
+    padding-block: 1.25rem;
+    border-radius: .5rem;
+    text-wrap: balance;
+    box-shadow: 0px 7px 0px 0px hsla(0, 0%, 0%, .2);
+    padding-inline: 1.2rem;
+}
+
+strong {
+    color: var(--clr-white);
+    font-weight: 600;
+}
+
+form {
+    background-color: var(--clr-white);
+    padding: 1.5rem;
+    display: grid;
+    gap: 1rem;
+    border-radius: .65rem;
+    box-shadow: 0px 7px 0px 0px hsla(0, 0%, 0%, .2);
+}
+
+.input-container {
+    display: grid;
+    gap: .5rem;
+    position: relative;
+}
+
+.component__error {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    display: none;
+}
+
+.component__input {
+    padding: 1rem 0 1rem 1rem;
+    font-size: .85rem;
+    font-weight: 600;
+    border: 1px solid hsla(300, 2%, 80%, 0.8);
+    border-radius: .35rem;
+}
+
+.component__error-message {
+    color: var(--clr-red);
+    text-align: end;
+    font-size: .65rem;
+    font-style: oblique;
+    font-weight: 500;
+    opacity: .8;
+    display: none;
+}
+
+.component__btn {
+    text-transform: uppercase;
+    padding-block: .85rem;
+    background-color: var(--clr-green);
+    color: var(--clr-white);
+    border: none;
+    border-radius: .25rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition-property: opacity transform;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+    box-shadow: 0px 3px 0px 0px hsla(154, 55%, 46%, 1);
+}
+
+.component__btn:hover {
+    filter:brightness(120%);
+}
+
+.component__btn:active {
+    transform: scale(.9);
+}
+
+.component__form-message {
+    font-size: .65rem;
+    color: var(--clr-grayish-blue);
+    text-align: center;
+    padding-inline: 1.5rem;
+    font-weight: 500;
+    line-height: 2;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-red);
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity ease-in-out 250ms;
+}
+
+a:hover {
+    filter: brightness(120%);
+}
+
+@media (width >= 768px) {
+    .component {
+        max-width: revert;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1090px;
+    }
+
+    .component__main {
+        text-align: start;
+        place-content: center;
+    }
+
+    .component__title {
+        font-size: 3rem;
+    }
+
+    .component__input {
+        padding-left: 2rem;
+    }
+}
