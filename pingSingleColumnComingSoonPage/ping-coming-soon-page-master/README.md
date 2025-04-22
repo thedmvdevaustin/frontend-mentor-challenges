@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/thedmvdevaustin/frontend-mentor-challenges/tree/main/pingSingleColumnComingSoonPage/ping-coming-soon-page-master](https://github.com/thedmvdevaustin/frontend-mentor-challenges/tree/main/pingSingleColumnComingSoonPage/ping-coming-soon-page-master)
+- Live Site URL: [https://dmvdevaustin-single-ping-component.netlify.app/](https://dmvdevaustin-single-ping-component.netlify.app/)
 
 ### Built with
 
@@ -49,4 +49,4 @@ Users should be able to:
 
 - Frontend Mentor - [@thedmvdevaustin](https://www.frontendmentor.io/profile/thedmvdevaustin)
 - Twitter - [@thedmvdevaustin](https://www.twitter.com/thedmvdevaustin)
-- LinkedIn - [@thedmvdevaustin](https://www.linkedIn.com/thedmvdevaustin)
+- LinkedIn - [@thedmvdevaustin](https://www.linkedin.com/in/thedmvdevaustin/)
