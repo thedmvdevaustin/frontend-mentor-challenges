@@ -1,0 +1,401 @@
+/* CSS RESET  */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+  
+body {
+/* 4. Add accessible line-height */
+    line-height: 1.5;
+/* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+  
+/* 6. Improve media defaults */
+img {
+    display: block;
+    max-width: 100%;
+}
+  
+/* 7. Inherit fonts for form controls */
+input, button {
+    font: inherit;
+}
+  
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* ## Colors
+
+### Primary
+
+- Blue: hsl(223, 87%, 63%)
+
+### Secondary
+
+- Pale Blue: hsl(223, 100%, 88%)
+- Light Red: hsl(354, 100%, 66%)
+
+### Neutral
+
+- Gray: hsl(0, 0%, 59%)
+- Very Dark Blue: hsl(209, 33%, 12%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 20px
+
+### Fonts
+
+- Family: [Libre Franklin](https://fonts.google.com/specimen/Libre+Franklin)
+- Weights: 300, 600, 700 */
+
+/* CUSTOM PROPERTIES  */
+:root {
+    /* COLORS  */
+    --clr-blue: hsl(223, 87%, 63%);
+    --clr-pale-blue: hsl(223, 100%, 88%);
+    --clr-light-red: hsl(354, 100%, 66%);
+    --clr-gray: hsl(0, 0%, 59%);
+    --clr-very-dark-blue: hsl(209, 33%, 12%);
+    /* FONT SIZE  */
+    --fs-p: 1.25rem; /* 20px  */
+}
+
+/* CUSTOM FONTS  */
+/* libre-franklin-300 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Libre Franklin';
+    font-style: normal;
+    font-weight: 300;
+    src: url('./fonts/libre-franklin-v18-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* libre-franklin-600 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Libre Franklin';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./fonts/libre-franklin-v18-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* libre-franklin-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Libre Franklin';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/libre-franklin-v18-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* GENERAL STYLES  */
+body {
+    font-family: 'Libre Franklin', Arial, Helvetica, sans-serif;
+    height: 100svh;
+}
+
+.component {
+    padding-inline: 2.5rem;
+    margin-block-start: 4rem;
+    display: grid;
+    gap: 2rem;
+    max-width: 375px;
+    justify-self: center;
+}
+
+.component__logo {
+    width: 60px;
+    height: 17px;
+    justify-self: center;
+}
+
+.component__grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.component__title {
+    justify-self: center;   
+}
+
+strong {
+    color: var(--clr-gray);
+    font-weight: 400;
+}
+
+.component__description {
+    font-size: .8rem;
+    justify-self: center;
+}
+
+.component__form {
+    display: grid;
+    gap: .5rem;
+    width: 90%;
+    justify-self: center;
+    padding-block: 1rem;
+}
+
+.input-container {
+    display: grid;
+    gap: .25rem;
+}
+
+.component__input {
+    padding-block: .5rem;
+    padding-inline-start: 2rem;
+    font-size: .8rem;
+    border-radius: 20px;
+    border: 1px solid var(--clr-blue);
+    width: 100%;
+}
+
+.component__input::placeholder {
+    color: var(--clr-pale-blue);
+}
+
+.component__btn {
+    padding-block: .5rem;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--clr-blue);
+    color: white;
+    font-size: .8rem;
+    font-weight: 600;
+    box-shadow: 0px 5px 10px 0px var(--clr-pale-blue);
+    cursor: pointer;
+    transition-property: filter, transform;
+    transition-duration: 150ms;
+    transition-timing-function: ease-in-out;
+    height: min-content;
+}
+
+.component__btn:hover {
+    filter:brightness(120%)
+}
+
+.component__btn:active {
+    transform: scale(.9);
+}
+
+.component__img {
+    padding-block: 1rem 3.5rem;
+}
+
+.component__footer {
+    display: grid;
+    gap: 1rem;
+    padding-block-end: 1.5rem;
+}
+
+.component__socials {
+    justify-self: center;
+    display: flex;
+    gap: 1rem;
+}
+
+.fa-brands {
+    color: var(--clr-blue);
+    border: 1px solid var(--clr-pale-blue);
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition-property: background-color, color, transform;
+    transition-duration: 150ms;
+    transition-timing-function: ease-in-out;
+}
+
+.fa-brands:hover {
+    background-color: var(--clr-blue);
+    color: white;
+}
+
+.fa-brands:active {
+    transform: scale(.9)
+}
+
+.fa-brands:nth-child(3) {
+    font-size: 1rem;
+}
+
+.component__copyright {
+    justify-self: center;
+    font-size: .7rem;
+    color: var(--clr-gray);
+}
+
+/* ERROR MESSAGE  */
+.component__error-message {
+    display: none;
+    font-size: .6rem;
+    justify-self: center;
+    color: var(--clr-light-red);
+}
+
+@media (width >= 750px) {
+    .component {
+        margin-block-start: 8rem;
+        padding-inline: 4rem;
+        gap: 4rem;
+        max-width: revert;
+    }
+
+    .component__logo {
+        width: 102px;
+        height: 32px;
+    }
+
+    .component__grid {
+        gap: 2rem;
+    }
+    
+    .component__title {
+        justify-self: center;
+        font-size: 2.5rem;  
+    }
+    
+    .component__description {
+        font-size: 1.5rem;
+    }
+    
+    .component__form {
+        padding-block-start: 2rem;
+        gap: 1rem;
+        width: 90%;
+        justify-self: center;
+    }
+    
+    .component__input {
+        padding-block: 1rem;
+        padding-inline-start: 3.5rem;
+        font-size: 1.5rem;
+        border-radius: 40px;
+    }
+    
+    .component__btn {
+        padding-block: 1.3rem;
+        border-radius: 40px;
+        font-size: 1.5rem;
+    }
+
+    .component__img {
+        padding-block: 4rem;
+    }
+    
+    .component__footer {
+        padding-block: 6rem 2rem;
+        gap: 2.5rem;
+    }
+
+    .component__socials {
+        gap: 1.5rem
+    }
+    
+    .fa-brands {
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+        font-size: 1.65rem;
+    }
+
+    .fa-brands:nth-child(3) {
+        font-size: 2rem;
+    }
+    
+    .component__copyright {
+        font-size: var(--fs-p);
+    }
+
+    /* ERROR MESSAGE  */
+    .component__error-message {
+        display: none;
+        font-size: var(--fs-p);
+    }
+}
+
+@media (width >= 1024px) {
+    
+    
+    .component {
+        padding-inline: 2.5rem;
+        margin-block-start: 5rem;
+        display: grid;
+        gap: 3rem;
+        max-width: 1000px;
+        justify-self: center;
+    }
+    
+    .component__grid {
+        gap: .5rem;
+    }
+    
+    .component__title {
+        font-size: 3.5rem;
+    }
+    
+    .component__form {
+        grid-template-columns: 60% 30%;
+        width: 100%;
+        padding-block-start: 3rem;
+    }
+
+    .component__input {
+        font-size: var(--fs-p);
+    }
+
+    .component__btn {
+        font-size: var(--fs-p);
+    }
+    
+    .component__img {
+        padding-block: 4rem;
+    }
+    
+    .component__footer {
+        display: grid;
+        gap: 2rem;
+        padding-block: 1rem 1.5rem;
+    }
+
+    .component__socials {
+        gap: 1rem;
+    }
+    
+    .fa-brands {
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        font-size: .8rem;
+    }
+    
+    .fa-brands:nth-child(3) {
+        font-size: 1rem;
+    }
+    
+    .component__copyright {
+        font-size: .8rem;
+    }
+
+    /* ERROR MESSAGE  */
+    .component__error-message {
+        display: none;
+        font-size: 1rem;
+        justify-self: start;
+        padding-inline-start: 3.5rem;
+    }
+}
