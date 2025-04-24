@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/thedmvdevaustin/frontend-mentor-challenges/tree/main/huddleLandingPageWithASingleIntroductorySection/huddle-landing-page-with-single-introductory-section-master](https://github.com/thedmvdevaustin/frontend-mentor-challenges/tree/main/huddleLandingPageWithASingleIntroductorySection/huddle-landing-page-with-single-introductory-section-master)
+- Live Site URL: [https://dmvdevaustin-huddle-landing-page.netlify.app/](https://dmvdevaustin-huddle-landing-page.netlify.app/)
 
 
 ### Built with
