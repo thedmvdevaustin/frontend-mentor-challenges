@@ -42,8 +42,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/thedmvdevaustin/frontend-mentor-challenges](https://github.com/thedmvdevaustin/frontend-mentor-challenges)
+- Live Site URL: [https://dmvdevaustin-extension-manager.netlify.app/](https://dmvdevaustin-extension-manager.netlify.app/)
 
 
 ### Built with
