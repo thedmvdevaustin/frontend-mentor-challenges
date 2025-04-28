@@ -1,0 +1,439 @@
+/* CSS RESET  */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+  
+body {
+/* 4. Add accessible line-height */
+    line-height: 1.5;
+/* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+  
+/* 6. Improve media defaults */
+img {
+    display: block;
+    max-width: 100%;
+}
+  
+/* 7. Inherit fonts for form controls */
+button {
+    font: inherit;
+}
+  
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* CUSTOM PROPERTIES */
+:root {
+    /* COLORS  */
+    --clr-neutral-900: hsl(227, 75%, 14%);
+    --clr-neutral-800: hsl(226, 25%, 17%);
+    --clr-neutral-700: hsl(225, 23%, 24%);
+    --clr-neutral-600: hsl(226, 11%, 37%);
+    --clr-neutral-300: hsl(0, 0%, 78%);
+    --clr-neutral-300-half-transparent: hsla(0, 0%, 78%, .3);
+    --clr-neutral-200: hsl(217, 61%, 90%);
+    --clr-neutral-200-half-transparent: hsla(217, 61%, 90%, .4);
+    --clr-neutral-100: hsl(0, 0%, 93%);
+    --clr-neutral-0: hsl(200, 60%, 99%);
+    --clr-red-400: hsl(3, 86%, 64%);
+    --clr-red-500: hsl(3, 71%, 56%);
+    --clr-red-700: hsl(3, 77%, 44%);
+    /* GRADIENTS  */
+    --gradient-light: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+    --gradient-dark: linear-gradient(180deg, #040918 0%, #091540 100%);
+    /* FONT SIZE  */
+    --fs-p: 1rem; /* 16px  */
+}
+
+/* CUSTOM FONTS  */
+/* noto-sans-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/noto-sans-v39-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* noto-sans-500 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./assets/fonts/noto-sans-v39-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* noto-sans-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/fonts/noto-sans-v39-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* GENERAL STYLES  */
+
+body {
+    height: 100%;
+    font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+    background: var(--gradient-light);
+}
+
+.container {
+    padding-inline: 1rem;
+    padding-block: 1rem 3rem;
+    display: grid;
+    gap: 2rem;
+}
+
+header {
+    background-color: var(--clr-neutral-0);
+    border-radius: .5rem;
+    padding: .65rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-theme {
+    background: var(--clr-neutral-300-half-transparent);
+    border: none;
+    border-radius: .75rem;
+    padding: .75rem;
+    cursor: pointer;
+    transition-property: background-color, transform;
+    transition-duration: 150ms;
+    transition-timing-function: ease;
+}
+
+.toggle-theme:hover {
+    background-color: var(--clr-neutral-300);
+}
+
+.toggle-theme:focus {
+    outline: 2px solid var(--clr-red-400);
+    outline-offset: 2px;
+}
+
+.toggle-theme:active {
+    transform: scale(.9);
+}
+
+.toggle--bg:hover {
+    background-color: var(--clr-neutral-600);
+}
+
+.container__grid {
+    display: grid;
+    gap: .5rem;
+    justify-self: center;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--clr-neutral-900);
+    text-align: center;
+}
+
+.toggle-btns {
+    display: flex;
+    gap: 1rem;
+}
+
+.showBtn {
+    padding: .35rem 1.2rem;
+    color: var(--clr-neutral-900);
+    border-radius: 30px;
+    border: none;
+    background-color: var(--clr-neutral-0);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition-property: opacity, background-color, transform;
+    transition-duration: 150ms;
+    transition-timing-function: ease;
+}
+
+.showBtn:hover {
+    opacity: .6;
+}
+
+.showBtn:focus {
+    outline: 2px solid var(--clr-red-700);
+    outline-offset: 2px;
+}
+
+.red--bg-light:hover {
+    opacity: revert;
+    background-color: var(--clr-red-500);
+}
+
+.red--bg-light:focus {
+    outline: 2px solid var(--clr-red-400);
+    outline-offset: 2px;
+}
+
+.red--bg-dark:focus {
+    outline: 2px solid var(--clr-red-400);
+    outline-offset: 2px;
+}
+
+.showBtn.bg--dark:hover {
+    opacity: revert;
+    /* background-color: hsl(225deg 9.14% 50.29%); */
+    background-color: var(--clr-neutral-600);
+}
+
+.showBtn.red--bg-dark:hover {
+    opacity: revert;
+    background-color: var(--clr-red-500);
+    filter: brightness(120%);
+}
+
+.bg--dark:focus {
+    outline: 2px solid var(--clr-red-400);
+    outline-offset: 2px;
+}
+
+.showBtn:active{
+    transform: scale(.9);
+}
+
+.extensions {
+    display: grid;
+    gap: .75rem;
+}
+
+.extension {
+    background-color: var(--clr-neutral-0);
+    border-radius: 1rem;
+    padding: 1rem;
+    display: grid;
+    gap: 2.5rem;
+}
+
+.extension__flex {
+    display: flex;
+    gap: 1rem;
+}
+
+.extension__grid {
+    display: grid;
+    gap: .25rem;
+}
+
+.extension__title {
+    font-size: 1.2rem;
+    color: var(--clr-neutral-900);
+}
+
+.extension__description {
+    color: var(--clr-neutral-600);
+    font-weight: 500;
+    font-size: .95rem;
+}
+
+.extension__btns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remove {
+    padding: .35rem .9rem;
+    background-color: var(--clr-neutral-0);
+    border-radius: 20px;
+    border: 1px solid var(--clr-neutral-300);
+    font-weight: 500;
+    font-size: .95rem;
+    color: var(--clr-neutral-900);
+    cursor: pointer;
+    transition-property: background-color, color, transform;
+    transition-duration: 150ms;
+    transition-timing-function: ease;
+}
+
+.remove:hover {
+    background-color: var(--clr-red-700);
+    color: var(--clr-neutral-0);
+}
+
+.remove.bg--dark:focus {
+    outline: 2px solid var(--clr-red-400);
+    outline-offset: 2px;
+}
+
+.remove.bg--dark:hover{
+    background-color: var(--clr-red-400);
+}
+
+.remove:active {
+    transform: scale(.9);
+}
+
+.remove:focus {
+    outline: 2px solid var(--clr-red-700);
+    outline-offset: 2px;
+}
+
+
+label {
+    height: 20px;
+    width: 35px;
+    display: block;
+    border-radius: 20px;
+    background-color: var(--clr-neutral-300);
+    position: relative;
+    cursor: pointer;
+    transition-property: transform, filter;
+    transition-duration: 150ms;
+    transition-timing-function: ease;
+}
+
+label::before {
+    position: absolute;
+    content: '';
+    background-color: var(--clr-neutral-0);
+    width: 45%;
+    height: 75%;
+    border-radius: 10px;
+    left: 2px;
+    top: 2.5px;
+    transition: transform 150ms ease;
+}
+
+label:hover {
+    filter: brightness(110%);
+}
+
+label:active {
+    transform: scale(.9);
+}
+
+label:focus {
+    outline: 2px solid var(--clr-red-400);
+    outline-offset: 2px;
+}
+
+input:checked + label::before {
+    transform: translateX(15.5px);
+}
+
+input {
+    display: none;
+}
+
+
+/* MEDIA QUERIES  */
+@media (width >= 650px) {
+    .container {
+        padding-inline: 2rem;
+        padding-block: 2rem 3rem;
+    }
+    .container__grid {
+        grid-auto-flow: column;
+        justify-content: space-between;
+        justify-self: revert;
+    }
+
+    .extensions {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .extension {
+        gap: 2.5rem;
+    }
+
+}
+
+@media (width >= 1024px) {
+    .container {
+        max-width: 1200px;
+        justify-self: center;
+    }
+    
+    .extensions {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .extension__description {
+        font-size: .9rem;
+    }
+
+    .remove {
+        padding: .35rem 1rem;
+        font-size: .9rem;
+    }
+}
+
+/* UTILITIES  */
+.shadow {
+    box-shadow: 0px 2px 2px 0px var(--clr-neutral-200), 0px -1px 2px 0px var(--clr-neutral-200);
+}
+
+.border--dark {
+    border: 1px solid hsla(217, 61%, 90%, .2);
+}
+
+.body-bg--dark {
+    background: var(--gradient-dark);
+}
+
+.bg--dark {
+    background-color: var(--clr-neutral-700)
+}
+
+.font--light {
+    color: var(--clr-neutral-0);
+}
+
+.toggle--bg {
+    background-color: hsla(225, 23%, 28%, 1);
+}
+
+.red--bg-light {
+    background-color: var(--clr-red-700);
+}
+
+.red--bg-dark {
+    background-color: var(--clr-red-400);
+}
+
+.red--font-light {
+    color: var(--clr-neutral-0)
+}
+
+.red-font-dark {
+    color: var(--clr-neutral-900);
+}
+
+.p--font-color {
+    color: var(--clr-neutral-300);
+}
+
+.toggle-light-inactive--bg-color {
+    background-color: var(--clr-neutral-300)
+}
+
+.toggle-dark-inactive--bg-color {
+    background-color: var(--clr-neutral-600);
+}
+
+.toggle-dark-active--bg-color {
+    background-color: var(--clr-red-400);
+}
+
+.toggle-light-active--bg-color {
+    background-color: var(--clr-red-700);
+}
