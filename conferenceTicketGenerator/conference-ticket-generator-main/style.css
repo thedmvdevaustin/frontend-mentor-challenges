@@ -1,0 +1,325 @@
+/* CSS RESET  */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+  
+body {
+/* 4. Add accessible line-height */
+    line-height: 1.5;
+/* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+  
+/* 6. Improve media defaults */
+img {
+    display: block;
+    max-width: 100%;
+}
+  
+/* 7. Inherit fonts for form controls */
+input, button {
+font: inherit;
+  }
+  
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* ## Colors
+
+- Neutral 0: hsl(0, 0%, 100%)
+- Neutral 300: hsl(252, 6%, 83%)
+- Neutral 500: hsl(245, 15%, 58%)
+- Neutral 700: hsl(245, 19%, 35%)
+- Neutral 900: hsl(248, 70%, 10%)
+
+- Orange 500: hsl(7, 88%, 67%)
+- Orange 700: hsl(7, 71%, 60%)
+
+- Gradient (text): hsl(7, 86%, 67%) to hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (labels): 20px 
+
+### Font
+
+- Family: [Inconsolata](https://fonts.google.com/specimen/Inconsolata)
+- Weights: 400, 500, 700, 800 */
+
+/* CUSTOM PROPERTIES  */
+
+:root {
+    /* COLORS  */
+    --clr-neutral-0: hsl(0, 0%, 100%);
+    --clr-neutral-300: hsl(252, 6%, 83%);
+    --clr-neutral-500: hsl(245, 15%, 58%);
+    --clr-neutral-700: hsl(245, 19%, 35%);
+    --clr-neutral-900: hsl(248, 70%, 10%);
+    --clr-orange-500: hsl(7, 88%, 67%);
+    --clr-orange-700: hsl(7, 71%, 60%);
+    /* GRADIENTS */
+    --grad: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+    /* FONT SIZES  */
+    --fs-labels: 1.25rem; /* 20px   */
+}
+
+/* CUSTOM FONTS  */
+/* inconsolata-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inconsolata';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/inconsolata-v32-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inconsolata-500 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inconsolata';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./assets/fonts/inconsolata-v32-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inconsolata-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inconsolata';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/fonts/inconsolata-v32-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inconsolata-800 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inconsolata';
+    font-style: normal;
+    font-weight: 800;
+    src: url('./assets/fonts/inconsolata-v32-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* GENERAL STYLES  */
+/* 
+.ticket-main, .ticket {
+    display: none;
+} */
+
+
+
+
+body {
+    font-family: 'Inconsolata';
+    background-image: 
+    url(./assets/images/pattern-circle.svg), 
+    url(./assets/images/pattern-lines.svg), 
+    url(./assets/images/pattern-squiggly-line-top.svg), 
+    url(./assets/images/pattern-circle.svg), 
+    url(./assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg), 
+    url(./assets/images/background-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 30%, 260%, 30%, 25%, 70%, cover;
+    background-position: -6% -6%, 0% 0%, 100% 2%, 115% 64%, bottom left, center;
+    display: grid;
+    gap: 2rem;
+}
+
+header {
+    justify-self: center;
+    margin-block-start: 2rem;
+}
+
+header > img {
+    width: 160px;
+    height: 100%;
+}
+
+.form-main {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.form-main > h1 {
+    color: var(--clr-neutral-0);
+    line-height: 1.12;
+    padding-inline: 1rem;
+    text-align: center;
+    font-size: 1.8rem;
+    align-self: center;
+}
+
+.form-main > p {
+    color: var(--clr-neutral-500);
+    text-align: center;
+    padding-inline: 1rem;
+    text-wrap: balance;
+    font-size: 1.2rem;
+    line-height: 1.12;
+}
+
+.form {
+    display: grid;
+    gap: 1.25rem;
+    padding-inline: .75rem;
+    padding-block-end: 6rem;
+}
+
+.form__input-container {
+    display: grid;
+}
+
+.form__input-container:nth-child(1) {
+    gap: .35rem;
+}
+
+.form__input-container > p {
+    color: var(--clr-neutral-300);
+    font-size: var(--fs-labels);
+}
+
+#upload-label {
+    background: hsla(245, 25%, 51%, .2);
+    padding-block: 1rem;
+    border-radius: .85rem;
+    border: 1px dashed var(--clr-neutral-300);
+    display: grid;
+    gap: .5rem;
+}
+
+#upload-label > img {
+    width: 50px;
+    height: 50px;
+    justify-self: center;
+    background: hsla(245, 25%, 51%, .2);
+    padding: .5rem;
+    border-radius: .75rem;
+    border: 1px solid hsla(245, 15%, 58%, .2);
+}
+
+#upload-label > p {
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--clr-neutral-500);
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.form__upload-info {
+    display: flex;
+    gap: .5rem;
+}
+
+.form__upload-info > p {
+    color: var(--clr-neutral-500);
+    font-size: .7rem;
+}
+
+label {
+    color: var(--clr-neutral-300);
+    font-size: var(--fs-labels);
+}
+
+.input {
+    border: 1px solid var(--clr-neutral-500);
+    padding-block: .75rem;
+    border-radius: .65rem;
+    background: hsla(245, 25%, 51%, .2);
+    padding-inline-start: 1rem;
+}
+
+.input::placeholder {
+    color: hsla(0, 0%, 100%, .6);
+}
+
+button {
+    padding-block: .75rem;
+    color: var(--clr-neutral-900);
+    background: var(--clr-orange-500);
+    border-radius: .75rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    border: none;
+}
+
+
+.form-main, .form {
+    display: none;
+}
+
+/* TICKET STYLES  */
+
+.ticket-main {
+    display: grid;
+    gap: 1rem;
+}
+
+.ticket-main > h1 {
+    color: var(--clr-neutral-0);
+    text-align: center;
+    line-height: 1.12;
+    padding-inline: 1rem;
+    font-weight: 500;
+}
+
+strong {
+    background: var(--grad);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ticket-main > p {
+    color: var(--clr-neutral-500);
+    text-align: center;
+    text-wrap: balance;
+    font-size: 1.1rem;
+    line-height: 1.12;
+}
+
+b {
+    color: hsla(7, 48.85%, 63.21%, 72%);
+}
+
+.ticket {
+    background-image: url(./assets/images/pattern-ticket.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-inline: .5rem;
+}
+
+.ticket__grid--gap--big {
+    display: grid;
+    gap: 1rem;
+}
+
+.ticket__flex--gap {
+    display: flex;
+}
+
+.ticket-logo {
+    width: 25px;
+    height: 25px;
+}
+
+.avatar-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: .5rem;
+}
+
+.ticket__sideways-ltr{
+    writing-mode: sideways-lr;
+}
+
+
+

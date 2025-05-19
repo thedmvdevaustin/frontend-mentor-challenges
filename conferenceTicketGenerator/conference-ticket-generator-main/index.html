@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Conference ticket generator</title>
+</head>
+<body>
+  <header>
+    <img src="./assets/images/logo-full.svg" alt="logo" width="40" height="40" />
+  </header>
+  <main class="form-main">
+    <h1>
+      Your Journey to Coding Conf 2025 Starts Here!
+    </h1>
+    <p>
+      Secure your spot at next year's biggest coding conference.
+    </p>
+  </main>
+  <!-- Form Starts  -->
+  <form class="form">
+    <div class="form__input-container">
+      <p>Upload Avatar</p>
+      <label id="upload-label" for="upload-avatar">
+        <img src="./assets/images/icon-upload.svg" alt="upload" width="30" height="30" class="upload-icon" />
+        <p>Drag and drop or click to upload</p>
+      </label>
+      <input type="file" class="form__upload" id="upload-avatar">
+      <div class="form__upload-info">
+        <img src="./assets/images/icon-info.svg" alt="info" class="info-icon" width="16" height="16" />
+        <p>Upload your photo (JPG or PNG, max size: 500KB).</p> 
+      </div>
+    </div>
+    <div class="form__input-container">
+      <label for="full-name">Full Name</label>
+      <input type="text" id="full-name" class="input" />
+    </div>
+    <div class="form__input-container">
+      <label for="email">Email Address</label>
+      <input type="text" id="email" placeholder="example@email.com" class="input" />
+    </div>
+    <div class="form__input-container">
+      <label for="username">GitHub Username</label>
+      <input type="text" class="input" placeholder="@yourusername" id="username" />
+    </div>
+    <button>Generate My Ticket</button>
+  </form>
+  <!-- Form Ends  -->
+
+  <!-- Generated Ticket Starts  -->
+  <main class="ticket-main">
+    <h1>Congrats <strong>Jonatan Kristof</strong>! Your ticket is ready. </h1>
+    <p>We've emailed your ticket to <b>jonatan@email.com</b> and wil send updates in the run up to the event.</p>
+  </main>
+  <article class="ticket">
+    <section class="ticket__grid--gap--big">
+      <div class="ticket__flex--gap">
+        <img src="./assets/images/logo-mark.svg" alt="logo" width="40" height="40" class="ticket-logo" />
+        <div class="ticket__flex-gap--sms">
+          <h3>Coding Conf</h3>
+          <p>Jan 31, 2025 / Austin, TX</p>
+        </div>
+      </div>
+      <div class="ticket__flex--gap">
+        <img src="./assets/images/image-avatar.jpg" alt="avatar" width="160" height="160" class="avatar-icon" />
+        <div class="ticket__grid--gap--sm">
+          <h4>Jonatan Kristof</h4>
+          <div class="ticket__flex--gap-sm">
+            <img src="./assets/images/icon-github.svg" alt="github" width="22" height="23" class="github-icon" />
+            <p>@jonatankristof0101</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="ticket__sideways-ltr">
+      <p>60919#</p>
+    </div>
+  </article>
+  <!-- Full Name  -->
+  <!-- Email Address  -->
+  <script src="script.js"></script>
+</body>
+</html>
