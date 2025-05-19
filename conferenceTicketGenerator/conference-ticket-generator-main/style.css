@@ -290,11 +290,17 @@ b {
 }
 
 .ticket {
-    background-image: url(./assets/images/pattern-ticket.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    position: relative;
     margin-inline: .5rem;
+    display: flex;
+}
+
+.ticket-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 0;
 }
 
 .ticket__grid--gap--big {
