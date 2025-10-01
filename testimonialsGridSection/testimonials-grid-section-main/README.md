@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/thedmvdevaustin/frontend-mentor-challenges/tree/main/testimonialsGridSection/testimonials-grid-section-main](https://github.com/thedmvdevaustin/frontend-mentor-challenges/tree/main/testimonialsGridSection/testimonials-grid-section-main)
+- Live Site URL: [https://dmvdevtestimonialsection.netlify.app/](https://dmvdevtestimonialsection.netlify.app/)
 
 ### Built with
 
