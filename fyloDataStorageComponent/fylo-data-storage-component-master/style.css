@@ -1,0 +1,238 @@
+/* CSS RESET  */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+  
+body {
+/* 4. Add accessible line-height */
+    line-height: 1.5;
+/* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+  
+/* 6. Improve media defaults */
+img {
+    display: block;
+    max-width: 100%;
+}
+  
+/* 7. Inherit fonts for form controls */
+input {
+    font: inherit;
+}
+
+/* CUSTOM PROPERTIES  */
+:root {
+    /* GRADIENTS  */
+    --gradient: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    /* COLORS  */
+    --clr-blue-200: hsl(243, 100%, 93%);
+    --clr-grayish-blue: hsl(229, 7%, 55%);
+    --clr-blue-850: hsl(228, 56%, 26%);
+    --clr-blue-950: hsl(229, 57%, 11%);
+    /* FONTS  */
+    --fs-p: .875rem;
+}
+
+/* CUSTOM FONTS  */
+/* raleway-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/raleway-v37-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* raleway-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/raleway-v37-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* GENERAL STYLES  */
+
+body {
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    background-image: url(./images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100svh;
+    display: grid;
+    place-items: center;
+    margin: 1.5rem;
+}
+
+.fylo {
+    display: grid;
+    gap: 1rem;
+    /* max-width: 327px; */
+}
+
+.fylo__links {
+    display: grid;
+    gap: 2rem;
+    background: var(--clr-blue-850);
+    padding: 2.5rem;
+    border-radius: 10px 100px 10px 10px;
+}
+
+.fylo__links-logo {
+    height: auto;
+}
+
+.fylo__links-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.fylo__links-icons > div {
+    background: var(--clr-blue-950);
+    border-radius: 9px;
+    display: flex;
+    align-items: center
+}
+
+.fylo__links-icons > div > img {
+    width: 100%;
+    height: auto;
+    padding: .75rem;
+}
+
+.fylo__storage {
+    background: var(--clr-blue-850);
+    padding: 2rem 2rem 5rem 2rem;
+    gap: 1rem;
+    border-radius: 10px;
+    display: grid;
+    position: relative;
+}
+
+.fylo__storage-info {
+    color: var(--clr-grayish-blue);
+    font-size: var(--fs-p);
+    text-align: center;
+}
+
+.fylo__storage-info > strong {
+    font-weight: 700;
+    color: var(--clr-blue-200);
+}
+
+.fylo__storage-range {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 50px;
+    width: 100%;
+    border: 3px solid var(--clr-blue-950);
+    transition: background 0.3s ease;
+    position: relative;
+}
+
+.fylo__storage-range::before, .fylo__storage-range::after {
+    position: absolute;
+    top: 30px;
+    color: var(--clr-blue-200);
+    font-weight: 700
+}
+
+.fylo__storage-range::before {
+    content: attr(data-min);
+}
+
+.fylo__storage-range::after {
+    content: attr(data-max);
+    right: 0;
+}
+
+.fylo__storage-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background: radial-gradient(circle, var(--clr-blue-200) 50%, hsl(6, 100%, 80%), hsl(335, 100%, 65%) 50%);
+    cursor: pointer;
+}
+
+.fylo__storage-range::-webkit-slider-runnable-track {
+    border-radius: 50px;
+}
+
+.fylo__storage-leftContainer {
+    position: absolute;
+    padding-inline: 1.5rem;
+    padding-block: .5rem;
+    background: white;
+    border-radius: 7px;
+    bottom: -20%;
+    left: 23%;
+}
+
+.fylo__storage-left {
+    color: var(--clr-grayish-blue);
+    font-size: var(--fs-p); /* 14px  */
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.fylo__storage-left > b {
+    font-size: 2rem;
+    color: black;
+}
+
+@media (width >= 1024px ) {
+    body {
+        background-image: url(./images/bg-desktop.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 100%;
+        background-color: var(--clr-blue-950);
+        justify-items: initial;
+        align-items: center;
+    }
+    .fylo {
+        grid-template-columns: 40% 1fr;
+        align-items: end;
+        gap: 2rem;
+    }
+    .fylo__links {
+        width: 60%;
+        justify-self: end;
+    }
+    .fylo__storage {
+        width: 70%;
+        padding: 2.5rem 2.5rem 5rem 2.5rem
+    }
+    .fylo__storage-info {
+        text-align: initial;
+    }
+    .fylo__storage-leftContainer {
+        top: -30%;
+        bottom: initial;
+        left: 65%;
+        transition: top 150ms ease;
+    }
+    .fylo__storage-leftContainer::after {
+        content: '';
+        position: absolute;
+        border-bottom: 25px solid transparent;
+        border-right: 25px solid white;
+        bottom: -19px;
+        right: 0;
+    }
+}
+
+@media (width >= 1440px) {
+    .fylo__storage-leftContainer {
+        top: -20%;
+    }
+}

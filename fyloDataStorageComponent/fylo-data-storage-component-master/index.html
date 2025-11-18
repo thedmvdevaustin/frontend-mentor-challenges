@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css" />
+  <title>Frontend Mentor | Fylo data storage component</title>
+</head>
+<body>
+  <main class="fylo">
+    <section class="fylo__links">
+      <div class="fylo__links-logo">
+        <img src="./images/logo.svg" alt="logo" width="135" height="40" />
+      </div>
+      <div class="fylo__links-icons">
+        <div>
+          <img src="./images/icon-document.svg" alt="document" width="20" height="24" />
+        </div>
+        <div>
+          <img src="./images/icon-folder.svg" alt="folder" width="24" height="20" />
+        </div>
+        <div>
+          <img src="./images/icon-upload.svg" alt="upload" width="24" height="16" />
+        </div>
+      </div>
+    </section>
+    <section class="fylo__storage">
+      <p class="fylo__storage-info">
+        You’ve used 
+        <strong>
+          815 GB 
+        </strong>
+        of your storage
+      </p>
+      <div class="fylo__storage-rangeContainer">
+        <input data-min="0 GB" data-max="1000 GB" class="fylo__storage-range" type="range" min="0" max="1000" value="715">
+      </div>
+      <div class="fylo__storage-leftContainer">
+        <p class="fylo__storage-left"><b>185 </b>gb left</p>
+      </div>
+    </section>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
