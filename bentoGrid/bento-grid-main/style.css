@@ -1,0 +1,471 @@
+/* CSS RESET  */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+  
+body {
+/* 4. Add accessible line-height */
+    line-height: 1.5;
+/* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+  
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+  
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+  
+/* 9. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+/* CUSTOM PROPERTIES  */
+
+:root {
+    /* COLORS  */
+    --clr-purple-100: hsl(254, 88%, 90%);
+    --clr-purple-500: hsl(256, 67%, 59%);
+    --clr-yellow-100: hsl(31, 66%, 93%);
+    --clr-yellow-500: hsl(39, 100%, 71%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-black: hsl(0, 0%, 7%);
+    /* FONTS  */
+    --fs-p: 1.125rem; /* 18px  */
+}
+
+/* CUSTOM FONTS  */
+/* dm-sans-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/dm-sans-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* dm-sans-500 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./assets/fonts/dm-sans-v17-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* GENERAL STYLES  */
+
+body {
+    display: grid;
+    gap: 2rem;
+    font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+    height: 100svh;
+}
+
+.bentoGrid {
+    padding-inline: 1rem;
+    margin-block: 2rem;
+    display: grid;
+    gap: 2rem;
+}
+
+article {
+    border-radius: .6rem;
+}
+
+.bentoGrid__review {
+    display: grid;
+    gap: 1.5rem;
+    padding-inline: 1.5rem;
+    padding-block: 2rem;
+    background: var(--clr-purple-500);
+}
+
+.review__header {
+    color: var(--clr-white);
+    font-size: 2.7rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: .9;
+    word-spacing: -5px;
+    letter-spacing: -1px;
+}
+
+.review__header > strong {
+    font-weight: 500;
+    color: var(--clr-yellow-500);
+}
+
+.review__starContainer {
+    display: grid;
+    gap: .5rem;
+}
+
+.review__imgContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.review__img {
+    width: 65%;
+    height: auto;
+}
+
+.review__caption {
+    text-align: center;
+    color: var(--clr-white);
+    font-size: var(--fs-p);
+}
+
+.bentoGrid__accounts {
+    display: grid;
+    gap: 1rem;
+    background: var(--clr-white);
+    box-shadow: -1px 1px 3px 0 rgba(0,0,0,.15);
+    padding: 1rem;
+}
+
+.accounts__imgContainer {
+    filter: drop-shadow(0px 1px 5px rgba(0,0,0,.15));
+    border-radius: 50px;
+}
+
+.accounts__img {
+    border-radius: 35px;
+}
+
+.accounts__title {
+    color: var(--clr-black);
+    font-weight: 500;
+    text-wrap: wrap;
+    line-height: .9;
+    letter-spacing: -2px;
+    font-size: 1.7rem;
+}
+
+.bentoGrid__scheduleMonth {
+    padding-inline-start: 1rem;
+    padding-block-start: 1rem;
+    display: grid;
+    gap: 1rem;
+    background: var(--clr-yellow-500);
+}
+
+.scheduleMonth__title {
+    line-height: .9;
+    font-weight: 500;
+    color: var(--clr-black);
+    letter-spacing: -2px;
+    font-size: 1.7rem;
+}
+
+.scheduleMonth__imgContainer {
+    overflow: hidden;
+}
+
+.scheduleMonth__img {
+    width: 68%;
+    height: 115%;
+}
+
+.bentoGrid__scheduleWeek {
+    display: grid;
+    gap: 1rem;
+    background: var(--clr-purple-100);
+    padding-inline: 1rem;
+    padding-block: 2rem;
+}
+
+.scheduleWeek__title {
+    color: var(--clr-black);
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.7rem;
+    letter-spacing: -2px;
+}
+
+.scheduleWeek__img {
+    height: auto;
+}
+
+.scheduleWeek__caption {
+    font-size: var(--fs-p);
+    text-align: center;
+    line-height: 1.12;
+}
+
+.bentoGrid__followers {
+    display: grid;
+    gap: 2.5rem;
+    background: var(--clr-purple-500);
+    padding-block: 1.5rem;
+    padding-inline: 2rem;
+}
+
+.followers__imgContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.followers__img {
+    width: 80%;
+    height: auto;
+}
+
+.followers__title {
+    color: var(--clr-white);
+    text-align: center;
+    line-height: .9;
+    font-weight: 500;
+    font-size: 2rem;
+    text-wrap: wrap;
+    letter-spacing: -2px;
+    padding-inline: 1.5rem;
+}
+
+.bentoGrid__audience {
+    background: var(--clr-white);
+    box-shadow: -1px 1px 3px 0px rgba(0,0,0,.15);
+    display: grid;
+    gap: 1.5rem;
+    padding-inline: 1.5rem;
+    padding-block: 1rem 1.5rem;
+}
+
+.audience__title {
+    font-weight: 500;
+    color: var(--clr-black);
+    font-size: 1.25rem;
+}
+
+.audience__percentage {
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--clr-black);
+    letter-spacing: -2px;
+}
+
+.audience__img {
+    width: 70%;
+    height: auto;
+}
+
+.bentoGrid__posts {
+    background: var(--clr-yellow-100);
+    padding: 2rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.posts__title {
+    color: var(--clr-black);
+    font-weight: 500;
+    line-height: .9;
+    font-size: 2rem;
+    letter-spacing: -2px;
+}
+
+.posts__title > strong {
+    color: var(--clr-purple-500);
+    font-style: italic;
+    font-weight: 500;
+}
+
+.posts__img {
+    width: 70%;
+    height: auto;
+}
+
+.bentoGrid__content {
+    background: var(--clr-yellow-500);
+    padding: 1rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.content__title {
+    color: var(--clr-black);
+    letter-spacing: -2px;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: .9;
+    text-wrap: wrap;
+}
+
+.content__img {
+    width: 70%;
+    height: auto;
+}
+
+@media (width >= 1024px) {
+    .bentoGrid {
+        grid-template-areas: 
+        "posts review review scheduleWeek"
+        "posts accounts scheduleMonth scheduleWeek"
+        "contentAI accounts scheduleMonth scheduleWeek"
+        "contentAI audience followers followers";
+        max-width: 1200px;
+        padding-inline: 0;
+        place-self: center;
+        grid-template-columns: repeat(4, 23%);
+        /* overflow-x: hidden; */
+        margin-block: 6rem;
+    }
+
+    .bentoGrid__review {
+        grid-area: review;
+        padding-inline: 1rem;
+        padding-block: 3rem;
+    }
+
+    .review__header {
+        font-size: 3.7rem;
+    }
+    .review__img {
+        width: 40%;
+    }
+    .bentoGrid__accounts {
+        grid-area: accounts;
+        padding-inline-end: 0;
+        overflow: hidden;
+        padding-block-start: 0;
+        gap: 0;
+    }
+
+    .accounts__imgContainer {
+        width: 130%;
+        align-self: center;
+        translate: 12px 0;
+    }
+
+    .accounts__img {
+        width: 100%;
+        height: auto;
+        max-width: revert;
+    }
+
+    .accounts__title {
+        font-size: 2.2rem;
+        padding-inline: .75rem 2rem
+    }
+
+    .bentoGrid__scheduleMonth {
+        grid-area: scheduleMonth;
+        padding-inline: 1.5rem;
+        padding-block: 1.5rem 0;
+        align-content: end;
+    }
+
+    .scheduleMonth__title {
+        font-size: 2.2rem;
+    }
+
+    .scheduleMonth__img {
+        width: 100%;
+        height: 179%;
+        object-fit: scale-down;
+        clip-path: inset(0 0 10% 0);
+    }
+    .bentoGrid__scheduleWeek {
+        grid-area: scheduleWeek;
+        padding-inline: 2rem 0;
+        padding-block: 2rem;
+        gap: 0;
+    }
+
+    .scheduleWeek__title {
+        font-size: 2rem;
+        line-height: .8;
+        text-align: start;
+    }
+
+    .scheduleWeek__imgContainer {
+        overflow: hidden;
+    }
+
+    .scheduleWeek__img {
+        max-width: revert;
+        width: 160%;
+    }
+
+    .scheduleWeek__caption {
+        text-align: start;
+        font-size: 1.25rem;
+        padding-inline-end: 2rem;
+    }
+
+    .bentoGrid__followers {
+        grid-area: followers;
+        grid-template-columns: repeat(2, 50%);
+        gap: .8rem;
+    }
+
+    .followers__title {
+        font-size: 2.5rem;
+        text-align: initial;
+        padding-inline: initial;
+        align-self: center;
+    }
+
+    .followers__img {
+        width: 100%;
+        object-fit: center;
+    }
+    .bentoGrid__audience {
+        grid-area: audience;
+        padding-block-start: 0rem;
+    }
+
+    .audience__percentage {
+        font-size: 5rem;
+    }
+    .bentoGrid__posts {
+        grid-area: posts;
+        align-content: center;
+    }
+
+    .posts__title {
+        font-size: 2.5rem;
+    }
+
+    .posts__img {
+        width: 85%;
+    }
+
+    .bentoGrid__content {
+        grid-area: contentAI;
+        padding: 0;
+        padding-inline: 1.5rem 1rem;
+        padding-block: 0 1.5rem;
+        gap: 0;
+    }
+
+    .content__title {
+        align-self: center;
+        font-size: 2.5rem;
+        letter-spacing: -3px;
+        text-wrap: pretty;
+    }
+
+    .content__imgContainer {
+        align-self: end;
+    }
+
+    .content__img {
+        width: 100%;
+    }
+}
