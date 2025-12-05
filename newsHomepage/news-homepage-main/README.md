@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-news-homepage-with-semantic-html-css-grid-flexbox-and-js-kNWbls2gfT](https://www.frontendmentor.io/solutions/responsive-news-homepage-with-semantic-html-css-grid-flexbox-and-js-kNWbls2gfT)
+- Live Site URL: [https://thedmvdevaustinnewshomepage.netlify.app/](https://thedmvdevaustinnewshomepage.netlify.app/)
 
 
 ### Built with
