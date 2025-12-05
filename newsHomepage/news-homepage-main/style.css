@@ -1,0 +1,461 @@
+/* CSS RESET  */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+  
+body {
+/* 4. Add accessible line-height */
+    line-height: 1.5;
+/* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+  
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+  
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+    font: inherit;
+}
+  
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+  
+/* 9. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+/* CUSTOM PROPERTIES  */
+:root {
+    /* COLORS  */
+    --clr-soft-orange: hsl(35, 77%, 62%);
+    --clr-soft-red: hsl(5, 85%, 63%);
+    --clr-off-white: hsl(36, 100%, 99%);
+    --clr-grayish-blue: hsl(233, 8%, 79%);
+    --clr-dark-grayish-blue: hsl(236, 13%, 42%);
+    --clr-very-dark-blue: hsl(240, 100%, 5%);
+    /* FONT SIZE  */
+    --fs-p: .9375rem; /* 15px  */
+}
+
+/* CUSTOM FONTS  */
+/* inter-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/inter-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/inter-v20-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-800 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    src: url('./fonts/inter-v20-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* HELPER CLASSES  */
+
+/* GENERAL STYLES  */
+body {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    display: grid;
+    gap: 2rem;
+    margin-block: 2rem;
+    min-height: 100svh;
+    position: relative;
+}
+
+.headerContainer {
+    max-width: 400px;
+    justify-self: center;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 1rem;
+}
+
+.header__img {
+    width: 50px;
+    height: auto
+}
+
+.header__button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.button__img {
+    width: 50px;
+    height: auto;
+}
+
+.header__nav {
+    display: none;
+}
+
+.sidebarContainer {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background: linear-gradient(to left, var(--clr-off-white) 70%, rgba(0,0,0,0.3) 70%);
+    height: 100svh;
+    top: 0;
+    right: 0;
+    display: none;
+    gap: 2rem;
+    grid-auto-rows: max-content 1fr;
+}
+
+.sidebar__btn {
+    justify-self: flex-end;
+    height: max-content;
+    background: transparent;
+    border: none;
+    padding: 2rem 1rem;
+    cursor: pointer;
+}
+
+.sidebar {
+    list-style: none;
+    justify-self: center;
+    padding: 1rem;
+}
+
+.list__item {
+    padding-block: .5rem;
+}
+
+.item__link {
+    font-size: 1.25rem;
+    color: var(--clr-very-dark-blue);
+    text-decoration: none;
+    cursor: pointer;
+    transition: color .5s ease, opacity .25s ease;
+}
+
+.item__link:active {
+    opacity: .5;
+}
+
+.item__link:hover {
+    color: var(--clr-soft-orange);
+}
+
+.mainContainer {
+    display: grid;
+    gap: 4rem;
+    max-width: 400px;
+    justify-self: center;
+}
+
+.homepage {
+    padding-inline: 1rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.img__mobile {
+    object-fit: contain;
+    height: auto;
+}
+
+.homepage__title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.12;
+    padding-inline-end: 1rem;
+    text-wrap: wrap;
+    word-spacing: -6px;
+}
+
+.homepage__info {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.info__details {
+    color: var(--clr-dark-grayish-blue);
+    font-size: 1rem;
+}
+
+.info__btn {
+    width: 54%;
+    padding-block: .875rem;
+    background-color: var(--clr-soft-red);
+    border: none;
+    color: var(--clr-very-dark-blue);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color .5s ease, color .5s ease, opacity .25s ease;
+}
+
+.info__btn:active {
+    opacity: .7;
+}
+
+.info__btn:hover {
+    background-color: var(--clr-very-dark-blue);
+    color: var(--clr-off-white);
+}
+
+.links {
+    background: var(--clr-very-dark-blue);
+    margin-inline: 1rem;
+    padding: 1rem;
+    padding-inline-start: 1.5rem;
+}
+
+.links__title {
+    color: var(--clr-soft-orange);
+    font-size: 2.2rem;
+}
+
+.links__list {
+    padding: 0;
+    list-style: none;
+}
+
+.list__link {
+    display: grid;
+    gap: .5rem;
+    padding-block: 2rem;
+    border-bottom: 1px solid var(--clr-dark-grayish-blue);
+}
+
+.list__link:nth-child(1) {
+    padding-block-start: 1.5rem;
+}
+
+.list__link:nth-child(3) {
+    border-bottom: none;
+    padding-block-end: 1rem;
+}
+
+.link__title {
+    color: var(--clr-off-white);
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: color .5s ease, opacity .25s ease;
+}
+
+.link__title:active {
+    opacity: .7
+}
+
+.link__title:hover {
+    color: var(--clr-soft-orange);
+}
+
+.link__info {
+    color: var(--clr-grayish-blue);
+}
+
+.category {
+    padding-inline: 1rem;
+}
+
+.category__list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 2rem;
+}
+
+.list--flex {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.category__img {
+    height: auto;
+    width: 100%;
+}
+
+.list--grid {
+    display: grid;
+    gap: .15rem;
+}
+
+.list__number {
+    color: var(--clr-soft-red);
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.category__link {
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: color .5s ease, opacity .5s ease;
+}
+
+.category__link:active {
+    opacity: .7;
+}
+
+.category__link:hover {
+    color: var(--clr-soft-red);
+}
+
+.category__info {
+    color: var(--clr-dark-grayish-blue);
+}
+
+@media (width >= 1024px) {
+    body {
+        gap: 3rem;
+    }
+    .headerContainer, .mainContainer {
+        max-width: 1200px;
+        justify-self: center;
+    }
+
+    .headerContainer {
+        margin-block: 4rem 0;
+    }
+
+    .header {
+        padding: 0;
+    }
+
+    .header__img {
+        width: initial;
+    }
+
+    .header__nav {
+        display: block;
+    }
+
+    .nav__list {
+        display: flex;
+        gap: 3rem;
+        list-style: none;
+        padding: 0;
+        /* padding-inline-end: 1.5rem; */
+    }
+
+    .item__link {
+        font-size: 1.1rem;
+        color: var(--clr-dark-grayish-blue);
+    }
+    .header__button {
+        display: none;
+    }
+
+    .mainContainer {
+        grid-template-areas: 
+        "homepage homepage links"
+        "category category category";
+        column-gap: 2rem;
+        row-gap: 4rem;
+        margin-block: 0 4rem;
+    }
+    
+    .homepage {
+        grid-area: homepage;
+        padding: 0;
+        grid-template-areas:
+        "homepageImage homepageImage"
+        "homepageTitle homepageInfo";
+        grid-auto-columns: 50% 50%;
+        gap: 1.5rem;
+    }
+    
+    .homepage__img {
+        grid-area: homepageImage;
+    }
+
+    .img__mobile {
+        width: 100%;
+        height: 100%;
+    }
+
+    .homepage__title {
+        grid-area: homepageTitle;
+        padding: 0;
+        font-size: 3.3rem;
+        text-wrap: balance;
+    }
+
+    .homepage__info {
+        grid-area: homepageInfo;
+    }
+
+    .info__details {
+        font-size: 1.1rem;
+        padding-inline-end: .5rem;
+    }
+    .links {
+        grid-area: links;
+        margin: 0;
+        width: 95%;
+        justify-self: flex-end;
+    }
+
+    .links__title {
+        font-size: 3rem;
+    }
+
+    .link__title {
+        font-size: 1.425rem;
+    }
+
+    .link__info {
+        font-size: 1.1rem;
+        text-wrap: wrap;
+    }
+    .category {
+        grid-area: category;
+        padding: 0;
+    }
+    .category__list {
+        display: flex;
+    }
+    .category__img {
+        height: auto;
+        width: 100%;
+    }
+    
+    .category__link {
+        font-size: 1.1rem;
+    }
+    
+    .list--grid {
+        gap: .5rem;
+    }
+    
+
+}
