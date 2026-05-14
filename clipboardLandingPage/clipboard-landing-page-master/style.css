@@ -1,0 +1,464 @@
+/* CSS RESET  */
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+    margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        interpolate-size: allow-keywords;
+    }
+}
+
+body {
+    /* 4. Increase line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 7. improve list defaults  */
+ul, ol {
+    padding: 0;
+    list-style: none;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* CUSTOM FONTS  */
+
+/* bai-jamjuree-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Bai Jamjuree';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/bai-jamjuree-v13-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* bai-jamjuree-600 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Bai Jamjuree';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./fonts/bai-jamjuree-v13-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* CUSTOM PROPERTIES  */
+:root {
+    /* COLORS  */
+    --clr-green-500: hsl(171, 66%, 44%);
+    --clr-blue-100: hsl(233, 100%, 69%);
+    --clr-gray-700: hsl(210, 10%, 33%);
+    --clr-gray-500: hsl(201, 11%, 66%);
+    /* FONT SIZES  */
+    --fs-body: 1.125rem;/* 18px  */
+}
+
+body {
+    font-family: 'Bai Jamjuree', Arial, Helvetica, sans-serif;
+}
+
+.main {
+    display: grid;
+    gap: 10rem;
+}
+
+.header {
+    background-image: url('./images/bg-header-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding-block: 5rem 3rem;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    line-height: initial;
+}
+
+.grid--btns {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.grid--sm {
+    display: grid;
+    gap: .75rem;
+}
+
+.grid-heading {
+    font-weight: 600;
+    padding-inline: 2rem;
+    text-align: center;
+    color: var(--clr-gray-700);
+}
+
+.grid-p {
+    font-weight: 400;
+    color: var(--clr-gray-500);
+    font-size: 1.01rem;
+    text-align: center;
+    padding-inline: 2rem;
+}
+
+.grid--linksContainer {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.grid--links {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: var(--fs-body);
+    padding-block: .85rem;
+    padding-inline: 2.5rem;
+    width: 90%;
+    justify-self: center;
+    text-align: center;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: filter 150ms ease-in-out;
+}
+
+.grid--links:hover {
+    filter: brightness(120%);
+}
+
+.grid--links:active {
+    filter: brightness(140%);
+}
+
+.green {
+    background: var(--clr-green-500);
+    box-shadow: 0px 3px 0px 0px rgb(21, 146, 128);
+}
+
+.blue {
+    background: var(--clr-blue-100);
+    box-shadow: 0px 3px 0px 0px hsla(233, 63%, 52%, 1);
+}
+
+.grid--large {
+    display: grid;
+    gap: 4rem;
+}
+
+.grid--flex {
+    display: grid;
+    gap: 3rem;
+}
+
+.flex-img {
+    width: 82.5%;
+    height: auto;
+    justify-self: center;
+}
+
+.grid--list {
+    display: grid;
+    gap: 3rem;
+}
+
+.grid-gap {
+    display: grid;
+    gap: .5rem;
+}
+
+.h2 {
+    font-size: 1.75rem;
+    line-height: initial;
+}
+
+.h3 {
+    font-size: 1.5rem;
+    line-height: initial;
+}
+
+[aria-labelledby="clipboard-title"] {
+    display: grid;
+    gap: 3.5rem;
+}
+
+.grid-imgContainer {
+    width: 90%;
+    height: auto;
+    justify-self: center;
+}
+
+.grid-img {
+    width: 100%;
+    height: auto;
+}
+
+[aria-labelledby="workflow-title"] {
+    display: grid;
+    gap: 5rem;
+}
+
+.grid--flex-list {
+    display: grid;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.grid--flex-listItem {
+    display: grid;
+    gap: 2.5rem;
+    justify-self: center
+}
+
+.grid-li-img {
+    justify-self: center;
+}
+
+.big-gap {
+    gap: 5rem;
+}
+
+[aria-labelledby="clipboard-header"] > .grid--sm > p {
+    padding-inline: 2.1rem;
+}
+
+footer {
+    margin-top: 10rem;
+    display: grid;
+    background: rgb(247, 246, 246);
+    gap: 3rem;
+    padding-block: 2.5rem;
+    justify-content: center;
+}
+
+.footerImg {
+    width: 40%;
+    height: auto;
+    justify-self: center;
+}
+
+.footer--grid-list {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.footer--grid-list > li {
+    justify-self: center;
+    transition: color 150ms ease-in-out;
+}
+
+
+.footer-listItem {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--clr-gray-700);
+    font-size: var(--fs-body);
+}
+
+.footer-listItem:hover {
+    color: var(--clr-green-500);
+}
+
+.footer-listItem:active {
+    filter: brightness(140%);
+}
+.footer-socials {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.footer-social {
+    cursor: pointer;
+}
+
+.social-icon > path {
+    transition: fill 150ms ease-in-out;
+}
+
+.social-icon:hover > path {
+    fill: var(--clr-green-500);
+}
+
+.social-icon:active > path {
+    filter: brightness(140%)
+}
+
+@media (width >= 1024px) {
+    main {
+        
+    }
+    .header {
+        background-image: url('./images/bg-header-desktop.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .grid--btns {
+        justify-content: center;
+        justify-self: center;
+        max-width: 50%;
+    }
+    
+    .grid-heading {
+        font-size: 2rem;
+        padding: 0;
+    }
+    
+    .h1 {
+        font-size: 2.5rem;
+    }
+    .grid-p {
+        font-size: var(--fs-body);
+        text-align: center;
+    }
+
+    .padding {
+        max-width: 54%;
+        justify-self: center;
+    }
+
+    .grid--linksContainer {
+        grid-template-columns: repeat(2, 1fr);
+        /* gap: 0; */
+    }
+
+    .grid--links {
+        width: 70%;
+    }
+
+    .green {
+        justify-self: flex-end;
+    }
+
+    .blue {
+        justify-self: flex-start;
+    }
+
+    .grid--flex {
+        grid-template-columns: 50% 27%;
+        justify-self: initial;
+        gap: 10rem;
+    }
+
+    .flex-img {
+        width: 100%;
+    }
+
+    .grid--list {
+        align-content: flex-start;
+        margin-top: 1rem;
+    }
+
+    .grid-gap {
+        gap: 1.5rem;
+    }
+
+    .grid--list > li {
+        justify-items: flex-start;
+    }
+
+    .h3 {
+        font-size: 1.5rem;
+    }
+
+    .grid--list > li > p {
+        text-align: start;
+        padding: 0;
+    }
+
+    .grid--sm {
+        gap: 1rem;
+    }
+
+    .grid-imgContainer {
+        max-width: 60%;
+    }
+
+    .grid--flex-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        margin: initial;
+        max-width: 85%;
+        justify-self: center;
+    }
+
+    .grid--flex-listItem > .grid-gap > p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .grid--flex-list:nth-of-type(2) {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 5rem;
+    }
+
+    footer {
+        grid-template-columns: 25% 50% 25%;
+        gap: 0;
+        align-items: center;
+        padding-block: 1.5rem;
+    }
+
+    .footerimgContainer {
+        justify-self: center;
+    }
+
+    .footerImg {
+        width: 18%;
+        height: auto;
+    }
+
+    .footer--grid-list {
+        grid-template-columns: repeat(3, 20%);
+        row-gap: 1rem;
+        grid-template-areas: 
+        "FAQs Privacy Install"
+        "Contact Press ......";
+    }
+    .footer--grid-list > li:nth-of-type(1) {
+        grid-area: FAQs;
+        justify-self: flex-start;
+    }
+    .footer--grid-list > li:nth-of-type(2) {
+        grid-area: Contact;
+        justify-self: flex-start;
+    }
+    .footer--grid-list > li:nth-of-type(3) {
+        grid-area: Privacy;
+        justify-self: flex-start;
+    }
+    .footer--grid-list > li:nth-of-type(4) {
+        grid-area: Press;
+        justify-self: flex-start;
+    }
+    .footer--grid-list > li:nth-of-type(5) {
+        grid-area: Install;
+        justify-self: flex-start;
+    }
+
+    .footer-listItem {
+        font-size: 1rem;
+    }
+
+    .footer-socials {
+        justify-self: center;
+        gap: 1.5rem;
+    }
+}
