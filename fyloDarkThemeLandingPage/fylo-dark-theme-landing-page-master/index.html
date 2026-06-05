@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Fylo landing page with dark theme and features grid</title>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__logo-container">
+      <a href="/" class="site-header__link">
+        <img src="./images/logo.svg" alt="Fylo" width="176" height="52" class="site-header__logo">
+      </a>
+    </div>
+    <nav class="site-header__nav" aria-label="Primary">
+      <ul class="site-header__list">
+        <li class="site-header__item">
+          <a href="#" class="site-header__nav-link">
+            Features
+          </a>
+        </li>
+        <li class="site-header__item">
+          <a href="#" class="site-header__nav-link">
+            Team
+          </a>
+        </li>
+        <li class="site-header__item">
+          <a href="#" class="site-header__nav-link">
+            Sign In
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="site-main">
+    <section class="site-hero" aria-labelleby="hero-title">
+      <div class="site-hero__img-container">
+        <img src="./images/illustration-intro.png" alt="2 people putting files into documents" width="720" height="534" class="site-hero__img">
+      </div>
+      <div class="site-hero__container">
+        <h1 id="hero-title" class="site-hero__title">
+          All your files in one secure location, accessible anywhere.
+        </h1>
+        <p class="site-hero__description">
+          Fylo stores all your most important files in one secure location. Access them wherever you need, share and collaborate with friends family, and co-workers.
+        </p>
+      </div>
+      <a href="#" class="site-hero__link">
+        Get Started
+      </a>
+    </section>
+    <section class="site-features" aria-labelledby="features">
+      <h2 class="visually-hidden" id="features">
+        Features
+      </h2>
+      <ul class="site-features__list">
+        <li class="site-features__item">
+          <div class="site-features__img-container">
+            <img src="./images/icon-access-anywhere.svg" width="83" height="78" loading="lazy" alt="" class="site-features__img">
+          </div>
+          <div class="site-features__container">
+            <h3 class="site-features__title">
+              Access your files, anywhere
+            </h3>
+            <p class="site-features__description">
+              The ability to use a smartphone, tablet, or computer to access your account means your files follow you everywhere.
+            </p>
+          </div>
+        </li>
+        <li class="site-features__item">
+          <div class="site-features__img-container">
+            <img src="./images/icon-security.svg" width="70" height="88" loading="lazy" alt="" class="site-features__img">
+          </div>
+          <div class="site-features__container">
+            <h3 class="site-features__title">
+              Security you can trust
+            </h3>
+            <p class="site-features__description">
+              2-factor authentication and user-controlled encryption are just a couple of the security features we allow to help secure your files.
+            </p>
+          </div>
+        </li>
+        <li class="site-features__item">
+          <div class="site-features__img-container">
+            <img src="./images/icon-collaboration.svg" width="86" height="71" loading="lazy"  alt="" class="site-features__img">
+          </div>
+          <div class="site-features__container">
+            <h3 class="site-features__title">
+              Real-time collaboration
+            </h3>
+            <p class="site-features__description">
+              Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.
+            </p>
+          </div>
+        </li>
+        <li class="site-features__item">
+          <div class="site-features__img-container">
+            <img src="./images/icon-any-file.svg" width="91" height="64" loading="lazy" alt="" class="site-features__img">
+          </div>
+          <div class="site-features__container">
+            <h3 class="site-features__title">
+              Store any type of file
+            </h3>
+            <p class="site-features__description">
+              Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to be securely stored and shared.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="productive" aria-labelledby="productive-title">
+      <div class="productive__img-container">
+        <img src="./images/illustration-stay-productive.png" alt="3 people putting messages on a background" width="615" height="465" loading="lazy"  class="productive__img">
+      </div>
+      <div class="productive__container">
+        <h2 id="productive-title" class="productive__title">
+          Stay productive, wherever you are
+        </h2>
+        <p class="productive__description">
+          Never let location be an issue when accessing your files. Fylo has you covered for all of your file storage needs.
+        </p>
+        <p class="productive__description">
+          Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.
+        </p>
+        <a href="#" class="productive__link">
+          See how Fylo Works
+          <svg class="productive__arrow-img" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><circle id="b" cx="6" cy="6" r="6"/><filter x="-25%" y="-25%" width="150%" height="150%" filterUnits="objectBoundingBox" id="a"><feOffset in="SourceAlpha" result="shadowOffsetOuter1"/><feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"/><feColorMatrix values="0 0 0 0 0.384313725 0 0 0 0 0.878431373 0 0 0 0 0.850980392 0 0 0 0.811141304 0" in="shadowBlurOuter1"/></filter></defs><g fill="none" fill-rule="evenodd"><g transform="translate(2 2)"><use fill="#000" filter="url(#a)" xlink:href="#b"/><use fill="#62E0D9" xlink:href="#b"/></g><path d="M8.582 6l-.363.35 1.452 1.4H5.333v.5h4.338L8.22 9.65l.363.35 2.074-2z" fill="#1B2330"/></g></svg>
+        </a>
+      </div>
+    </section>
+    <section class="testimonials" aria-labelledby="testimonials-title">
+      <h2 id="testimonials-title" class="visually-hidden">
+        Customer testimonials
+      </h2>
+      <ul class="testimonials__list">
+        <li class="testimonials__item">
+          <figure class="testimonial-card">
+            <blockquote class="testimonial-card__quote">
+              <p class="testimonial-card__quote-message">
+                Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.
+              </p>
+            </blockquote>
+            <figcaption class="testimonial-card__author">
+              <img src="./images/profile-1.jpg" width="128" height="128" alt="" class="testimonial-card__img">
+              <div class="testimonial-card__container">
+                <h3 class="testimonial-card__name">
+                  Satish Patel
+                </h3>
+                <p class="testimonial-card__role">
+                  Founder & CEO, Huddle
+                </p>
+              </div>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="testimonials__item">
+          <figure class="testimonial-card">
+            <blockquote class="testimonial-card__quote">
+              <p class="testimonial-card__quote-message">
+                Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.
+              </p>
+            </blockquote>
+            <figcaption class="testimonial-card__author">
+              <img src="./images/profile-2.jpg" width="128" height="128" alt="" class="testimonial-card__img">
+              <div class="testimonial-card__container">
+                <h3 class="testimonial-card__name">
+                  Bruce McKenzie
+                </h3>
+                <p class="testimonial-card__role">
+                  Founder & CEO, Huddle
+                </p>
+              </div>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="testimonials__item">
+          <figure class="testimonial-card">
+            <blockquote class="testimonial-card__quote">
+              <p class="testimonial-card__quote-message">
+                Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.
+              </p>
+            </blockquote>
+            <figcaption class="testimonial-card__author">
+              <img src="./images/profile-3.jpg" width="128" height="128" alt="" class="testimonial-card__img">
+              <div class="testimonial-card__container">
+                <h3 class="testimonial-card__name">
+                  Iva Boyd
+                </h3>
+                <p class="testimonial-card__role">
+                  Founder & CEO, Huddle
+                </p>
+              </div>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+    <div class="access-container">
+      <section class="access" aria-labelledby="access-title">
+        <div class="access__container">
+          <h2 id="access-title" class="access__title">
+            Get early access today
+          </h2>
+          <p class="access__description" id="access-description">
+            It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.
+          </p>
+        </div>
+        <form novalidate action="#" class="access__form" aria-describedby="access-description">
+          <div class="access__form-container">
+            <label for="email" class="visually-hidden">
+              Enter your email
+            </label>
+            <input type="email" id="email" placeholder="email@example.com" autocomplete="email" class="access__input" aria-describedby="email-error" required >
+            <button class="access__button">
+              Get Started For Free
+            </button>
+          </div>
+          <p  id="email-error" class="access__error hide-display" role="alert" aria-live="polite">
+            Please enter a valid email address.
+          </p>
+        </form>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer__address-container">
+      <a href="/" class="site-footer__logo-link">
+        <img src="./images/logo.svg" alt="Fylo" width="176" height="52" loading="lazy"  class="site-footer__logo">
+      </a>
+      <section class="site-footer__contact" aria-labelledby="footer-contact-title">
+        <h2 class="visually-hidden" id="footer-contact-title">
+          Contact information
+        </h2>
+        <address class="site-footer__address">
+          <ul class="site-footer__contact-list">
+            <li class="site-footer__contact-item">
+              <div class="site-footer__contact-container">
+                <img src="./images/icon-location.svg" width="13" height="18" alt="" aria-hidden="true" class="site-footer__contact-img">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                </p>
+              </div>
+            </li>
+            <li class="site-footer__contact-item">
+              <div class="site-footer__contact-container">
+                <img src="./images/icon-phone.svg" width="18" height="18" alt="" aria-hidden="true" class="site-footer__contact-img">
+                <p>
+                  +1-543-123-4567
+                </p>
+              </div>
+            </li>
+            <li class="site-footer__contact-item">
+              <div class="site-footer__contact-container">
+                <img src="./images/icon-email.svg" width="20" height="16" alt="" aria-hidden="true" class="site-footer__contact-img">
+                <p>
+                  example@fylo.com
+                </p>
+              </div>
+            </li>
+          </ul>
+        </address>
+      </section>
+    </div>
+    <div class="site-footer__nav-container">
+      <nav class="site-footer__nav" aria-labelledby="site-footer-nav-title">
+        <h2 class="visually-hidden" id="site-footer-nav-title">
+          Footer navigation
+        </h2>
+        <ul class="site-footer__list">
+          <li class="site-footer__item">
+            <a href="#" class="site-footer__link">
+              About Us
+            </a>
+          </li>
+          <li class="site-footer__item">
+            <a href="#" class="site-footer__link">
+              Jobs
+            </a>
+          </li>
+          <li class="site-footer__item">
+            <a href="#" class="site-footer__link">
+              Press
+            </a>
+          </li>
+          <li class="site-footer__item">
+            <a href="#" class="site-footer__link">
+              Blog
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="site-footer__nav" aria-labelledby="site-footer-support-title">
+        <h2 class="visually-hidden" id="site-footer-support-title">
+          Support Navigation
+        </h2>
+        <ul class="site-footer__list">
+          <li class="site-footer__item">
+            <a href="#" class="site-footer__link">
+              Contact Us
+            </a>
+          </li>
+          <li class="site-footer__item">
+            <a href="#" class="site-footer__link">
+              Terms
+            </a>
+          </li>
+          <li class="site-footer__item">
+            <a href="#" class="site-footer__link">
+              Privacy
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <section class="site-footer__social-links">
+      <h2 class="visually-hidden" id="site-footer-social-title">
+        Social media links
+      </h2>
+      <ul class="site-footer__social-list">
+        <li class="site-footer__social-item">
+          <a href="#" class="site-footer__social-link" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="site-footer__social-item">
+          <a href="#" class="site-footer__social-link" aria-label="Twitter">
+            <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="site-footer__social-item">
+          <a href="#" class="site-footer__social-link" aria-label="Instagram">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+</html>
