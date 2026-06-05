@@ -24,8 +24,8 @@ This is a solution to the [Fylo dark theme landing page challenge on Frontend Me
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-semantic-accessible-flyo-dark-theme-page-xfZcjGXu1n](https://www.frontendmentor.io/solutions/responsive-semantic-accessible-flyo-dark-theme-page-xfZcjGXu1nm)
+- Live Site URL: [https://thedmvdevaustinfylodarktheme.netlify.app/](https://thedmvdevaustinfylodarktheme.netlify.app/)
 
 
 ### Built with
