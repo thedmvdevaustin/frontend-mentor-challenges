@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css" />
+  <title>Frontend Mentor | Contact form</title>
+</head>
+<body>
+  <main class="contact">
+    <h1 class="contact__title">
+      Contact Us
+    </h1>
+    <form novalidate class="contact__form">
+      <div class="contact__names">
+        <div class="contact__name">
+          <label for="first-name" class="contact__label">
+            First Name
+          </label>
+          <input name="firstName" type="text" class="contact__input" id="first-name" required  autocomplete="given-name" >
+          <p id="first-name-error" class="contact__error" hidden role="alert">
+            This field is required
+          </p>
+        </div>
+        <div class="contact__name">
+          <label for="last-name" class="contact__label">
+            Last Name
+          </label>
+          <input name="lastName" type="text" class="contact__input" id="last-name" required  autocomplete="family-name" >
+          <p id="last-name-error" class="contact__error" hidden role="alert">
+            This field is required
+          </p>
+        </div>
+      </div>
+      <div class="contact__name">
+        <label for="email" class="contact__label">
+          Email Address
+        </label>
+        <input name="email" type="email" class="contact__input" id="email" required  autocomplete="email" >
+        <p id="email-error" class="contact__error" hidden role="alert">
+          Please enter a valid email address
+        </p>
+      </div>
+      <fieldset class="contact__fieldset"  >
+        <legend class="contact__legend">
+          Query Type
+        </legend>
+        <div class="contact__radio-option">
+          <input type="radio" name="query-type" class="contact__radio" id="general" required>
+          <label for="general" class="contact__radio-label">
+            General Enquiry
+          </label>
+        </div>
+        <div class="contact__radio-option">
+          <input type="radio" name="query-type" class="contact__radio" id="support">
+          <label for="support" class="contact__radio-label">
+            Support Request
+          </label>
+        </div>
+        <p id="query-error" class="contact__error" hidden role="alert">
+          Please select a query type
+        </p>
+      </fieldset>
+      <div class="contact__message">
+        <label for="message" class="contact__label">
+          Message
+        </label>
+        <textarea name="message" id="message" class="contact__textarea" required></textarea>
+        <p id="message-error" class="contact__error" hidden role="alert">
+          This field is required
+        </p>
+      </div>
+      <div class="contact__checkbox-container">
+        <input name="consent" type="checkbox" class="contact__checkbox" id="consent" required >
+        <label for="consent" class="contact__label">
+          I consent to being contacted by the team
+        </label>
+        <p id="checkbox-error" class="contact__error" hidden role="alert">
+          To submit this form, please consent to being contacted
+        </p>
+      </div>
+      <button type="submit" class="contact__submit">
+        Submit
+      </button>
+    </form>
+    <div class="contact__toast visually-hidden" role="status" aria-atomic="true"></div>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+/* 2. Remove default margin */
+*:not(dialog) {
+    margin: 0;
+}
+  
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+      interpolate-size: allow-keywords;
+    }
+}
+  
+body {
+    /* 4. Increase line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+  
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+  
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+    font: inherit;
+}
+  
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* CUSTOM FONTS  */
+/* karla-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/karla-v33-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* karla-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/fonts/karla-v33-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* CUSTOM PROPERTIES  */
+:root {
+    /* COLORS  */
+    --clr-green-200: hsl(148, 38%, 91%);
+    --clr-green-600: hsl(169, 82%, 27%);
+    --clr-red: hsl(0, 66%, 54%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-grey-500: hsl(186, 15%, 59%);
+    --clr-grey-900: hsl(187, 24%, 22%);
+    /* FONTS  */
+    --fs-labels: 1rem; /* 16px  */
+}
+
+/* HELPER CLASSES  */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}  
+
+/* GENERAL STYLES  */
+
+body {
+    background: var(--clr-green-200);
+    font-family: 'Karla', Arial, Helvetica, sans-serif;
+}
+
+.contact {
+    margin-inline: 1rem;
+    margin-block: 2rem;
+    background: var(--clr-white);
+    border-radius: 12px;
+    padding-inline: 1.5rem;
+    padding-block: 1rem;
+    display: grid;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.contact__title {
+    font-weight: 700;
+    color: var(--clr-grey-900);
+}
+
+.contact__form {
+    display: grid;
+    gap: 1.5rem;
+    color: var(--clr-grey-900);
+}
+
+.contact__names {
+    display: grid;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.contact__name {
+    display: grid;
+    gap: .5rem;
+}
+
+.contact__label {
+    font-size: var(--fs-labels);
+    padding-inline: 0 1rem;
+    cursor: pointer;
+    display: inline-flex;
+    gap: 1ch;
+}
+
+.contact__label::after {
+    content: "*";
+    width: 5px;
+    height: 5px;
+    color: var(--clr-green-600);
+}
+
+.contact__input {
+    padding-block: .5rem;
+    padding-inline: .5rem;
+    border-radius: 7px;
+    border: 1px solid var(--clr-grey-900);
+    cursor: pointer;    
+}
+
+.contact__input:hover {
+   border: 1px solid var(--clr-green-600);
+}
+
+.contact__input:user-invalid {
+    border: 1px solid var(--clr-red);
+}
+
+.contact__input:focus-visible {
+    outline: 2px solid var(--clr-green-600);
+    border: none;
+}
+
+.contact__error {
+    color: var(--clr-red);
+    /* display: none; */
+}
+
+[for="email"]::before {
+    left: 115px;
+}
+
+.contact__fieldset {
+    border: none;
+    padding: 0;
+    display: grid;
+    gap: .75rem;
+}
+
+.contact__legend {
+    font-size: var(--fs-labels);
+    padding-block: 0 .75rem;
+    position: relative;
+}
+
+.contact__legend::before {
+    content: '*';
+    position: absolute;
+    left: 90px;
+    top: 0px;
+    width: 5px;
+    height: 5px;
+    color: var(--clr-green-600);
+}
+
+.contact__radio-option {
+    border: 1px solid var(--clr-grey-900);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding-block: .75rem;
+    padding-inline: 1.5rem 0;
+    border-radius: 7px;
+    font-family: 'Karla', Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.contact__radio-option:has([type="radio"]:checked) {
+    border: 1px solid var(--clr-green-600);
+    background-color: var(--clr-green-200);
+}
+
+.contact__radio-label {
+    cursor: pointer;
+}
+
+.contact__radio-label::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+
+.contact__radio {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid hsl(300, 1%, 80%);
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.contact__radio:checked {
+    background: radial-gradient(circle, var(--clr-green-600) 40%, var(--clr-green-200) 50%);
+    outline: 2px solid var(--clr-green-600);
+    border: none;
+    outline-offset: -1px;
+}
+
+.contact__radio:focus-visible {
+    width: 18px;
+    height: 18px;
+    background: radial-gradient(circle, var(--clr-green-600) 40%, var(--clr-green-200) 50%);
+    outline: 2px solid var(--clr-green-600);
+    outline-offset: -1px;
+    border: none;
+}
+
+.contact__message {
+    display: grid;
+    gap: .25rem;
+}
+
+.contact__textarea {
+    border-radius: 7px;
+    height: 3lh;
+    box-sizing: content-box;
+    resize: vertical;
+}
+
+.contact__textarea:hover{
+    border: 1px solid var(--clr-green-600);
+}
+
+.contact__textarea:user-invalid {
+    border: 1px solid var(--clr-red);
+}
+
+[for="message"]::before {
+    left: 75px;
+}
+
+.contact__checkbox-container {
+    display: grid;
+    grid-template-columns: 7% 1fr;
+    gap: .5rem;
+    align-items: center;
+}
+
+.contact__checkbox {
+    grid-column: 1 / 2;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--clr-grey-500);
+    cursor: pointer;
+}
+
+.contact__checkbox:checked {
+    border: none;
+    position: relative;
+}
+
+.contact__checkbox:checked::after {
+    content: url(./assets/images/icon-checkbox-check.svg);
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    color: white;
+}
+
+[for="consent"] {
+    grid-column: 2 / 3;
+}
+
+#checkbox-error {
+    grid-column: 1 / 3;
+}
+
+.contact__submit {
+    padding-block: 1rem;
+    background: var(--clr-green-600);
+    color: var(--clr-white);
+    border-radius: 10px;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: background 150ms ease-in-out;
+}
+
+.contact__submit:hover {
+    background: rgb(8, 82, 68);
+}
+
+.contact__toast {
+    border: none;
+    border-radius: 12px;
+    background: rgb(22, 57, 40);
+    position: absolute;
+    top: 0px;
+    left: 50px;
+    padding-inline: 1.5rem;
+    padding-block: 1.5rem;
+}
+
+.contact__toast-message {
+    display: grid;
+    gap: .75rem;
+}
+
+.contact__container {
+    display: flex;
+    gap: .75rem;
+    align-items: center;
+}
+
+.contact__toast-title {
+    color: var(--clr-white);
+    font-size: 1.2rem;
+    font-family: 'Karla', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.contact__toast-description {
+    color: var(--clr-grey-500);
+    font-size: 1rem;
+}
+
+
+
+@media (width >= 750px) {
+    body {
+        display: grid;
+        place-items: center;
+    }
+
+    .contact {
+        max-width: 750px;
+        width: 65%;
+        margin-block: 8rem;
+    }
+    .contact__names {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact__fieldset {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact__toast {
+        top: -105px;
+        left: 135px;
+    }
+}
