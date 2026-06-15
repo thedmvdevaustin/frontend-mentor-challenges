@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-contact-form-with-semantic-html-and-a11y-and-wcag-standards-WzPORUOy6m](https://www.frontendmentor.io/solutions/responsive-contact-form-with-semantic-html-and-a11y-and-wcag-standards-WzPORUOy6m)
+- Live Site URL: [https://thedmvdevaustincontactform.netlify.app/](https://thedmvdevaustincontactform.netlify.app/)
 
 ### Built with
 
