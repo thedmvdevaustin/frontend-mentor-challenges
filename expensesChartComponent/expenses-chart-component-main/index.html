@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Expenses chart component</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <main class="chart">
+    <h1 class="chart__title visually-hidden">Finance Dashboard</h1>
+    <section class="chart__balance" aria-labelledby="balance-title" >
+      <h2 class="balance__title" id="balance-title" >
+        My balance
+      </h2>
+      <p class="balance__total">
+        $921.48
+      </p>
+      <img src="./images/logo.svg" alt="" width="72" height="48" class="balance__img">
+    </section>
+    <section class="chart__spending" aria-labelledby="spending-title">
+      <h2 class="spending__title" id="spending-title" >
+        Spending - Last 7 days
+      </h2>
+      <figure class="spending__graph">
+        <ul class="spending__chart" aria-hidden="true"></ul>
+        <table class="spending__table visually-hidden">
+          <caption>Spending - Last 7 days</caption>
+          <thead>
+            <tr>
+              <th scope="col">Day of the week</th>
+              <th scope="col">Spending</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Monday</th>
+            </tr>
+            <tr>
+              <th scope="row">Tuesday</th>
+            </tr>
+            <tr>
+              <th scope="row">Wednesday</th>
+            </tr>
+            <tr>
+              <th scope="row">Thursday</th>
+            </tr>
+            <tr>
+              <th scope="row">Friday</th>
+            </tr>
+            <tr>
+              <th scope="row">Saturday</th>
+            </tr>
+            <tr>
+              <th scope="row">Sunday</th>
+            </tr>
+          </tbody>
+        </table>
+        <div class="spending__monthly">
+          <p class="spending__total">
+            Total this month
+            <strong>
+              $478.33
+            </strong>
+          </p>
+          <p class="spending__last-month">
+            <strong>
+              +2.4%
+            </strong>
+            from last month
+          </p>
+        </div>
+      </figure>
+    </section>
+  </main>
+</body>
+</html>
