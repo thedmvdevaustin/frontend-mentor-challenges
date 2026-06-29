@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css" />
+  <title>Frontend Mentor | Loopstudios landing page</title>
+</head>
+<body>
+  <section class="hero">
+    <header class="hero__header">
+      <img src="./images/logo.svg" alt="logo" width="192" height="32" class="hero__logo">
+      <button class="hero__menu-btn" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu" >
+        <img src="./images/icon-hamburger.svg" alt="" width="24" height="16" class="hero__menu-icon">
+      </button>
+      <nav class="hero__nav" id="primary-nav" aria-label="Primary">
+        <ul class="hero__list">
+          <li class="hero__list-item">
+            <a href="#" class="hero__link">
+              About
+            </a>
+          </li>
+          <li class="hero__list-item">
+            <a href="#" class="hero__link">
+              Careers
+            </a>
+          </li>
+          <li class="hero__list-item">
+            <a href="#" class="hero__link">
+              Events
+            </a>
+          </li>
+          <li class="hero__list-item">
+            <a href="#" class="hero__link">
+              Products
+            </a>
+          </li>
+          <li class="hero__list-item">
+            <a href="#" class="hero__link">
+              Support
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <h1 class="hero__title">
+      Immersive Experiences That Deliver
+    </h1>
+  </section>
+  <main class="main">
+    <section class="main__interactive" aria-labelledby="interactive-title">
+      <picture class="main__img">
+        <source media="(min-width: 960px)" srcset="images/desktop/image-interactive.jpg" type="image/jpeg">
+        <img src="images/mobile/image-interactive.jpg" alt="Guy using a VR device" width="654" height="448">
+      </picture>
+      <section class="main__container">
+        <h2 class="main__heading" id="interactive-title">
+          The leader in interactive VR
+        </h2>
+        <p class="main__description">
+          Founded in 2011, Loopstudios has been producing world-class virtual reality 
+          projects for some of the best companies around the globe. Our award-winning 
+          creations have transformed businesses through digital experiences that bind 
+          to their brand.
+        </p>
+      </section>
+    </section>
+    <section class="main__creations" aria-labelledby="creations-title" >
+      <h2 class="main__heading" id="creations-title">
+        Our Creations
+      </h2>
+      <button class="main__btn" aria-expanded="false" aria-controls="creations-list">See all</button>
+      <ul class="main__list" id="creations-list">
+        <li class="main__list-item">
+          <a href="#" class="main__list-link">
+            Deep Earth
+          </a>
+        </li>
+        <li class="main__list-item">
+          <a href="#" class="main__list-link">
+            Night Arcade
+          </a>
+        </li>
+        <li class="main__list-item">
+          <a href="#" class="main__list-link">
+            Soccer Team VR
+          </a>
+        </li>
+        <li class="main__list-item">
+          <a href="#" class="main__list-link">
+            The Grid
+          </a>
+        </li>
+        <li class="main__list-item">
+          <a href="#" class="main__list-link">
+            From Up Above VR
+          </a>
+        </li>
+        <li class="main__list-item">
+          <a href="#" class="main__list-link">
+            Pocket borealis
+          </a>
+        </li>
+        <li class="main__list-item">
+          <a href="#" class="main__list-link">
+            The curiosity
+          </a>
+        </li>
+        <li class="main__list-item">
+          <a href="#" class="main__list-link">
+            Make it fisheye
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer class="footer">
+    <img src="./images/logo.svg" alt="" width="192" height="32" class="footer__logo">
+    <nav class="footer__nav" aria-label="Footer" >
+      <ul class="footer__nav-list">
+        <li class="footer__nav-item">
+          <a href="#" class="footer__nav-link">
+            About
+          </a>
+        </li>
+        <li class="footer__nav-item">
+          <a href="#" class="footer__nav-link">
+            Careers
+          </a>
+        </li>
+        <li class="footer__nav-item">
+          <a href="#" class="footer__nav-link">
+            Events
+          </a>
+        </li>
+        <li class="footer__nav-item">
+          <a href="#" class="footer__nav-link">
+            Products
+          </a>
+        </li>
+        <li class="footer__nav-item">
+          <a href="#" class="footer__nav-link">
+            Support
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <ul class="footer__socials">
+      <li class="footer__social-item">
+        <a href="#" class="footer__social__link" aria-label="Facebook" >
+          <img src="./images/icon-facebook.svg" alt="Facebook" width="24" height="24" class="footer__social-img" aria-hidden="true">
+        </a>
+      </li>
+      <li class="footer__social-item">
+        <a href="#" class="footer__social__link" aria-label="Twitter" >
+          <img src="./images/icon-twitter.svg" alt="Twitter" width="24" height="20" class="footer__social-img" aria-hidden="true">
+        </a>
+      </li>
+      <li class="footer__social-item">
+        <a href="#" class="footer__social__link" aria-label="Pinterest" >
+          <img src="./images/icon-pinterest.svg" alt="Pinterest" width="24" height="24" class="footer__social-img" aria-hidden="true">
+        </a>
+      </li>
+      <li class="footer__social-item">
+        <a href="#" class="footer__social__link" aria-label="Instagram" >
+          <img src="./images/icon-instagram.svg" alt="Instagram" width="24" height="24" class="footer__social-img" aria-hidden="true">
+        </a>
+      </li>
+    </ul>
+    <p class="footer__copyright">
+      © 2021 Loopstudios. All rights reserved.
+    </p>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+</html>
+<!-- things to do: 
+1. figure out vr picture layout for desktop version(picture tag is not working)
+2. figure out hover states for both navs for active states version -->
