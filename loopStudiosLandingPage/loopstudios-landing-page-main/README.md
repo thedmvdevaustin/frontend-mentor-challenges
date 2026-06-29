@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-a11y-wcag-standard-loopstudio-landing-page-LY1t2ubF-H](https://www.frontendmentor.io/solutions/responsive-a11y-wcag-standard-loopstudio-landing-page-LY1t2ubF-H)
+- Live Site URL: [https://dmvdevaustinloopstudioslanding.netlify.app/](https://dmvdevaustinloopstudioslanding.netlify.app/)
 
 
 ### Built with
