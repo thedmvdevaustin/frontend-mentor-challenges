@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css" />
+  <title>Frontend Mentor | Project tracking intro component</title>
+</head>
+<body>
+  <div class="grid-container">
+    <header class="tracking__header">
+      <img src="./images/logo.svg" alt="logo" width="32" height="32" class="tracking__logo">
+      <button class="tracking__menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Open menu" >
+        <img src="./images/icon-hamburger.svg" alt="" width="24" height="16" class="tracking__menu-icon">
+      </button>
+      <nav class="tracking__nav" id="nav">
+        <ul class="tracking__list">
+          <li class="tracking__list-item">
+            <a href="#" class="tracking__list-link">
+              Product
+            </a>
+          </li>
+          <li class="tracking__list-item">
+            <a href="#" class="tracking__list-link">
+              Features
+            </a>
+          </li>
+          <li class="tracking__list-item">
+            <a href="#" class="tracking__list-link">
+              Pricing
+            </a>
+          </li>
+          <li class="tracking__list-item" aria-hidden="true" >
+            <a class="tracking__list-link" tabindex="-1">
+  
+            </a>
+          </li>
+          <li class="tracking__list-item">
+            <a href="#" class="tracking__list-link">
+              Login
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="img-container">
+      <img src="./images/illustration-devices.svg" alt="iphone and laptop devices" width="960" height="464" class="tracking__img" />
+    </div>
+    <div class="decorative-block" aria-hidden="true"></div>
+    <main class="tracking__main">
+      <h2 class="tracking__heading">
+        <em>
+          New
+        </em>
+        Monograph Dashboard
+      </h2>
+      <h1 class="tracking__title">
+        Powerful insights into your team
+      </h1>
+      <p class="tracking__description">
+        Project planning and time tracking for agile teams
+      </p>
+      <p class="tracking__demo">
+        <a href="#">
+          Schedule a demo
+        </a>
+        to see a preview
+      </p>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!-- finished. Please update readme-template and post to github  -->
