@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-semantic-html-a11y-wcag-signup-form-with-success-message-21_FeNvVs6](https://www.frontendmentor.io/solutions/responsive-semantic-html-a11y-wcag-signup-form-with-success-message-21_FeNvVs6)
+- Live Site URL: [https://dmvdevaustinnewsletterformwithsuccess.netlify.app/](https://dmvdevaustinnewsletterformwithsuccess.netlify.app/)
 
 
 ### Built with
