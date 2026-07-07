@@ -1,0 +1,304 @@
+/* CSS RESET  */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+/* 2. Remove default margin */
+*:not(dialog) {
+    margin: 0;
+}
+  
+body {
+    /* 4. Increase line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+  
+/* 6. Improve media defaults */
+img, picture {
+    display: block;
+    max-width: 100%;
+}
+  
+/* 7. Inherit fonts for form controls */
+input, button {
+    font: inherit;
+}
+  
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* CUSTOM FONTS  */
+/* roboto-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/roboto-v51-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* roboto-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/fonts/roboto-v51-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* CUSTOM PROPERTIES  */
+:root {
+    /* COLOR  */
+    --clr-red: hsl(4, 100%, 67%);
+    --clr-blue-800: hsl(234, 29%, 20%);
+    --clr-blue-700: hsl(235, 18%, 26%);
+    --clr-grey: hsl(0, 0%, 58%);
+    --clr-white: hsl(0, 0%, 100%);
+    /* FONTS  */
+    --fs-p: 1rem;  /* 16px  */
+}
+
+/* MOBILE STYLES  */
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    background: var(--clr-blue-700);
+}
+
+.success {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: var(--clr-white);
+}
+
+.newsletter {
+    display: grid;
+    grid-template-areas: 
+    'image'
+    'section';
+    gap: 2rem;
+    margin-inline: auto;
+    background: var(--clr-white);
+}
+
+.newsletter__img {
+    grid-area: image;
+    object-fit: contain;
+}
+
+.newsletter__updated {
+    padding-inline: 1.5rem;
+    grid-area: section;
+    display: grid;
+    gap: 1rem;
+}
+
+.updated__title {
+    font-size: clamp(2.5rem, 3vw + 1rem, 4rem);
+    color: var(--clr-blue-800);
+    font-weight: 700;
+}
+
+.updated__details {
+    font-size: var(--fs-p);
+    font-weight: 400;
+    color: var(--clr-blue-800);
+}
+
+.updated__list {
+    padding: 0;
+    padding-block: .5rem 0;
+    display: grid;
+    gap: 1rem;
+}
+
+.updated__list-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.updated__list-item::before {
+    content: '';
+    background-image: url('./assets/images/icon-list.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 22px;
+    height: 21px;
+}
+
+.newsletter__form {
+    display: grid;
+    gap: 1.5rem;
+    padding-block: 1.5rem 2.5rem;
+}
+
+.form__input-container {
+    display: grid;
+    grid-template-areas: 
+    'label error'
+    'input input';
+    row-gap: .5rem;
+}
+
+.form__label {
+    grid-area: label;
+    color: var(--clr-blue-900);
+    font-size: .75rem;
+    font-weight: 700;
+}
+
+.form__error-message {
+    grid-area: error;
+    justify-self: flex-end;
+    color: var(--clr-red);
+    font-size: .75rem;
+    font-weight: 700;
+}
+
+.form__input {
+    grid-area: input;
+    padding-inline: 1.25rem 0;
+    padding-block: .75rem;
+    border-radius: 7px;
+    border: 1px solid var(--clr-grey);
+    cursor: pointer;
+}
+
+
+[aria-invalid="true"] {
+    background: hsla(4, 100%, 67%, .2);
+    border: 1px solid var(--clr-red);
+    color: var(--clr-red);
+}
+
+.form__input::placeholder {
+    color: var(--clr-grey);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.form__submit-btn {
+    padding-block: 1rem;
+    color: var(--clr-white);
+    background: var(--clr-blue-800);
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: var(--fs-p);
+    border: none;
+    cursor: pointer;
+}
+
+.form__submit-btn:hover {
+    background: linear-gradient(to right, hsl(346, 98%, 65%), hsl(26, 100%, 64%));
+    box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, .15);
+}
+
+.newsletter__success {
+    display: grid;
+    padding-block: 10rem 2rem;
+    padding-inline: 1.5rem;
+    gap: 17rem;
+    place-self: center;
+    max-width: 460px;
+}
+
+.success-container {
+    display: grid;
+    gap: 1rem;
+}
+
+.success__title {
+    font-size: 2.5rem;
+    color: var(--clr-blue-900);
+    font-weight: 700;
+    padding-block: 1.5rem 0;
+    line-height: 1;
+}
+
+.success__message {
+    font-size: var(--fs-p);
+    font-weight: 400;
+    color: var(--clr-blue-900);
+}
+
+.success__message > em {
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+@media(min-width: 376px) {
+    .newsletter {
+        max-width: 70%;
+    }
+
+    .success {
+        background: none;
+    }
+
+    .newsletter__success {
+        background: var(--clr-white);
+        max-width: 455px;
+        border-radius: 1.5rem;
+        gap: 1.5rem;
+        box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, .15);
+        padding-inline: 3rem;
+        padding-block: 2rem 4rem;
+        gap: 2rem;
+    }
+    
+}
+
+@media(min-width: 750px) {
+    .newsletter{
+        max-width: 50%;
+    }
+
+
+}
+
+@media(min-width: 1050px) {
+    .newsletter {
+        max-width: 40%;
+    }
+}
+
+/* DESKTOP STYLES  */
+@media (min-width: 1250px) {
+    body {
+        background: var(--clr-blue-800)
+    }
+    .newsletter {
+        grid-template-areas: 
+        'section image';
+        max-width: 65%;
+        grid-template-columns: repeat(2, 1fr);
+        margin-block: 6rem;
+        margin-inline: auto;
+        border-radius: 2.5em;
+        gap: 4rem;
+        padding-inline: 0;
+    }
+
+    .newsletter__img {
+        padding-block: 1.5rem;
+    }
+    .newsletter__updated {
+        align-self: center;
+        padding-inline: 4rem 0;
+    }
+}
+
+/* HELPER CLASSES  */
+[hidden] {
+    display: none !important;
+}
+
+.no-display {
+    display: none;
+}

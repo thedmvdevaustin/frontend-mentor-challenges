@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css" />
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+<body>
+  <!-- Sign-up form start -->
+  <main class="newsletter">
+    <picture class="newsletter__img">
+      <source media="(min-width: 1250px)" srcset="./assets/images/illustration-sign-up-desktop.svg" />
+      <source media="(min-width: 530px)" srcset="./assets/images/illustration-sign-up-tablet.svg" />
+      <img src="./assets/images/illustration-sign-up-mobile.svg" alt="hero" class="newletter__img-mobile" />
+    </picture>
+
+    <section class="newsletter__updated" aria-labelledby="updated-title" >
+      <h1 class="updated__title" id="updated-title">
+        Stay updated!
+      </h1>
+      <p class="updated__details">
+        Join 60,000+ product managers receiving monthly updates on:
+      </p>
+      <ul class="updated__list">
+        <li class="updated__list-item">
+          Product discovery and building what matters
+        </li>
+        <li class="updated__list-item">
+          Measuring to ensure updates are a success
+        </li>
+        <li class="updated__list-item">
+          And much more!
+        </li>
+      </ul>
+      <form novalidate class="newsletter__form">
+        <div class="form__input-container">
+          <label for="email" class="form__label">
+            Email address
+          </label>
+          <p class="form__error-message" hidden role="alert"> 
+            Valid email required
+          </p>
+          <input type="email" name="email" class="form__input" id="email" placeholder="email@company.com" required autocomplete="email" />
+        </div>
+        <button type="submit" class="form__submit-btn">
+          Subscribe to monthly newsletter
+        </button>
+      </form>
+    </section>
+    <!-- Sign-up form end -->
+    <!-- Success message start -->
+    <section class="newsletter__success" aria-labelledby="success-title" hidden>
+      <div class="success-container">
+        <img src="./assets/images/icon-success.svg" alt="" width="64" height="64" loading="lazy" class="success__icon">
+        <h2 class="success__title" id="success-title">
+          Thanks for subscribing!
+        </h2>
+        <p class="success__message">
+          A confirmation email has been sent to 
+          <em>
+            ash@loremcompany.com. 
+          </em>
+          Please open it and click the button inside to confirm your subscription.
+        </p>
+      </div>
+      <button type="button" class="form__submit-btn">
+        Dismiss message
+      </button>
+    </section>
+    <!-- Success message end -->
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
