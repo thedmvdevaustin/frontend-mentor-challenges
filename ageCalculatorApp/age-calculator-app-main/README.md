@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-wcag-standard-a11y-semantic-html-age-calulator-nNZTiQV_rd](https://www.frontendmentor.io/solutions/responsive-wcag-standard-a11y-semantic-html-age-calulator-nNZTiQV_rd)
+- Live Site URL: [https://aesthetic-muffin-38f9e9.netlify.app/](https://aesthetic-muffin-38f9e9.netlify.app/)
 
 
 ### Built with
