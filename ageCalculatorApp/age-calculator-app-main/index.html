@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css" />
+  <title>Frontend Mentor | Age calculator app</title>
+</head>
+<body>
+  <main class="calculator">
+    <section class="calculator__description visually-hidden" aria-labelledby="title">
+      <h1 class="calulator__title" id="title">
+        Age Calculator
+      </h1>
+      <p class="calculator__details">
+        Enter your date of birth in the order of day month and year in the format of DD, MM, YYYY in the 3 separate inputs below and press enter. 
+      </p>
+    </section>
+    <form novalidate class="calculator__form">
+      <div class="calculator__form-container">
+        <div class="calculator__input-container">
+          <label for="day" class="calculator__label">
+            Day
+          </label>
+          <input name="day" type="number" min="1" max="31" placeholder="DD" class="calculator__input" id="day" required autocomplete="bday-day">
+          <p class="calculator__error" aria-hidden="true" role="alert">
+            This field is required
+          </p>
+        </div>
+        <div class="calculator__input-container">
+          <label for="month" class="calculator__label">
+            Month
+          </label>
+          <input name="month" type="number" min="1" max="12" placeholder="MM" class="calculator__input" id="month" required autocomplete="bday-month">
+          <p class="calculator__error" aria-hidden="true" role="alert">
+            This field is required
+          </p>
+        </div>
+        <div class="calculator__input-container">
+          <label for="year" class="calculator__label">
+            Year
+          </label>
+          <input name="year" type="number" min="1" max="2026" placeholder="YYYY" class="calculator__input" id="year" required autocomplete="bday-year">
+          <p class="calculator__error" aria-hidden="true" role="alert">
+            This field is required
+          </p>
+        </div>
+      </div>
+      <button type="submit" class="calculator__submit">
+        <img src="./assets/images/icon-arrow.svg" alt="" width="46" height="44" class="calculator__arrow-icon">
+      </button>
+    </form>
+    <section class="calculator__age" aria-labelledby="heading" >
+      <h2 class="calculator__heading visually-hidden" id="heading">
+        You have been alive for:
+      </h2>
+      <ul class="calculator__list">
+        <li class="calculator__list-item">
+          <em>
+            - - 
+          </em>
+          years
+        </li>
+        <li class="calculator__list-item">
+          <em>
+            - - 
+          </em>
+          months
+        </li>
+        <li class="calculator__list-item">
+          <em>
+            - - 
+          </em>
+          days
+        </li>
+      </ul>
+    </section>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>

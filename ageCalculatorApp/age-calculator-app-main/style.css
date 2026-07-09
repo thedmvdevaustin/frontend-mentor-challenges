@@ -1,0 +1,265 @@
+/* CSS RESET  */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+/* 2. Remove default margin */
+*:not(dialog) {
+    margin: 0;
+}
+
+body {
+    /* 4. Increase line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+  
+/* 5. Improve media defaults */
+img, svg {
+    display: block;
+    max-width: 100%;
+}
+  
+/* 6. Inherit fonts for form controls */
+input, button {
+    font: inherit;
+}
+  
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* CUSTOM FONTS  */
+
+/* poppins-italic - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 400;
+    src: url('./assets/fonts/poppins-v24-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./assets/fonts/poppins-v24-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-800italic - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 800;
+    src: url('./assets/fonts/poppins-v24-latin-800italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* CUSTOM PROPERTIES  */
+
+:root {
+    /* COLORS  */
+    --clr-purple-500: hsl(259, 100%, 65%);
+    --clr-red-400: hsl(0, 100%, 67%);
+    --clr-white: hsl(0, 100%, 100%);
+    --clr-grey-100: hsl(0, 0%, 94%);
+    --clr-grey-200: hsl(0, 0%, 86%);
+    --clr-grey-500: hsl(0, 1%, 44%);
+    --clr-black: hsl(0, 0%, 0%);
+    /* FONTS  */
+    --fs-p: 2rem;
+}
+
+/* CSS HELPER CLASSES  */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+
+/* MOBILE STYLES  */
+
+body {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    background: var(--clr-grey-100);
+}
+
+.calculator {
+    display: grid;
+    gap: 3rem;
+    background: var(--clr-white);
+    border-radius: 1.5rem 1.5rem 5rem 1.5rem;
+    padding-block: 2rem;
+    padding-inline: 1.5rem;
+    margin-block: 5rem 0;
+    margin-inline: 1rem;
+}
+
+.calculator__form {
+    display: grid;
+    gap: 2rem;
+    position: relative;
+}
+
+.calculator__form-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.calculator__input-container {
+    width: 100%;
+    display: grid;
+    gap: .5rem;
+}
+
+.calculator__input-container:has([aria-invalid = true]) > label {
+    color: var(--clr-red-400);
+}
+
+.calculator__label {
+    color: var(--clr-grey-500);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: .65rem;
+}
+
+.calculator__input {
+    width: 100%;
+    border-radius: .35em;
+    border: 1px solid var(--clr-grey-100);
+    font-size: 1.25rem;
+    padding-block: .75rem;
+    padding-inline: 1rem 0;
+}
+
+[aria-invalid = true] {
+    border: 1px solid var(--clr-red-400);
+}
+
+.calculator__error {
+    font-size: .5rem;
+    color: var(--clr-red-400);
+    font-weight: 400;
+    font-style: italic;
+    opacity: 0;
+}
+
+.calculator__submit {
+    display: grid;
+    place-items: center;
+    text-decoration: line-through;
+    border: none;
+    background: none;
+    padding: 1rem;
+    background: var(--clr-purple-500);
+    border-radius: 50%;
+    justify-self: center;
+    cursor: pointer;
+    transition: background 150ms ease-in-out;
+}
+
+.calculator__submit:hover {
+    background: var(--clr-black);
+}
+
+.calculator__submit::after, .calculator__submit::before {
+    content: '';
+    position: absolute;
+    width: 39%;
+    height: 2px;
+    background: var(--clr-grey-100);
+    top: 83%;
+    pointer-events: none;
+}
+.calculator__submit::before {
+    left: 0;
+}
+.calculator__submit::after {
+    right: 0;
+}
+
+.calculator__arrow-icon {
+    width: 30px;
+    height: auto;
+} 
+
+.calculator__list {
+    display: grid;
+    gap: .5rem;
+    padding: 0;
+    padding-block: 0 1rem;
+    list-style: none;
+}
+
+.calculator__list-item {
+    font-size: 3.1rem;
+    color: var(--clr-black);
+    font-weight: 800;
+    font-style: italic;
+}
+
+.calculator__list-item > em {
+    color: var(--clr-purple-500);
+}
+
+@media (min-width: 46.875rem) {
+    .calculator {
+        width: 60%;
+        border-radius: 1.25rem 1.25rem 8rem 1.25rem;
+        margin-block: 5rem;
+        max-width: 500px;
+    }
+
+    .calculator__form-container {
+        width: 70%;
+    }
+
+    .calculator__error {
+        font-size: .6rem;
+    }
+    
+    .calculator__submit {
+        justify-self: flex-end;
+    }
+
+    .calculator__submit::after {
+        content: none;
+    }
+
+    .calculator__submit::before {
+        width: 86%;
+    }
+
+    .calculator__list-item {
+        font-size: 4.1rem;
+    }
+}
+
+@media (min-width: 75rem) {
+    .calculator {
+        max-width: 600px;
+    }
+    
+    .calculator__submit::before {
+        width: 88%;
+    }
+
+    .calculator__list-item {
+        font-size: 4.5rem;
+    }
+}
