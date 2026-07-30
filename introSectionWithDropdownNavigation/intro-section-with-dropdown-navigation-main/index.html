@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css" />
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="header__logo">
+      <img src="./images/logo.svg" alt="snap" width="84" height="27" class="header__logo-img" />
+    </a>
+    <button class="header__open-menu" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <img src="./images/icon-menu.svg" alt="" width="32" height="18" class="header__open-icon" aria-hidden="true" />
+    </button>
+    <nav class="header__nav" id="primary-nav" hidden>
+      <button class="header__close-menu" aria-label="Close menu">
+        <img src="./images/icon-close-menu.svg" alt="" width="26" height="26" class="header__close-icon" aria-hidden="true" />
+      </button>
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <button class="header__open-submenu" aria-expanded="false" aria-controls="submenu-1">
+            <span>Features</span>
+            <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/></svg>
+          </button>
+          <ul class="header__submenu" id="submenu-1" hidden>
+            <li class="header__submenu-item">
+              <a href="#" class="header__submenu-link">
+                <img src="./images/icon-todo.svg" alt="todo list" width="14" height="16" class="header__submenu-icon">
+                <span>Todo List</span>
+              </a>
+            </li>
+            <li class="header__submenu-item">
+              <a href="#" class="header__submenu-link">
+                <img src="./images/icon-calendar.svg" alt="calendar" width="16" height="16" class="header__submenu-icon">
+                <span>Calendar</span>
+              </a>
+            </li>
+            <li class="header__submenu-item">
+              <a href="#" class="header__submenu-link">
+                <img src="./images/icon-reminders.svg" alt="reminder" width="13" height="17" class="header__submenu-icon">
+                <span>Reminders</span>
+              </a>
+            </li>
+            <li class="header__submenu-item">
+              <a href="#" class="header__submenu-link">
+                <img src="./images/icon-planning.svg" alt="planning" width="16" height="16" class="header__submenu-icon">
+                <span>Planning</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="header__nav-item">
+          <button class="header__open-submenu" aria-expanded="false" aria-controls="submenu-2">
+            <span>Company</span>
+            <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg"><path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4"/></svg>
+          </button>
+          <ul class="header__submenu" id="submenu-2" hidden>
+            <li class="header__submenu-item">
+              <a href="#" class="header__submenu-link">
+                History
+              </a>
+            </li>
+            <li class="header__submenu-item">
+              <a href="#" class="header__submenu-link">
+                Our Team
+              </a>
+            </li>
+            <li class="header__submenu-item">
+              <a href="#" class="header__submenu-link">
+                Blog
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="header__nav-item">
+          <a href="#" class="header__nav-link">
+            Careers
+          </a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#" class="header__nav-link">
+            About
+          </a>
+        </li>
+      </ul>
+      <div class="header__link-container">
+        <a href="#" class="header__link">
+          Login
+        </a>
+        <a href="#" class="header__link">
+          Register
+        </a>
+      </div>
+    </nav>
+  </header>
+  <main class="hero">
+    <picture class="hero__img">
+      <source srcset="./images/image-hero-desktop.png" media="(min-width: 1024px)" class="hero__desktop" />
+      <img src="./images/image-hero-mobile.png" alt="guy working on laptop" class="hero__mobile" />
+    </picture>
+    <section class="hero__section" aria-labelledby="hero-title">
+      <h1 class="hero__title" id="hero-title">
+        Make remote work
+      </h1>
+      <p class="hero__details">
+        Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.
+      </p>
+      <a href="#" class="hero__link">
+        Learn more
+      </a>
+    </section>
+    <ul class="hero__list">
+      <li class="hero__list-item">
+        <img src="./images/client-databiz.svg" alt="databiz" width="114" height="20" loading="lazy" class="hero__list-img">
+      </li>
+      <li class="hero__list-item">
+        <img src="./images/client-audiophile.svg" alt="audiophile" width="73" height="36" loading="lazy" class="hero__list-img">
+      </li>
+      <li class="hero__list-item">
+        <img src="./images/client-meet.svg" alt="meet" width="90" height="20" loading="lazy" class="hero__list-img">
+      </li>
+      <li class="hero__list-item">
+        <img src="./images/client-maker.svg" alt="maker" width="83" height="24" loading="lazy" class="hero__list-img">
+      </li>
+    </ul>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
