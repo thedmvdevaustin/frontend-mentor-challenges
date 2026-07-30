@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-intro-dropdown-nav-with-a11y-wcag-semantic-html-css-and-js-5kWKsySOgz](https://www.frontendmentor.io/solutions/responsive-intro-dropdown-nav-with-a11y-wcag-semantic-html-css-and-js-5kWKsySOgz)
+- Live Site URL: [https://thedmvdevaustinsectionwithdropdown.netlify.app/](https://thedmvdevaustinsectionwithdropdown.netlify.app/)
 
 ### Built with
 
