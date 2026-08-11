@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css" />
+  <title>Frontend Mentor | Interactive pricing component</title>
+</head>
+<body>
+  <section class="header" aria-labelledby="header-title" >
+    <h1 class="header__title" id="header-title">
+      Simple, traffic-based pricing
+    </h1>
+    <p class="header__details">
+      Sign-up for our 30-day trial. No credit card required.
+    </p>
+  </section>
+  <main class="main">
+    <form action="#" class="main__form">
+      <h2 class="main__title">
+        100K Pageviews
+      </h2>
+      <div class="form__range-container">
+        <label for="input-range" class="form__input-label visually-hidden">
+          Page view range slider
+        </label>
+        <input type="range" min="1" max="5" class="form__range" id="input-range" />
+      </div>
+      <p class="form__pricing-total">
+        <b class="form__price">$16.00</b>
+        <span> / month</span>
+      </p>
+      <label class="form__checkbox-label">
+        Monthly Billing
+        <input type="checkbox" min="1" max="5" class="form__checkbox" />
+        Yearly Billing
+        <em>-25%</em>
+      </label>
+    </form>
+    <section class="start">
+      <h2 class="start__title visually-hidden" id="start-title">
+        Below are some listed benifits when you start the trial
+      </h2>
+      <ul class="start__list">
+        <li class="start__list-item">
+          <img src="./images/icon-check.svg" alt="" width="9" height="8" class="start__list-icon" />
+          <span class="start__list-text">
+            Unlimited websites
+          </span>
+        </li>
+        <li class="start__list-item">
+          <img src="./images/icon-check.svg" alt="" width="9" height="8" class="start__list-icon" />
+          <span class="start__list-text">
+            100% data ownership
+          </span>
+        </li>
+        <li class="start__list-item">
+          <img src="./images/icon-check.svg" alt="" width="9" height="8" class="start__list-icon" />
+          <span class="start__list-text">
+            Email reports
+          </span>
+        </li>
+      </ul>
+      <button type="button" class="start__btn">
+        Start my trial
+      </button>
+    </section>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
