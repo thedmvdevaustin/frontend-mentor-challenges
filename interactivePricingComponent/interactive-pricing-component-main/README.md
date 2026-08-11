@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-pricing-component-with-wcag-a11y-semantic-html-css-and-js-x1X78LuQ11](https://www.frontendmentor.io/solutions/responsive-pricing-component-with-wcag-a11y-semantic-html-css-and-js-x1X78LuQ11)
+- Live Site URL: [https://thedmvdevaustin-pricing-component.netlify.app/](https://thedmvdevaustin-pricing-component.netlify.app/)
 
 ## My process
 
