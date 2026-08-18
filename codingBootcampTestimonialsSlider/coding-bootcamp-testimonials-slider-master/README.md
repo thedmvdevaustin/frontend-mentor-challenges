@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-bootcamp-slider-with-wcag-a11y-semantic-html-css-and-js-XRBhJcsnM4](https://www.frontendmentor.io/solutions/responsive-bootcamp-slider-with-wcag-a11y-semantic-html-css-and-js-XRBhJcsnM4)
+- Live Site URL: [https://dmvdevaustinbootcampslider.netlify.app/](https://dmvdevaustinbootcampslider.netlify.app/)
 
 ### Built with
 

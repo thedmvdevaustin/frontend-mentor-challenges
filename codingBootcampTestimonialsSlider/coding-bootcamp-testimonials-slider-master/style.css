@@ -203,8 +203,6 @@ body {
 
 @media (min-width: 64rem) {
     body {
-        font-family: 'Inter', Arial, Helvetica, sans-serif;
-        /* background: url('./images/pattern-curve.svg') 0% 110%/50% no-repeat, url('./images/pattern-bg.svg') 102% 43%/46% no-repeat; */
         background: url('./images/pattern-curve.svg') 0% 110%/50% no-repeat, url('./images/pattern-bg.svg') 96% 45%/44% no-repeat;
     }
 
@@ -273,7 +271,6 @@ body {
 
 @media (min-width: 72rem) {
     body {
-        font-family: 'Inter', Arial, Helvetica, sans-serif;
         background: url('./images/pattern-curve.svg') 0% 110%/50% no-repeat, url('./images/pattern-bg.svg') 97% 43%/46% no-repeat;
     }
     
