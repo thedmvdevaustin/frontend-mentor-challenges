@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css" />
+  <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+</head>
+<body>
+  <main class="slider">
+    <section class="slider__testimonials" aria-labelledby="testimonials-title">
+      <h2 class="slider__testimonials-title visually-hidden" id="testimonials-title">
+        Testimonials
+      </h2>
+      <div class="slider__viewport">
+        <div class="slider__track">
+          <article class="slider__testimonial" id="testimonial-1">
+            <div class="slider__img-container">
+              <img src="./images/image-tanya.jpg" alt="tanya" width="540" height="540" class="slider__img" />
+              <div class="slider__btns-container">
+                <button type="button" class="slider__prev-btn" aria-controls="testimonial-1" aria-label="previous slide">
+                  <img src="./images/icon-prev.svg" alt="" width="12" height="18" class="slider__prev-icon" aria-hidden="true" />
+                </button>
+                <button class="slider__next-btn" aria-controls="testimonial-1" aria-label="next slide">
+                  <img src="./images/icon-next.svg" alt="" width="13" height="18" class="slider__next-icon" aria-hidden="true" />
+                </button>
+              </div>
+            </div>
+            <figure class="slider__figure">
+              <blockquote class="slider__blockquote">
+                <p class="slider__quote">
+                  “ I’ve been interested in coding for a while but never taken the jump, until now. 
+                  I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
+                  excited about the future. ”
+                </p>
+              </blockquote>
+              <figcaption class="slider__figcaption">
+                <span class="slider__name">
+                  Tanya Sinclair
+                </span>
+                <span class="slider__role">
+                  UX Engineer
+                </span>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="slider__testimonial" id="testimonial-2" aria-hidden="true" inert>
+            <div class="slider__img-container">
+              <img src="./images/image-john.jpg" alt="tanya" width="540" height="540" class="slider__img" />
+              <div class="slider__btns-container">
+                <button type="button" class="slider__prev-btn" aria-controls="testimonial-2" aria-label="previous slide">
+                  <img src="./images/icon-prev.svg" alt="" width="12" height="18" class="slider__prev-icon" aria-hidden="true" />
+                </button>
+                <button class="slider__next-btn" aria-label="next slide" aria-controls="testimonial-2">
+                  <img src="./images/icon-next.svg" alt="" width="13" height="18" class="slider__next-icon" aria-hidden="true" />
+                </button>
+              </div>
+            </div>
+            <figure class="slider__figure">
+              <blockquote class="slider__blockquote">
+                <p class="slider__quote">
+                  “ If you want to lay the best foundation possible I’d recommend taking this course. 
+                  The depth the instructors go into is incredible. I now feel so confident about 
+                  starting up as a professional developer. ”
+                </p>
+              </blockquote>
+              <figcaption class="slider__figcaption">
+                <span class="slider__name">
+                  John Tarkpor
+                </span>
+                <span class="slider__role">
+                  Junior Front-end Developer
+                </span>
+              </figcaption>
+            </figure>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
