@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-media-dasboard-with-a11y-wcag-semantic-html-css-and-js-FZ8gcTk4B7](https://www.frontendmentor.io/solutions/responsive-media-dasboard-with-a11y-wcag-semantic-html-css-and-js-FZ8gcTk4B7)
+- Live Site URL: [https://dmvdevaustinsocialmediadashboard.netlify.app](https://dmvdevaustinsocialmediadashboard.netlify.app)
 
 
 ### Built with

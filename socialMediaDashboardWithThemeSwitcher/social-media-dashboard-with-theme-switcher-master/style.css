@@ -243,10 +243,6 @@ body {
     filter: brightness(95%);
 }
 
-.bg-top:has(.header__toggle-checkbox:checked) > main > ul >   {
-    filter: brightness(130%);
-}
-
 .main__stats-item:nth-of-type(2) {
     background: linear-gradient(to bottom, var(--clr-blue-500) 0% 2%, var(--clr-card-bg) 2%);
 }
