@@ -433,13 +433,13 @@ body {
         display: grid;
         gap: 2rem;
         grid-template-columns: repeat(auto-fill, min(100%, 15.68rem));
-        justify-content: stretch;
+        justify-content: center;
     }
 
     .main__overview-list {
         display: grid;
         gap: 2rem;
         grid-template-columns: repeat(auto-fill, min(100%, 15.68rem));
-        justify-content: stretch;
+        justify-content: center;
     }
 }
