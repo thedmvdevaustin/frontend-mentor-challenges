@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-wcag-a11y-semantic-html-pricing-toggle-t63XKVyVpW](https://www.frontendmentor.io/solutions/responsive-wcag-a11y-semantic-html-pricing-toggle-t63XKVyVpW)
+- Live Site URL: [https://dmvdevaustinpricingtoggle.netlify.app](https://dmvdevaustinpricingtoggle.netlify.app)
 
 
 ### Built with

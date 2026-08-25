@@ -14,6 +14,9 @@
     html {
       interpolate-size: allow-keywords;
     }
+}
+
+@media (prefers-reduced-motion: reduce) {
     * {
         transition: none;
     }
