@@ -1,0 +1,267 @@
+/* CSS RESET  */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+/* 2. Remove default margin */
+*:not(dialog) {
+    margin: 0;
+}
+  
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+      interpolate-size: allow-keywords;
+    }
+    * {
+        transition: none;
+    }
+}
+  
+body {
+    /* 4. Increase line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+  
+/* 6. Inherit fonts for form controls */
+input {
+    font: inherit;
+}
+  
+/* 8. Avoid text overflows */
+p, h1, h2 {
+    overflow-wrap: break-word;
+}
+
+/* CUSTOM FONTS  */
+/* montserrat-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/montserrat-v31-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* CUSTOM PROPERTIES  */
+:root {
+    /* COLORS  */
+    --clr-blue-50: hsl(240, 78%, 98%);
+    --clr-gray-650: hsl(233, 13%, 49%);
+    --clr-gray-700: hsl(232, 13%, 33%);
+    /* GRADIENTS */
+    --grad-to-right: linear-gradient(to right, hsl(237, 73%, 79%), hsl(238, 63%, 64%));
+    --grad-to-bottom-right: linear-gradient(to bottom right, hsl(237, 73%, 79%), hsl(238, 63%, 64%));
+    /* FONTS */
+    --fs-p: .9375rem; /* 15px */
+}
+
+/* MOBILE STYLES  */
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    background: url('./images/bg-top.svg') 1100% -3%/96% no-repeat var(--clr-blue-50);
+}
+
+.main {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: minmax(0, 23.45rem);
+    gap: 4rem;
+    padding-inline: 1.5rem;
+    padding-block: 3.5rem; 
+}
+
+.main__header {
+    display: grid;
+    gap: 2rem;
+}
+
+.main__title {
+    text-align: center;
+    color: var(--clr-gray-650);
+    font-size: 1.75rem;
+}
+
+
+.main__label {
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: lightgray;
+    font-size: .85rem;
+}
+
+.main__input {
+    appearance: none;
+    background: var(--grad-to-right);
+    padding-inline: 1.75rem;
+    padding-block: 1rem;
+    border-radius: 2em;
+    position: relative;
+    cursor: pointer;
+    transition: opacity 150ms ease-in-out
+}
+
+.main__input::after {
+    content: '';
+    position: absolute;
+    width: 45%;
+    height: 78%;
+    background: var(--clr-blue-50);
+    top: 3.5px;
+    right: 4px;
+    border-radius: 5em;
+    transition: transform 150ms ease;
+}
+
+.main__input:checked::after {
+    transform: translateX(-85%);
+}
+
+.main__input:hover {
+    opacity: .6;
+}
+
+.main__list {
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 2rem;
+}
+
+.main__list-item {
+    background: white;
+    border-radius: .45em;
+    padding-inline: 2rem;
+    padding-block: 2rem;
+    display: grid;
+    gap: 1.5rem;
+    box-shadow: 0px 5px 20px 0px rgba(0,0,0,.15);
+}
+
+.main__list-item:nth-last-of-type(2) {
+    background: var(--grad-to-bottom-right);
+}
+
+.main__list-title {
+    text-align: center;
+    color: var(--clr-gray-650);
+    font-size: 1.15rem;
+}
+
+.main__list-item:nth-last-of-type(2) > .main__list-title, .main__list-item:nth-last-of-type(2) > .main__list-price, .main__list-item:nth-last-of-type(2) > .main__sublist > .main__sublist-item {
+    color: white
+}
+
+.main__list-price {
+    text-align: center;
+    color: var(--clr-gray-700);
+}
+
+.monthly, .annually {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+    max-width: 100%;
+}
+
+.monthly > b, .annually > b {
+    font-size: 3.5rem;
+}
+
+.main__sublist {
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+    padding-block: 0 .5rem;
+}
+
+.main__sublist-item {
+    border-top: 1px solid lightgray;
+    color: var(--clr-gray-650);
+    padding-block: 1rem 0;
+    font-size: var(--fs-p);
+    text-align: center;
+}
+
+.main__sublist-item:nth-of-type(3) {
+    border-bottom: 1px solid lightgray;
+    padding-block: 1rem;
+}
+
+.main__list-link {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: .85rem;
+    border-radius: .25em;
+    background: var(--grad-to-right);
+    padding-block: .75rem;
+    border: 1px solid transparent;
+    transition: border 150ms ease-in-out, color 150ms ease-in-out, background-color 150ms ease-in-out;
+}
+
+.main__list-link:hover {
+    color: hsl(238, 63%, 64%);
+    background: white;
+    border: 1px solid hsl(238, 63%, 64%);
+}
+
+.main__list-item:nth-last-of-type(2) > .main__list-link {
+    color: hsl(238, 63%, 64%);
+    background: white;
+}  
+.main__list-item:nth-last-of-type(2) > .main__list-link:hover {
+    color: white;
+    background: hsl(238, 63%, 64%);
+    border: 1px solid white;
+}  
+
+@media (min-width: 26.5675rem) {
+    .monthly > b, .annually > b {
+        font-size: 4.75rem;
+    }
+}
+
+@media (min-width: 64rem) {
+    body {
+        background: url('./images/bg-top.svg') 100% 0%/25% no-repeat, url('./images/bg-bottom.svg') 0% 100%/25% no-repeat var(--clr-blue-50);
+        grid-template-columns: none;
+    }
+
+    .main {
+        row-gap: 6rem;
+        column-gap: 0;
+        padding-inline: 0rem;
+        padding-block: 5rem 8rem; 
+    }
+
+    .main__list {
+        grid-template-columns: repeat(3, 23.45rem);
+        justify-content: center;
+        gap: 0;
+    }
+
+    .main__list-item {
+        border-radius: .75em 0 0 .75em;
+    }
+    
+    .main__list-item:nth-of-type(2) {
+        border-radius: .75em;
+        transform: scaleY(1.1);
+    }
+    .main__list-item:nth-of-type(3) {
+        border-radius: 0 .75em .75em 0;
+    }
+
+}
