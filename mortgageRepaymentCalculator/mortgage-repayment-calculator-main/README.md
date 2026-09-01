@@ -39,8 +39,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-a11y-wcag-semantic-html-with-production-ready-css-and-js-cysNm28u-H](https://www.frontendmentor.io/solutions/responsive-a11y-wcag-semantic-html-with-production-ready-css-and-js-cysNm28u-H)
+- Live Site URL: [https://dmvdevaustinmortgagerepayment.netlify.app](https://dmvdevaustinmortgagerepayment.netlify.app)
 
 ### Built with
 
