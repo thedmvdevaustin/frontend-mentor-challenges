@@ -1,0 +1,387 @@
+/* CSS RESET  */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+/* 2. Remove default margin */
+*:not(dialog) {
+    margin: 0;
+}
+  
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+      interpolate-size: allow-keywords;
+    }
+}
+
+  
+body {
+    /* 4. Increase line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+  
+/* 6. Improve media defaults */
+img, svg {
+    display: block;
+    max-width: 100%;
+}
+  
+/* 7. Inherit fonts for form controls */
+button {
+    font: inherit;
+}
+  
+/* 8. Avoid text overflows */
+p, h1, h2, h3 {
+    overflow-wrap: break-word;
+}
+
+/* 9. Disable keyword animations */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none;
+    }
+}
+
+/* CUSTOM FONTS  */
+/* rubik-300 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 300;
+    src: url('./fonts/rubik-v31-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/rubik-v31-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-500 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./fonts/rubik-v31-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* HELPER CLASSES  */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  
+
+/* CUSTOM PROPERTIES  */
+:root {
+    /* COLORS  */
+    --clr-purple-600: hsl(246, 80%, 60%);
+    --clr-work-orange-300: hsl(15, 100%, 70%);
+    --clr-play-blue-300: hsl(195, 74%, 62%);
+    --clr-study-pink-400: hsl(348, 100%, 68%);
+    --clr-exercise-green-400: hsl(145, 58%, 55%);
+    --clr-social-purple-700: hsl(264, 64%, 52%);
+    --clr-self-care-yellow-300: hsl(43, 84%, 65%);
+    --clr-navy-950: hsl(226, 43%, 10%);
+    --clr-navy-900: hsl(235, 46%, 20%);
+    --clr-purple-500: hsl(235, 45%, 61%);
+    --clr-navy-200: hsl(236, 100%, 87%);
+    /* FONTS */
+    --fs-card-titles: 1.125rem; /* 18px  */
+}
+
+/* MOBILE STYLES */
+body {
+    min-height: 100svh;
+    display: grid;
+    place-content: center;
+    background: var(--clr-navy-950);
+    font-family: 'Rubik', Arial, Helvetica, sans-serif;
+}
+
+.dashboard {
+    padding-block: 5rem;
+    /* padding-inline: 1rem; */
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: 
+    'profile'
+    'list';
+}
+
+.dashboard__profile {
+    grid-area: profile;
+    display: grid;
+    position: relative;
+    z-index: 1;
+}
+
+.dashboard__profile-container {
+    background: var(--clr-purple-600);
+    border-radius: .85em;
+    padding-block: 1.5rem;
+    padding-inline: 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.dashboard__img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.dashboard__name {
+    font-size: .9rem;
+    font-weight: 300;
+    color: var(--clr-navy-200);
+    display: grid;
+}
+
+.dashboard__name > b {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 300;
+}
+
+.dashboard__nav {
+    position: relative;
+    background: var(--clr-navy-900);
+    border-radius: 0 0 .85em .85em;
+    transform: translateY(-15%);
+    z-index: -1;
+}
+
+.dashboard__nav-list {
+    padding-inline: 1.5rem;
+    padding-block: 2rem 1.5rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard__nav-link {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--clr-purple-500);
+    font-size: var(--fs-card-titles);
+    transition: color 150ms ease-in-out;
+}
+
+.dashboard__nav-link.active, .dashboard__nav-link:hover {
+    color: white;
+}
+
+.dashboard__list {
+    grid-area: list;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.dashboard__item {
+    background: var(--clr-work-orange-300);
+    border-radius: .85rem;
+    position: relative;
+    padding-block: 2.5rem 0;
+    overflow: hidden;
+}
+
+.dashboard__item:nth-of-type(2) {
+    background: var(--clr-play-blue-300)
+}
+.dashboard__item:nth-of-type(3) {
+    background: var(--clr-study-pink-400)
+}
+.dashboard__item:nth-of-type(4) {
+    background: var(--clr-exercise-green-400)
+}
+.dashboard__item:nth-of-type(5) {
+    background: var(--clr-social-purple-700)
+}
+.dashboard__item:nth-of-type(6) {
+    background: var(--clr-self-care-yellow-300)
+}
+
+.dashboard__item::before {
+    content: '';
+    position: absolute;
+    background: url('./images/icon-work.svg');
+    width: 79px;
+    height: 79px;
+    top: -10px;
+    right: 15px;
+}
+
+.dashboard__item:nth-of-type(2)::before {
+    background: url('./images/icon-play.svg');
+    width: 76px;
+    height: 77px;
+    top: -4px;
+    right: 20px;
+}
+.dashboard__item:nth-of-type(3)::before {
+    background: url('./images/icon-study.svg');
+    top: -4px;
+    right: 15px;
+}
+.dashboard__item:nth-of-type(4)::before {
+    background: url('./images/icon-exercise.svg');
+    width: 81px;
+    height: 55px;
+    top: 1px;
+    right: 15px;
+}
+.dashboard__item:nth-of-type(5)::before {
+    background: url('./images/icon-social.svg');
+    width: 75px;
+    height: 100%;
+    top: -12px;
+    right: 15px;
+}
+.dashboard__item:nth-of-type(6)::before {
+    background: url('./images/icon-self-care.svg');
+    width: 67px;
+    height: 67px;
+}
+
+.dashboard__link {
+    display: grid;
+    padding-inline: 1.5rem;
+    padding-block: 1.5rem 1rem;
+    border-radius: .85em;
+    position: relative;
+    background: var(--clr-navy-900);
+    z-index: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: filter 150ms ease-in-out;
+}
+
+.dashboard__link:hover {
+    filter: brightness(130%);
+}
+
+.dashboard__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboard__category {
+    font-size: var(--fs-card-titles);
+    color: white;
+    font-weight: 500;
+}
+
+.dashboard__btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.dashboard__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--clr-navy-200);
+    font-size: 1rem;
+}
+
+.dashboard__hours {
+    font-size: 2.15rem;
+    color: white;
+    font-weight: 300;
+}
+
+@media (min-width: 64rem) {
+    body {
+        grid-template-columns: minmax(0, 75rem);
+    }
+    
+    .dashboard {
+        padding-block: 5rem;
+        padding-inline: 1.5rem;
+        column-gap: 1.5rem;
+        row-gap: 2.5rem;
+        grid-template-areas: 
+        'profile list'
+        'profile list';
+        grid-template-columns: max-content;
+    }
+
+    .dashboard__profile {
+
+    }
+    
+    .dashboard__profile-container {
+        padding-inline: 2rem 6rem;
+        padding-block: 2rem 5rem;
+        display: grid;
+        gap: 1.5rem;
+        align-items: flex-start;
+        height: 105%;
+    }
+    
+    .dashboard__name {
+        font-size: 1rem;
+    }
+
+    .dashboard__name > b {
+        font-size: 2.5rem;
+        width: min-content;
+        line-height: 1.2;
+    }
+    
+    .dashboard__nav {
+        transform: translateY(0);
+        align-self: flex-end;
+    }
+    
+    .dashboard__nav-list {
+        padding-block: 2rem 1.5rem;
+        display: grid;
+        gap: 1rem;
+    }
+    
+    .dashboard__nav-link {
+        font-size: var(--fs-card-titles);
+    }
+    
+    .dashboard__list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .dashboard__link {
+        padding-inline: 2rem;
+        padding-block: 1.5rem;
+        gap: 1rem;
+    }
+    
+    .dashboard__info {
+        display: grid;
+    }
+    
+    .dashboard__hours {
+        font-size: 3.5rem;
+    }
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css" />
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+<body>
+  <main class="dashboard">
+    <h1 class="dashboard__title visually-hidden">
+      Time Tracking Dashboard
+    </h1>
+    <section class="dashboard__profile" aria-labelledby="profile-title">
+      <div class="dashboard__profile-container">
+        <img src="./images/image-jeremy.png" alt="Jeremy" width="234" height="234" class="dashboard__img" />
+        <p class="dashboard__name">
+          Report for
+          <b>
+            Jeremy Robson
+          </b>
+        </p>
+      </div>
+      <nav class="dashboard__nav">
+        <ul class="dashboard__nav-list">
+          <li class="dashboard__nav-item">
+            <a href="/daily" class="dashboard__nav-link">
+              Daily
+            </a>
+          </li>
+          <li class="dashboard__nav-item">
+            <a href="/weekly" class="dashboard__nav-link active">
+              Weekly
+            </a>
+          </li>
+          <li class="dashboard__nav-item">
+            <a href="/monthly" class="dashboard__nav-link">
+              Monthly
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+    <ul class="dashboard__list">
+      <h2 class="dashboard__list-title visually-hidden">
+        Dashboard categories
+      </h2>
+      <li class="dashboard__item">
+        <a href="#" class="dashboard__link">
+          <div class="dashboard__container">
+            <h3 class="dashboard__category">
+              Work
+            </h3>
+            <button type="button" class="dashboard__btn" aria-label="Show more info">
+              <img src="./images/icon-ellipsis.svg" alt="" width="21" height="5" class="dashboard__icon" aria-hidden="true" />
+            </button>
+          </div>
+          <p class="dashboard__info">
+            <b class="dashboard__hours">
+              32hrs <!-- weekly -->
+            </b>
+            Last Week - 36hrs <!-- weekly -->
+          </p>
+        </a>
+      </li>
+      <li class="dashboard__item">
+        <a href="#" class="dashboard__link">
+          <div class="dashboard__container">
+            <h3 class="dashboard__category">
+              Play
+            </h3>
+            <button type="button" class="dashboard__btn" aria-label="Show more info">
+              <img src="./images/icon-ellipsis.svg" alt="" width="21" height="5" class="dashboard__icon" aria-hidden="true" />
+            </button>
+          </div>
+          <p class="dashboard__info">
+            <b class="dashboard__hours">
+              10hrs <!-- weekly -->
+            </b>
+            Last Week - 8hrs <!-- weekly -->
+          </p>
+        </a>
+      </li>
+      <li class="dashboard__item">
+        <a href="#" class="dashboard__link">
+          <div class="dashboard__container">
+            <h3 class="dashboard__category">
+              Study
+            </h3>
+            <button type="button" class="dashboard__btn" aria-label="Show more info">
+              <img src="./images/icon-ellipsis.svg" alt="" width="21" height="5" class="dashboard__icon" aria-hidden="true" />
+            </button>
+          </div>
+          <p class="dashboard__info">
+            <b class="dashboard__hours">
+              4hrs <!-- weekly -->
+            </b>
+            Last Week - 7hrs <!-- weekly -->
+          </p>
+        </a>
+      </li>
+      <li class="dashboard__item">
+        <a href="#" class="dashboard__link">
+          <div class="dashboard__container">
+            <h3 class="dashboard__category">
+              Exercise
+            </h3>
+            <button type="button" class="dashboard__btn" aria-label="Show more info">
+              <img src="./images/icon-ellipsis.svg" alt="" width="21" height="5" class="dashboard__icon" aria-hidden="true" />
+            </button>
+          </div>
+          <p class="dashboard__info">
+            <b class="dashboard__hours">
+              4hrs <!-- weekly -->
+            </b>
+            Last Week - 5hrs <!-- weekly -->
+          </p>
+        </a>
+      </li>
+      <li class="dashboard__item">
+        <a href="#" class="dashboard__link">
+          <div class="dashboard__container">
+            <h3 class="dashboard__category">
+              Social
+            </h3>
+            <button type="button" class="dashboard__btn" aria-label="Show more info">
+              <img src="./images/icon-ellipsis.svg" alt="" width="21" height="5" class="dashboard__icon" aria-hidden="true" />
+            </button>
+          </div>
+          <p class="dashboard__info">
+            <b class="dashboard__hours">
+              5hrs <!-- weekly -->
+            </b>
+            Last Week - 10hrs <!-- weekly -->
+          </p>
+        </a>
+      </li>
+      <li class="dashboard__item">
+        <a href="#" class="dashboard__link">
+          <div class="dashboard__container">
+            <h3 class="dashboard__category">
+              Self Care
+            </h3>
+            <button type="button" class="dashboard__btn" aria-label="Show more info">
+              <img src="./images/icon-ellipsis.svg" alt="" width="21" height="5" class="dashboard__icon" aria-hidden="true" />
+            </button>
+          </div>
+          <p class="dashboard__info">
+            <b class="dashboard__hours">
+              2hrs <!-- weekly -->
+            </b>
+            Last Week - 2hrs <!-- weekly -->
+          </p>
+        </a>
+      </li>
+    </ul>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
