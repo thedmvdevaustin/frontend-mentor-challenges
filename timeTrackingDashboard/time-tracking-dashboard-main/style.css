@@ -328,10 +328,6 @@ body {
         'profile list';
         grid-template-columns: max-content;
     }
-
-    .dashboard__profile {
-
-    }
     
     .dashboard__profile-container {
         padding-inline: 2rem 6rem;

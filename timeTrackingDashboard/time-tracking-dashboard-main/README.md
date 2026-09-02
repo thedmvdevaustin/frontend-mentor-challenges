@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-time-tracking-dashboard-with-a11y-wcag-semantic-html-css-js-mlofZtweta](https://www.frontendmentor.io/solutions/responsive-time-tracking-dashboard-with-a11y-wcag-semantic-html-css-js-mlofZtweta)
+- Live Site URL: [https://dmvdevaustintimetrackingdashboard.netlify.app](https://dmvdevaustintimetrackingdashboard.netlify.app)
 
 
 ### Built with
