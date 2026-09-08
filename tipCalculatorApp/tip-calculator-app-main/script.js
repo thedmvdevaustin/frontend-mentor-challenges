@@ -3,7 +3,7 @@ const inputs = document.querySelectorAll('input[type="number"]');
 const resetBtn = document.querySelector(".results__btn");
 
 const textInputs = [...inputs].filter(input => !input.classList.contains('calculator__text-input'));
-textInputs.forEach((textInput, index) => {
+textInputs.forEach(textInput => {
     textInput.addEventListener("blur", () => {
         if (textInput.value === '0') {
             const p = textInput.nextElementSibling;

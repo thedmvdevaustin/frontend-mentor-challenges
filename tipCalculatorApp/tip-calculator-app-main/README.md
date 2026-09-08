@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-tip-calculator-app-with-wcag-a11y-semantic-html-css-and-js-2JaljuIXuM](https://www.frontendmentor.io/solutions/responsive-tip-calculator-app-with-wcag-a11y-semantic-html-css-and-js-2JaljuIXuM)
+- Live Site URL: [https://dmvdevaustintipcalculatorapp.netlify.app](https://dmvdevaustintipcalculatorapp.netlify.app)
 
 
 ### Built with
