@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css" />
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+  <header class="header">
+    <img src="./images/logo.svg" alt="Splitter" width="87" height="54" class="header__logo" />
+  </header>
+  <main class="calculator">
+    <h1 class="calculator__title visually-hidden">
+      Tip Calculator
+    </h1>
+    <form class="calculator__form" novalidate>
+      <h2 class="calculator__form-title visually-hidden">
+        Enter the bill, tip and number of people to receive an amount and total per person
+      </h2>
+      <div class="calculator__input-container">
+        <label for="bill" class="calculator__label">
+          Bill
+        </label>
+        <input type="number" name="bill" class="calculator__input" id="bill" placeholder="0"/>
+        <p class="calculator__error" aria-hidden="true">
+          Can't be zero
+        </p>
+      </div>
+      <fieldset class="calculator__fieldset">
+        <legend class="calculator__label">
+          Select Tip %
+        </legend>
+          <label for="five" class="calculator__radio-label">
+            <span class="calculator__radio-span">
+              5%
+            </span>
+            <input type="radio" name="tip" value=".05" class="calculator__radio-input" id="five" />
+          </label>
+          <label for="ten" class="calculator__radio-label">
+            <span class="calculator__radio-span">
+              10%
+            </span>
+            <input type="radio" name="tip" value=".10" class="calculator__radio-input" id="ten" />
+          </label>
+          <label for="fifteen" class="calculator__radio-label">
+            <span class="calculator__radio-span">
+              15%
+            </span>
+            <input type="radio" name="tip" value=".15" class="calculator__radio-input" id="fifteen" />
+          </label>
+          <label for="twenty-five" class="calculator__radio-label">
+            <span class="calculator__radio-span">
+              25%
+            </span>
+            <input type="radio" name="tip" value=".25" class="calculator__radio-input" id="twenty-five" />
+          </label>
+          <label for="fifty" class="calculator__radio-label">
+            <span class="calculator__radio-span">
+              50%
+            </span>
+            <input type="radio" name="tip" value=".50" class="calculator__radio-input" id="fifty" />
+          </label>
+          <div class="calculator__text-container">
+            <label for="custom" class="visually-hidden">
+              Enter a custom tip percentage
+            </label>
+            <input type="number" name="custom" min="1" class="calculator__text-input" id="custom" placeholder="Custom"/>
+          </div>
+        </div>
+      </fieldset>
+      <div class="calculator__input-container">
+        <label for="people" class="calculator__label">
+          Number of People
+        </label>
+        <input type="number" name="people" class="calculator__input" id="people" placeholder="0"/>
+        <p class="calculator__error" aria-hidden="true">
+          Can't be zero
+        </p>
+      </div>
+    </form>
+    <section class="results" aria-labelledby="results-title">
+      <h2 class="results__title visually-hidden" id="results-title">
+        Calculator results
+      </h2>
+      <div class="results__container">
+        <p class="results__details">
+          <b>
+            Tip Amount
+          </b>
+          / person
+        </p>
+        <p class="results__number" id="amount">
+          &dollar;0.00
+        </p>
+      </div>
+      <div class="results__container">
+        <p class="results__details">
+          <b>
+            Total
+          </b>
+          / person
+        </p>
+        <p class="results__number" id="total">
+          &dollar;0.00
+        </p>
+      </div>
+      <button type="button" class="results__btn">
+        Reset
+      </button>
+    </section>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
