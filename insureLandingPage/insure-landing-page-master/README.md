@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://www.frontendmentor.io/solutions/responsive-insure-landing-page-with-semantic-html-a11y-wcag-css-js-60PC7Z1Xi8](https://www.frontendmentor.io/solutions/responsive-insure-landing-page-with-semantic-html-a11y-wcag-css-js-60PC7Z1Xi8)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-insure-page-with-semantic-html-a11y-wcag-css-and-js-vbMFiKu-OM](https://www.frontendmentor.io/solutions/responsive-insure-page-with-semantic-html-a11y-wcag-css-and-js-vbMFiKu-OM)
 - Live Site URL: [https://dmvdevaustin-insure.netlify.app/](https://dmvdevaustin-insure.netlify.app/)
 
 
