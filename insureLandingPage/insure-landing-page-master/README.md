@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-insure-landing-page-with-semantic-html-a11y-wcag-css-js-60PC7Z1Xi8](https://www.frontendmentor.io/solutions/responsive-insure-landing-page-with-semantic-html-a11y-wcag-css-js-60PC7Z1Xi8)
+- Live Site URL: [https://dmvdevaustin-insure.netlify.app/](https://dmvdevaustin-insure.netlify.app/)
 
 
 ### Built with
