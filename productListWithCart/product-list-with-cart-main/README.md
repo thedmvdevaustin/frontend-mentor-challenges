@@ -30,10 +30,10 @@ Users should be able to:
 ![desktop order confirmation version](./assets/images/desktop-order-confirmed.png)
 ![desktop active version](./assets/images/desktop-active.png)
 
-### Links
+### Linkshttps://www.frontendmentor.io/solutions/responsive-product-list-semantic-html-wcag-standards-a11y-bem-css-js-5mK0Vd_uKB
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-product-list-semantic-html-wcag-standards-a11y-bem-css-js-5mK0Vd_uKB](https://www.frontendmentor.io/solutions/responsive-product-list-semantic-html-wcag-standards-a11y-bem-css-js-5mK0Vd_uKB)
+- Live Site URL: [https://dmvdevaustinproductlistwithcart.netlify.app](https://dmvdevaustinproductlistwithcart.netlify.app)
 
 
 ### Built with

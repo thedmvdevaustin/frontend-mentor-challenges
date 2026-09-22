@@ -1,4 +1,3 @@
-const productCart = document.querySelector(".product__cart");
 const dessertsList = document.querySelector(".desserts__list");
 const cartList = document.querySelector(".cart__list");
 const cartContainer = document.querySelector(".cart__container");
@@ -92,7 +91,7 @@ const toggleAddCartBtn = (name) => {
 }
 
 const addToCart = (name) => {
-    let itemInfo = dessertItems.find(dessert => dessert.name === name);
+    const itemInfo = dessertItems.find(dessert => dessert.name === name);
     cartItems.push({quantity: 1, ...itemInfo});
     cartItems.sort((a,b) => a.name.localeCompare(b.name));
 }

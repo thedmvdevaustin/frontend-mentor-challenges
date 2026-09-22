@@ -572,7 +572,7 @@ body {
     filter: brightness(85%);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
     .product {
         padding-inline: 1rem;
         padding-block: 5rem;
