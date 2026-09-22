@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css" />
+  <title>Frontend Mentor | Product list with cart</title>
+</head>
+<body>
+  <main class="product">
+    <section class="product__desserts" aria-labelledby="desserts-title">
+      <h1 class="desserts__title" id="desserts-title">
+        Desserts
+      </h1>
+      <ul class="desserts__list">
+      </ul>
+    </section>
+    <section class="product__cart" aria-labelledby="cart-title">
+      <div class="cart__container">
+        <h2 class="cart__title" id="cart-title">
+          Your Cart (0)
+        </h2>
+        <img src="./assets/images/illustration-empty-cart.svg" alt="" width="128" height="128" class="cart__container-img" />
+        <p class="cart__container-info">
+          Your added items will appear here
+        </p>
+      </div>
+      <div class="cart__items-container" hidden>
+        <h2 class="cart__title" id="cart-title">
+          Your Cart (0)
+        </h2>
+        <div class="product__cart-container">
+          <ul class="cart__list">
+          </ul>
+          <p class="cart__total">
+            Order Total
+            <strong>&dollar;46.50</strong>
+          </p>
+        </div>
+        <div class="cart__carbon-container">
+          <img src="./assets/images/icon-carbon-neutral.svg" alt="" class="cart__carbon-icon" />
+          <p class="cart__carbon-details">
+            This is a <b>carbon-neutral</b> delivery
+          </p>
+        </div>
+        <button type="button" class="cart__btn">
+          Confirm Order
+        </button>
+      </div>
+    </section>
+  </main>
+  <dialog class="dialog" aria-labelledby="dialog-title">
+    <div class="dialog__container">
+      <img src="./assets/images/icon-order-confirmed.svg" alt="" width="48" height="48" loading="lazy" class="dialog__icon" />
+      <div class="dialog__order-container">
+        <h2 class="dialog__title" id="dialog-title">
+          Order Confirmed
+        </h2>
+        <p class="dialog__details">
+          We hope you enjoy your food!
+        </p>
+      </div>
+      <div class="dialog__cart-container">
+        <ul class="dialog__list">
+          <li class="dialog__list-item">
+            <div class="dialog__list-container">
+              <img src="./assets/images/image-tiramisu-thumbnail.jpg" alt=""
+              width="100" height="96" loading="lazy" class="dialog__item-thumbnail">
+              <div class="dialog__item-info">
+                <h3 class="dialog__item-name">
+                  Classic Tiramisu
+                </h3>
+                <p class="dialog__item-details">
+                  <b>1x</b>
+                  @ &dollar;5.50
+                </p>
+              </div>
+            </div>
+            <p class="dialog__item-total">
+              &dollar;5.50
+            </p>
+          </li>
+        </ul>
+        <p class="dialog__order-details">
+        </p>
+      </div>
+      <button type="button" class="dialog__btn">
+        Start New Order
+      </button>
+    </div>
+  </dialog>
+  <script src="./script.js"></script>
+</body>
+</html>
