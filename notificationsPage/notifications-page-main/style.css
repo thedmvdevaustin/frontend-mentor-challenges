@@ -1,0 +1,269 @@
+/* CSS RESET  */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+/* 2. Remove default margin */
+*:not(dialog) {
+    margin: 0;
+}
+  
+/* 3. Disable animations */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none;
+    }
+}
+  
+body {
+    /* 4. Increase line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+  
+/* 6. Improve media defaults */
+img {
+    display: block;
+    max-width: 100%;
+}
+  
+/* 7. Inherit fonts for form controls */
+button {
+    font: inherit;
+}
+  
+/* 8. Avoid text overflows */
+p, h1 {
+    overflow-wrap: break-word;
+}
+
+/* CUSTOM FONTS  */
+/* plus-jakarta-sans-500 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./assets/fonts/plus-jakarta-sans-v12-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* plus-jakarta-sans-800 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 800;
+    src: url('./assets/fonts/plus-jakarta-sans-v12-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* CUSTOM PROPERTIES  */
+:root {
+    /* COLORS  */
+    --clr-white: hsl(0, 100%, 100%);
+    --clr-navy-50: hsl(210, 60%, 98%);
+    --clr-blue-100: hsl(211, 68%, 94%);
+    --clr-navy-100: hsl(205, 33%, 90%);
+    --clr-gray-500: hsl(219, 14%, 63%);
+    --clr-gray-600: hsl(219, 12%, 42%);
+    --clr-navy-950: hsl(224, 21%, 14%);
+    /* FONTS  */
+    --fs-p: 1rem; /* 16px  */
+    --ff-body: 'Plus Jakarta Sans', Arial, Helvetica, sans-serif;
+}
+
+/* MOBILE STYLES  */
+body {
+    font-family: var(--ff-body);
+}
+
+.notifications {
+    background: var(--clr-white);
+    padding-block: 1.5rem;
+    padding-inline: 1rem;
+    display: grid;
+    gap: 1.5rem;
+    max-width: 40rem;
+    margin-inline: auto;
+}
+
+.notifications__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notifications__title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--clr-navy-950);
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.notifications__title > em {
+    padding-inline: .65rem;
+    padding-block: .05rem;
+    border-radius: .35em;
+    background: darkblue;
+    color: var(--clr-white);
+    font-style: normal;
+    font-size: var(--fs-p)
+}
+
+.notifications__btn {
+    border: none;
+    background: none;
+    color: var(--clr-gray-600);
+    font-size: .9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 150ms ease-in-out;
+}
+
+
+.notifications__list {
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: .5rem;
+}
+
+.notifications__list-item {
+    padding-inline: .75rem;
+    padding-block: .75rem;
+    border-radius: .35em;
+    display: flex;
+    gap: 1rem;
+    transition: background-color 150ms ease-in-out;
+}
+
+.notifications__list-item.unread {
+    background: var(--clr-blue-100);
+}
+
+.notifications__img {
+    width: 40px;
+    height: 40px;
+}
+
+.notifications__list-container {
+    display: grid;
+    grid-template-areas: 
+    'message image'
+    'time ....'
+    'details ....';
+    justify-content: space-between;
+    width: 100%;
+}
+
+.notifications__list-msg {
+    grid-area: message;
+    
+    font-size: .85rem;
+    font-weight: 500;
+    color: var(--clr-gray-600);
+    line-height: 1.12;
+}
+
+
+.notifications__list-name {
+    text-decoration: none;
+    color: var(--clr-navy-950);
+    font-weight: 800;
+    transition: color 150ms ease-in-out;
+    cursor: pointer;
+    font-size: .9rem;
+}
+
+.notifications__list-link {
+    text-decoration: none;
+    color: var(--clr-gray-600);
+    font-weight: 800;
+    cursor: pointer;
+    font-size: .875rem;
+}
+
+.notifications__list-time {
+    grid-area: time;
+    color: var(--clr-gray-500);
+    font-weight: 500;
+    font-size: .9rem;
+}
+
+.notifications__list-details {
+    grid-area: details;
+    color: var(--clr-gray-600);
+    font-size: .875rem;
+    font-weight: 500;
+    border: 1px solid var(--clr-navy-100);
+    border-radius: .25em;
+    padding-inline: 1rem 1.5rem;
+    padding-block: 1rem;
+    margin-block: .5rem 0;
+    line-height: 1.12;
+    background: var(--clr-white);
+    text-decoration: none;
+    transition: background-color 150ms ease-in-out, border 150ms ease-in-out;
+}
+
+.notifications__list-thumbnail {
+    text-decoration: none;
+    border: 3px solid transparent;
+    transition: border 150ms ease-in-out;
+    border-radius: .75em;
+}
+
+.notifications__list-thumbnail:hover {
+    border-color: var(--clr-navy-100)
+}
+
+.thumbnail__picture {
+    width: 40px;
+    height: 40px;
+    border-radius: .35em;
+}
+
+/* HOVER STATES  */
+
+.notifications__btn:hover, .notifications__list-name:hover, .notifications__list-link:hover {
+    color: darkblue;
+}
+
+.notifications__list-details:hover {
+    background: var(--clr-blue-100);
+    border: 1px solid transparent;
+}
+
+@media (min-width: 40rem) {
+    body {
+        background: var(--clr-navy-50);
+    }
+    
+    .notifications {
+        padding-block: 1.5rem 0rem;
+        padding-inline: 1.5rem;
+        margin-block: 2.5rem 4rem;
+        border-radius: 1em;
+    }
+    
+    .notifications__title {
+        font-size: 1.25rem;
+        gap: .75rem;
+    }
+    
+    .notifications__list-item {
+        padding-inline: 1rem;
+        padding-block: 1rem;
+    }
+    
+    .notifications__list-container {
+        display: grid;
+        grid-template-areas: 
+        'message image'
+        'time ....'
+        'details ....';
+        justify-content: space-between;
+    }
+}
