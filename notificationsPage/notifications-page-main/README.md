@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/responsive-notifications-page-with-semantic-html-css-grid-and-js-3uzXaRPTym)
+- Live Site URL: [https://dmvdevaustinnotificationpage.netlify.app/](https://dmvdevaustinnotificationpage.netlify.app/)
 
 ### Built with
 
