@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css" />
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+  <main class="card">
+    <h1 class="card__title visually-hidden">
+      Card Details Form
+    </h1>
+    <div class="card__bg-container" aria-hidden="true">
+      <div class="card__front-container">
+        <img src="./images/card-logo.svg" alt="logo" width="84" height="47" class="card__logo" />
+        <p class="card__front-number">
+          0000 0000 0000 0000
+        </p>
+        <div class="card__info-container">
+          <p class="card__info-name">
+            Jane Appleseed
+          </p>
+          <p class="card__info-expiration">
+            00/00
+          </p>
+        </div>
+      </div>
+      <div class="card__back-container">
+        <p class="card__cvc">
+          000
+        </p>
+      </div>
+    </div>
+    <form novalidate class="card__form">
+      <h2 class="card__form-title visually-hidden">
+        Enter your card information
+      </h2>
+      <div class="card__form-container">
+        <label for="name" class="card__form-label">
+          Cardholder Name
+        </label>
+        <input type="text" id="name" name="name" class="card__form-input" placeholder="e.g. Jane Appleseed" aria-describedby="error-name" autocomplete="name" required />
+        <p class="card__form-error" id="error-name" aria-hidden="true">
+          Can't be blank
+        </p>
+      </div>
+      <div class="card__form-container">
+        <label for="number" class="card__form-label">
+          Card Number
+        </label>
+        <input type="text" maxLength="19" id="number" name="number" autocomplete="cc-number" inputmode="numeric" maxlength="12" class="card__form-input" placeholder="e.g. 1234 5678 9123 0000" aria-describedby="error-cc-number" required/>
+        <p class="card__form-error" id="error-cc-number" aria-hidden="true">
+          Can't be blank
+        </p>
+      </div>
+      <div class="card__flex-container">
+        <fieldset class="card__form-fieldset">
+          <legend class="card__form-label">
+            Exp. Date (MM/YY)
+          </legend>
+          <div class="card__form-container">
+            <label for="month" class="card__form-label visually-hidden">
+              Month
+            </label>
+            <input type="text" maxlength="2" id="month" name="month" autocomplete="cc-exp-month" inputmode="numeric" maxlength="2" class="card__form-input" placeholder="MM" required aria-describedby="error-expiration" />
+          </div>
+          <div class="card__form-container">
+            <label for="year" class="card__form-label visually-hidden">
+              Year
+            </label>
+            <input type="text" maxlength="2" id="year" name="year" autocomplete="cc-exp-year" inputmode="numeric" maxlength="2" class="card__form-input" placeholder="YY" required aria-describedby="error-expiration" />
+          </div>
+          <p class="card__form-error" id="error-expiration" aria-hidden="true">
+            Can't be blank
+          </p>        
+        </fieldset>
+        <div class="card__form-container">
+          <label for="cvc" class="card__form-label">
+            CVC
+          </label>
+          <input type="text" maxlength="3" id="cvc" name="cvc" autocomplete="cc-csc" maxlength="3" inputmode="numeric" required placeholder="e.g. 123" class="card__form-input" aria-describedby="error-cvc" >
+          <p class="card__form-error" id="error-cvc" aria-hidden="true">
+            Can't be blank
+          </p>
+        </div>
+      </div>
+      <button type="submit" class="card__form-btn">
+        Confirm
+      </button>
+    </form>
+    <!-- Completed state start -->
+    <section class="completed" hidden>
+      <img src="./images/icon-complete.svg" alt="check" width="80" height="80" loading="lazy" class="completed__icon">
+      <h2 class="completed__title">
+        Thank you!
+      </h2>
+      <p class="completed__details">
+        We've added your card details
+      </p>
+      <button class="completed__btn">
+        Continue
+      </button>
+    </section>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
+
+<!-- test with assistive technologies, screed reader should not read the card before user interacts with an input, It should read card details form then enter your card information  -->

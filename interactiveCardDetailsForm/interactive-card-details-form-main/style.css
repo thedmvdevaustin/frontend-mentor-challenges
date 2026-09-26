@@ -1,0 +1,412 @@
+/* CSS RESET  */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+/* 2. Remove default margin */
+*:not(dialog) {
+    margin: 0;
+}
+  
+/* 3. disable animations */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        transition: none;
+    }
+}
+  
+body {
+    /* 4. Increase line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+  
+/* 6. Improve media defaults */
+img {
+    display: block;
+    max-width: 100%;
+}
+  
+/* 7. Inherit fonts for form controls */
+input, button {
+    font: inherit;
+}
+  
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* CUSTOM FONTS  */
+/* space-grotesk-500 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./fonts/space-grotesk-v22-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* CUSTOM PROPERTIES  */
+:root {
+    /* COLORS  */
+    --clr-white: hsl(0, 100%, 100%);
+    --clr-gray-200: hsl(270, 3%, 87%);
+    --clr-gray-400: hsl(212, 12%, 71%);
+    --clr-purple-950: hsl(278, 68%, 11%);
+    --red-400-input-errors: hsl(0, 100%, 66%);
+    /* GRADIENTS  */
+    --grad-active-input-border: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    /* FONTS  */
+    --fs-body: 1.125rem; /* 18px  */
+    --ff-body: 'Space Grotesk', Arial, Helvetica, sans-serif;
+}
+
+/* HELPER CLASSES  */
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}  
+
+/* MOBILE STYLES  */
+body {
+    font-family: var(--ff-body);
+    font-weight: 500;
+}
+
+.card {
+    display: grid;
+    gap: 6rem;
+    max-width: 23.4375rem;
+    margin-inline: auto;
+}
+
+.card__bg-container {
+    background: url('./images/bg-main-mobile.png') center no-repeat;
+    position: relative;
+    display: grid;
+    grid-template-areas: 
+    'back'
+    'front';
+    min-height: 240px;
+}
+
+.card__front-container {
+    grid-area: front;
+    background: url('./images/bg-card-front.png') center no-repeat;
+    display: grid;
+    gap: .75rem;
+    padding-inline: 1.5rem;
+    padding-block: 1.25rem;
+    border-radius: .35em;
+    position: absolute;
+    bottom: -52px;
+    left: 15px;
+    z-index: 100;
+    width: 300px;
+}
+
+.card__logo {
+    width: 22%;
+    height: auto;
+}
+
+.card__front-number {
+    margin-block: 1rem 0;
+    font-size: var(--fs-body);
+    color: var(--clr-white);
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.card__info-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card__info-name {
+    color: var(--clr-white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: .65rem;
+}
+
+.card__info-expiration {
+    font-size: .6rem;
+    color: var(--clr-white);
+    letter-spacing: 1px;
+}
+
+.card__back-container {
+    grid-area: back;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    z-index: 10;
+    background: url('./images/bg-card-back.png') center no-repeat;
+    background-size: 95%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-inline: 1.5rem;
+    width: 300px;
+    min-height: 200px;
+}
+
+.card__cvc {
+    font-size: .6rem;
+    color: var(--clr-white);
+    letter-spacing: 2px;
+    padding-inline: 0 1rem;
+    padding-block: 0 .25rem;
+}
+
+.card__form {
+    padding-inline: 1.5rem;
+    padding-block: 0 3rem;
+    display: grid;
+    gap: .25rem;
+}
+
+.card__form.hide {
+    display: none;
+}
+
+.card__form-container {
+    display: grid;
+    gap: .25rem;
+}
+
+.card__form-label {
+    font-size: .8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--clr-purple-950);
+}
+
+.card__form-input {
+    padding-block: .75rem;
+    padding-inline: 1rem;
+    border: 1px solid var(--clr-gray-200);
+    border-radius: .5em;
+    width: 100%;
+    transition: border 150ms ease, outline 150ms ease;
+}
+
+.card__form-input:focus-visible, .card__form-input:active {
+    outline: 1px solid var(--clr-purple-950);
+}
+
+.card__form-input[aria-invalid="true"] {
+    border-color: var(--red-400-input-errors);
+}
+
+.card__form-error {
+    color: var(--red-400-input-errors);
+    font-size: .6rem;
+    opacity: 1;
+    transition: opacity 150ms ease;
+}
+
+.card__form-error[aria-hidden="true"] {
+    opacity: 0;
+}
+
+.card__form-input::placeholder {
+    font-size: var(--fs-body);
+    color: var(--clr-gray-200);
+}
+
+.card__flex-container {
+    display: flex;
+    gap: .75rem;
+    align-items: flex-end;
+}
+
+.card__form-fieldset {
+    flex: 1;
+    border: none;
+    padding: 0; 
+    display: grid;
+    grid-template-areas: 
+    'label label'
+    'month year'
+    'error error';
+    gap: .25rem;
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+}
+
+.card__form-fieldset > .card__form-label {
+    grid-area: label;
+    display: contents;
+    text-wrap: nowrap;
+    /* margin-block: 0 .25rem; */
+}
+
+
+.card__form-fieldset > .card__form-container > input {
+    width: 95%;
+}
+
+.card__form-container:has(#month) {
+    grid-area: month;
+}
+
+.card__form-container:has(#year) {
+    grid-area: year;
+}
+
+#error-expiration {
+    grid-area: error;
+}
+
+.card__form-btn {
+    background: var(--clr-purple-950);
+    border-radius: .35em;
+    padding-block: .75rem;
+    color: var(--clr-white);
+    font-size: 1.25rem;
+    border: none;
+    cursor: pointer;
+    margin-block: 1rem 0;
+}
+
+.completed.show {
+    display: grid;
+    gap: .5rem;
+    padding-inline: 1.5rem;
+    
+}
+
+.completed__icon {
+    justify-self: center;
+}
+
+.completed__title {
+    text-align: center;
+    color: var(--clr-purple-950);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-block: 1rem 0;
+}
+
+.completed__details {
+    text-align: center;
+    font-size: var(--fs-body);
+    color: var(--clr-gray-400);
+}
+
+.completed__btn {
+    background: var(--clr-purple-950);
+    border-radius: .35em;
+    padding-block: .75rem;
+    color: var(--clr-white);
+    font-size: 1.25rem;
+    border: none;
+    cursor: pointer;
+    margin-block: 2rem 4rem;
+    width: 100%;
+}
+
+@media (min-width: 75rem) {
+    .card {
+        gap: 5rem;
+        max-width: none;
+        margin-inline: 0;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .card__bg-container {
+        background: url('./images/bg-main-desktop.png') no-repeat;
+        grid-template-areas: 
+        'front'
+        'back';
+        min-height: 100vh;
+    }
+    
+    .card__front-container {
+        background: url('./images/bg-card-front.png') center no-repeat;
+        bottom: 50px;
+        left: 230px;
+        width: 447px;
+        max-width: 447px;
+        margin-inline: auto;
+        padding-inline: 2rem;
+        gap: 1rem;
+    }
+
+    .card__logo {
+        width: 25%;
+    }
+    
+    .card__front-number {
+        margin-block: 2rem 0;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+    
+    .card__info-name {
+        letter-spacing: 2px;
+        font-size: .85rem;
+    }
+    
+    .card__info-expiration {
+        font-size: .85rem;
+        letter-spacing: 2px;
+    }
+    
+    .card__back-container {
+        top: -20px;
+        right: -50px;
+        background-size: 100%;
+        padding-inline: 0;
+        width: 447px;
+        min-height: 245px;
+        max-width: 447px;
+        margin-inline: auto;
+    }
+    
+    .card__cvc {
+        font-size: .85rem;
+        padding-inline: 0 3rem;
+        padding-block: 0 .5rem;
+    }
+    
+    .card__form {
+        align-self: center;
+        padding-inline: 0;
+        padding-block: 0 3rem;
+        max-width: 25rem;
+        margin-inline: auto;
+    }
+    
+    .card__form-error {
+        font-size: .7rem;
+    }
+    
+    .card__flex-container {
+        gap: 1.25rem;
+    }
+
+    .completed {
+        align-self: center;
+        padding-inline: 0rem;
+        max-width: 27rem;
+        width: 100%;
+        justify-self: center;
+    }
+}
