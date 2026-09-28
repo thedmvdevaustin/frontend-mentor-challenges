@@ -1,0 +1,118 @@
+/* CSS RESET  */
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+/* 2. Remove default margin */
+*:not(dialog) {
+    margin: 0;
+}
+  
+/* 3. disable animations for users who prefer reduce motion */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        transition: none;
+    }
+}
+  
+body {
+    /* 4. Increase line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+  
+/* 6. Improve media defaults */
+img, picture {
+    display: block;
+    max-width: 100%;
+}
+  
+/* 7. Inherit fonts for form controls */
+button {
+    font: inherit;
+}
+  
+/* 8. Avoid text overflows */
+p, h1 {
+    overflow-wrap: break-word;
+}
+
+/* CUSTOM FONTS  */
+/* manrope-800 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    src: url('./fonts/manrope-v20-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* CUSTOM PROPERTIES  */
+:root {
+    /* COLORS  */
+    --clr-blue-200: hsl(193, 38%, 86%);
+    --clr-green-300: hsl(150, 100%, 66%);
+    --clr-blue-600: hsl(217, 19%, 38%);
+    --clr-blue-900: hsl(217, 19%, 24%);
+    --clr-blue-950: hsl(218, 23%, 16%);
+}
+
+/* MOBILE STYLES  */
+body {
+    font-family: 'Manrope', Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    background: var(--clr-blue-950);
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    grid-template-columns: minmax(0, 29rem);
+}
+
+.advice {
+    padding-inline: 1rem;
+    background: var(--clr-blue-900);
+    border-radius: .75em;
+    padding-block: 2.5rem 4rem;
+    display: grid;
+    gap: 1.5rem;
+    margin-inline: 1rem;
+    position: relative;
+    box-shadow: 0px 20px 20px 0px rgba(0,0,0,.15);
+}
+
+.advice__title {
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--clr-green-300);
+    text-align: center;
+}
+
+.advice__details {
+    font-size: 1.5rem;
+    color: var(--clr-blue-200);
+    text-align: center;
+}
+
+.advice__picture {
+    transform: translateX(7px);
+}
+
+.advice__btn {
+    position: absolute;
+    bottom: -25px;
+    justify-self: center;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+    border-radius: 2em;
+    background: var(--clr-green-300);
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 150ms ease-in-out;
+}
+
+.advice__btn:hover {
+    box-shadow: 3px 3px 20px 0 var(--clr-green-300), -3px -3px 20px 0 var(--clr-green-300);
+}
