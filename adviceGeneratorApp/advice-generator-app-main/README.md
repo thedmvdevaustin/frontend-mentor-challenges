@@ -28,12 +28,12 @@ Users should be able to:
 
 ![mobile version](./images/mobile.png)
 ![desktop version](./images/desktop.png)
-![desktop active version](./images/desktop-active.png)
+![desktop https://dmvdevaustin-advicegenerator.netlify.appactive version](./images/desktop-active.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-advice-generator-with-semantic-html-css-and-vanilla-js-FQBZMQLexW](https://www.frontendmentor.io/solutions/responsive-advice-generator-with-semantic-html-css-and-vanilla-js-FQBZMQLexW)
+- Live Site URL: [https://dmvdevaustin-advicegenerator.netlify.app](https://dmvdevaustin-advicegenerator.netlify.app)
 
 ## My process
 
@@ -41,7 +41,7 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
+- Flexboxhttps://www.frontendmentor.io/solutions/responsive-advice-generator-with-semantic-html-css-and-vanilla-js-FQBZMQLexW
 - CSS Grid
 - Mobile-first workflow
 
