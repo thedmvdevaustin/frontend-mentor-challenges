@@ -1,0 +1,5 @@
+JS NOTES
+1. modal going to be fieldset with radio type inputs. from button go up to li then select pledge type, store type in variable, loop through radio input list, find which one hads same name as pledge type, check that one and put focus on that one.
+2. modal opens with back to project and select rewards
+CSS NOTES
+1. for cancel modal button try targeting the opacity inside the path and setting it to one on the hover
