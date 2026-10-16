@@ -9,9 +9,7 @@ const mainTicket = document.querySelector(".main__ticket");
 const ticketFirstName = document.querySelector(".main__ticket-first")
 const ticketLastName = document.querySelector(".main__ticket-last");
 const ticketEmail = document.querySelector(".main__ticket-email");
-const ticketPicture = document.querySelector(".main__bottom-img");
-const ticketName = document.querySelector(".main__left-name");
-const ticketUsername = document.querySelector(".main__left-username");
+const ticketleftBottomContainer = document.querySelector(".main__left-bottom");
 const avatarContainer = document.querySelector(".main__avatar-container");
 const avatarUploaded = document.querySelector(".main__avatar-uploaded");
 const avatarDescription = document.querySelector(".main__description-container");
@@ -109,10 +107,18 @@ const changeToTicket = () => {
     ticketFirstName.innerText = `${fullNameInput.value.split(" ")[0]} `;
     ticketLastName.innerText = fullNameInput.value.split(" ")[1];
     ticketEmail.innerText = emailInput.value;
-    ticketPicture.src = URL.createObjectURL(avatarInput.files[0]);
-    ticketPicture.alt = fullNameInput.value;
-    ticketName.innerText = fullNameInput.value;
-    ticketUsername.innerText = usernameInput.value;
+    ticketleftBottomContainer.innerHTML = `<img src=${URL.createObjectURL(avatarInput.files[0])} alt=${fullNameInput.value} width="160" height="160" class="main__bottom-img" />
+    <div class="main__left-container">
+      <h2 class="main__left-name">
+        ${fullNameInput.value}
+      </h2>
+      <div class="main__left-flex">
+        <img src="./assets/images/icon-github.svg" alt="" width="22" height="23" class="main__left-icon" />
+        <p class="main__left-username">
+          ${usernameInput.value}
+        </p>
+      </div>
+    </div>`
 }
 
 inputs.forEach((input, index) => {

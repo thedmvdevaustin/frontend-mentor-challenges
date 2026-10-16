@@ -38,8 +38,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-ticket-generator-w-wcag-a11y-semantic-html-css-and-js-tQSmk4TzVa](https://www.frontendmentor.io/solutions/responsive-ticket-generator-w-wcag-a11y-semantic-html-css-and-js-tQSmk4TzVa)
+- Live Site URL: [https://dmvdevaustin-ticketgenerator.netlify.app/](https://dmvdevaustin-ticketgenerator.netlify.app/)
 
 ### Built with
 
