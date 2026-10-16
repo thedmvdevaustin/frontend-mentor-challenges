@@ -5,18 +5,148 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css" />
   <title>Frontend Mentor | Conference ticket generator</title>
 </head>
-<body class="ticket-body">
-  <!-- Form Starts  -->
-  
-  <!-- Form Ends  -->
+<body>
+  <header class="header">
+    <a href="#" class="header__logo">
+      <img src="./assets/images/logo-full.svg" alt="Coding Conf" width="209" height="30" class="header__logo-img" />
+    </a>
+  </header>
+  <!-- Form starts -->
+  <main class="main__form">
+    <section class="main__form-info" aria-labelledby="info-title">
+      <h1 class="main__form-title" id="info-title">
+        Your Journey to Coding Conf 2025 Starts Here!
+      </h1>
+      <p class="main__form-details">
+        Secure your spot at next year's biggest coding conference.
+      </p>
+    </section>
+    <form novalidate class="main__ticket-form">
+      <div class="main__form-container">
+        <label for="avatar" class="main__form-label">
+          Upload Avatar
+        </label>
+        <div class="main__avatar-container">
+          <input type="file" required id="avatar" accept="image/png, image/jpeg" class="main__avatar-input" name="avatar" aria-describedby="avatar-instructions avatar-info avatar-error"/>
+          <div class="main__icon-container">
+            <img src="./assets/images/icon-upload.svg" alt="" width="30" height="30" />
+          </div>
+          <p class="main__avatar-details" id="avatar-instructions">
+            Drag and drop or click to upload
+          </p>
+        </div>
+        <div class="main__avatar-uploaded" aria-hidden="true">
+          <img src="" alt="" width="160" height="160" class="main__uploaded-img">
+          <div class="main__uploaded-container">
+            <button type="button" id="remove" class="main__avatar-btn">
+              Remove image
+            </button>
+            <button type="button" id="change" class="main__avatar-btn">
+              Change image
+            </button>
+          </div>
+        </div>
+        <div class="main__description-container">
+          <img src="./assets/images/icon-info.svg" alt="" width="16" height="16" class="main__description-icon" />
+          <p class="main__form-description" id="avatar-info">
+            Upload your photo (JPG or PNG, max size: 500KB).
+          </p>
+        </div>
+        <div class="main__error-container" aria-hidden="true">
+          <svg class="main__error-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round" d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"/><path fill="#D1D0D5" d="M8.004 10.462V7.596ZM8 5.57v-.042Z"/><path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round" d="M8.004 10.462V7.596M8 5.569v-.042"/></svg>
+          <p class="main__form-error" id="avatar-error"></p>
+        </div>
+      </div>
+      <div class="main__form-container">
+        <label for="name" class="main__form-label">
+          Full Name
+        </label>
+        <input type="text" autocomplete="name" id="name" name="name" class="main__form-input" aria-describedby="name-error" required />
+        <div class="main__error-container" aria-hidden="true">
+          <svg class="main__error-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round" d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"/><path fill="#D1D0D5" d="M8.004 10.462V7.596ZM8 5.57v-.042Z"/><path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round" d="M8.004 10.462V7.596M8 5.569v-.042"/></svg>
+          <p class="main__form-error" id="name-error"></p>
+        </div>
+      </div>
+      <div class="main__form-container">
+        <label for="email" class="main__form-label">
+          Email Address
+        </label>
+        <input type="email" autocomplete="email" id="email" name="email" class="main__form-input" aria-describedby="email-error" placeholder="example@email.com" required />
+        <div class="main__error-container" aria-hidden="true">
+          <svg class="main__error-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round" d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"/><path fill="#D1D0D5" d="M8.004 10.462V7.596ZM8 5.57v-.042Z"/><path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round" d="M8.004 10.462V7.596M8 5.569v-.042"/></svg>
+          <p class="main__form-error" id="email-error"></p>
+        </div>
+      </div>
+      <div class="main__form-container">
+        <label for="username" class="main__form-label">
+          GitHub Username
+        </label>
+        <input type="text" autocomplete="username" id="username" name="username" class="main__form-input" aria-describedby="username-error" placeholder="@yourusername" required />
+        <div class="main__error-container" aria-hidden="true">
+          <svg class="main__error-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round" d="M2 8a6 6 0 1 0 12 0A6 6 0 0 0 2 8Z"/><path fill="#D1D0D5" d="M8.004 10.462V7.596ZM8 5.57v-.042Z"/><path stroke="#D1D0D5" stroke-linecap="round" stroke-linejoin="round" d="M8.004 10.462V7.596M8 5.569v-.042"/></svg>
+          <p class="main__form-error" id="username-error"></p>
+        </div>
+      </div>
+      <button type="submit" class="main__form-btn">
+        Generate My Ticket
+      </button>
+    </form>
+  </main>
+  <!-- Form ends -->
+  <!-- Generated tickets starts -->
+  <main class="main__ticket" hidden>
+    <section class="main__ticket-info" id="ticket-title">
+      <h1 class="main__ticket-title" id="ticket-title">
+        Congrats, <b class="main__ticket-first"></b><b class="main__ticket-last"></b><!-- Full Name -->! Your ticket is ready.
+      </h1>
+      <p class="main__ticket-details">
+        We've emailed your ticket to <b class="main__ticket-email"></b> <!-- Email Address --> and will send updates in the run up to the event.
+      </p>
+    </section>
+    <section class="main__ticket-container">
+      <div class="main__ticket-bg">
+        <div class="main__ticket-left">
+          <div class="main__left-top">
+            <img src="./assets/images/logo-mark.svg" alt="" width="40" height="40" class="main__top-img" />
+            <div class="main__top-container">
+              <h2 class="main__left-title">
+                Coding Conf
+              </h2>
+              <p class="main__left-details">
+                Jan 31, 2025 / Austin, TX
+              </p>
+            </div>
+          </div>
+          <div class="main__left-bottom">
+            <img src="" alt="" width="160" height="160" class="main__bottom-img" />
+            <div class="main__left-container">
+              <h2 class="main__left-name">
+                
+              </h2>
+              <div class="main__left-flex">
+                <img src="./assets/images/icon-github.svg" alt="" width="22" height="23" class="main__left-icon" />
+                <p class="main__left-username">
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main__ticket-right">
+          <p class="main__ticket-number">
+            #01609
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <!-- Generated Ticket Starts  -->
 
-  <!-- Full Name  -->
-  <!-- Email Address  -->
-  <script src="script.js"></script>
+
+  <!-- Generated tickets ends -->
+  <script src="./script.js"></script>
 </body>
 </html>
