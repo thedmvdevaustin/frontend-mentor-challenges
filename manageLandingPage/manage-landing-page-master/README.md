@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-semantic-html-css-and-vanilla-js-manage-landing-LoXC52RFYk](https://www.frontendmentor.io/solutions/responsive-semantic-html-css-and-vanilla-js-manage-landing-LoXC52RFYk)
+- Live Site URL: [https://dmvdevaustin-managelanding.netlify.app](https://dmvdevaustin-managelanding.netlify.app)
 
 
 ### Built with
